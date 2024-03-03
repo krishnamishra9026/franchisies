@@ -16,11 +16,11 @@ return new class extends Migration
             $table->string('name')->nullable();
             $table->string('mobile')->nullable();
             $table->string('user_type')->nullable();
-            $table->bigInteger('user_id')->nullable();
-            $table->bigInteger('campaign_id')->nullable();
-            $table->string('price')->nullable();
             $table->string('email')->nullable();
-            $table->string('subject')->nullable();
+            $table->string('brand_name')->nullable();
+            $table->string('available_slot')->nullable();
+            $table->string('category')->nullable();
+            $table->string('city')->nullable();
             $table->text('query')->nullable();
             $table->boolean('status')->default(true);
             $table->timestamps();

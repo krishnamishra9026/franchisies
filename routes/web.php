@@ -60,6 +60,7 @@ Route::get('/get-search-city', [IndexController::class, 'getSearchCity'])->name(
 Route::get('/get-search-city-sposnor', [IndexController::class, 'getSearchCitySposnor'])->name('get-search-city-sposnor');
 
 Route::post('/save-conatct-us', [IndexController::class, 'saveContactUs'])->name('save-conatct-us');
+Route::post('/save-join-us', [IndexController::class, 'saveJoinUs'])->name('save-join-us');
 Route::post('/save-quote', [IndexController::class, 'saveQuote'])->name('save-quote');
 
  Route::post('/save-review', [IndexController::class, 'saveReview'])->name('save-review');
@@ -67,6 +68,7 @@ Route::post('/save-quote', [IndexController::class, 'saveQuote'])->name('save-qu
 Route::get('/campaign', [IndexController::class, 'campaign'])->name('campaign');
 
 Route::get('/support', [IndexController::class, 'support'])->name('support');
+Route::get('/join', [IndexController::class, 'join'])->name('join');
 
 Route::get('/faq', [IndexController::class, 'faq'])->name('faq');
 Route::get('/blogs', [IndexController::class, 'blogs'])->name('blogs');

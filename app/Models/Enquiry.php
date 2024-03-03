@@ -11,13 +11,14 @@ class Enquiry extends Model
 
     protected $fillable = [
       'user_type',
-      'user_id',
       'mobile',
       'name',
-      'subject',
       'email',
       'query',
-      'price',
-      'status',
+      'brand_name',
+      'available_slot',
+      'category',
+      'city',
+      'status'
    ];
 }

@@ -289,7 +289,7 @@
             <div class="row">
                 <div class="col-sm-8 col-12">
                     <h5>{{ $settings->banner1_title }}</h5>
-                    <a href="{{ route('marketplace.creators') }}"
+                    <a href="{{ route('join') }}"
                         style="background-color:{{ $settings->banner1_button_bg_color }}; color:{{ $settings->banner1_button_text_color }};"
                         class="btn btn-primary btn-lg">{{ $settings->banner1_button_text }}</a>
                 </div>
@@ -397,7 +397,7 @@
                         style="background-image: url('{{ asset('storage/uploads/settings/banner2/' . $settings->banner2_image) }}')">
                         <h5>{{ $settings->banner2_title }}</h5>
                         <p>{{ $settings->banner2_description }}</p>
-                        <a href="{{ route('support') }}"
+                        <a href="{{ route('join') }}"
                             style="background-color:{{ $settings->banner2_button_bg_color }}; color:{{ $settings->banner2_button_text_color }};"
                             class="btn btn-primary btn-lg">{{ $settings->banner2_button_text }}</a>
                     </div>

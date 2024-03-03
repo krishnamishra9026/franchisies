@@ -7,6 +7,7 @@ use App\Models\HomePageService;
 use App\Models\InformationPageManagement;
 use App\Models\HomePageSetting;
 use App\Models\Creator;
+use App\Models\Category;
 use App\Models\User;
 use App\Models\Review;
 use App\Models\Brand;
@@ -36,8 +37,6 @@ class IndexController extends Controller
     public function home(){
 
         $reviews = HomePageReview::latest()->take(5)->get();
-
-
 
         $services = HomePageService::latest('sort_order')->take(5)->get();
         $settings = HomePageSetting::first();
@@ -74,6 +73,11 @@ set_time_limit(3600);
 
     public function support(){
         return view('frontend.support');
+    }
+
+    public function join(){
+        $categories = Category::get(['name', 'id']);
+        return view('frontend.join', compact('categories'));
     }
 
     public function faq(){
@@ -125,6 +129,21 @@ set_time_limit(3600);
 
         $input['user_type'] = '';
         $input['subject'] = '';
+
+        $product = Enquiry::create($input);
+
+        return redirect()->back()->with('message', 'Enquiry submitted successfully!');
+    }
+
+
+    public function saveJoinUs(Request $request)
+    {              
+        $request->validate([
+            'name'                  => ['required'],
+            'email'                 => ['required'],
+        ]);
+
+        $input = $request->except('_token');
 
         $product = Enquiry::create($input);
 

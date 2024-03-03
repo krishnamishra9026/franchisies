@@ -21,7 +21,7 @@ $footer_logo = $setting ? asset('storage/uploads/logo/'.$setting->footer_logo) :
                       <a class="nav-link" href="{{ url('category/music') }}">Explore Brands</a>
                     </li>
                     <li class="nav-item">
-                      <a href="{{ route('register') }}" class="nav-link btn btn-primary">Join</a>
+                      <a href="{{ route('join') }}" class="nav-link btn btn-primary">Join</a>
                     </li>
                     <li class="nav-item">
                         <a href="{{ route('support') }}" class="nav-link btn btn-primary">Support</a>
@@ -65,12 +65,8 @@ $footer_logo = $setting ? asset('storage/uploads/logo/'.$setting->footer_logo) :
                 <li>
                     <a href="{{ route('marketplace.creators') }}">Explore Marketplace</a>
                 </li>
-                <li>
-                    <a href="{{ route('login') }}">Sign In</a>
-                </li>
-                @if (Route::has('register'))
-                <a href="{{ route('register') }}" class="joinus btn btn-primary">Join</a>
-                @endif
+  
+                <a href="{{ route('join') }}" class="joinus btn btn-primary">Join</a>
             </ul>
         </nav>
     </div>
