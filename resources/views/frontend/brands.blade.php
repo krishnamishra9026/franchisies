@@ -23,7 +23,7 @@
             <div class="row">
                 <div class="col-sm-12 col-12">
                     <div class="searchbar BoxShadow">
-                        <form action="{{ route('marketplace.creators') }}">
+                        <form action="{{ route('categories.index', 'music') }}">
                             <div class="input-group mb-3">
                                 <input type="text" id="searchUser" value="{{ request()->get('search') }}" name="search" class="form-control" placeholder="Search for Creator">
                                 <div class="input-group-append">
@@ -42,7 +42,7 @@
 
 
                 <div class="col-sm-12 col-12">
-                    <form action="{{ route('marketplace.creators') }}" id="" method="GET">
+                    <form action="{{ route('categories.index', 'music') }}" id="" method="GET">
                     <div class="search-creators">
                         <button type="button" id="ShowFilter" class="btn btn-primary mb-2  d-sm-none">Show Filter</button>
                         <button type="button" id="HideFilter" class="btn btn-primary mb-2 d-sm-none">Hide Filter</button>
@@ -280,67 +280,10 @@
 @push('scripts')
 <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
-<script type="text/javascript">
-    var path = "{{ route('get-search-keywords') }}";
-    $( "#searchUser" ).autocomplete({
-        source: function( request, response ) {
-          $.ajax({
-            url: path,
-            type: 'GET',
-            dataType: "json",
-            data: {
-             search: request.term
-         },
-         success: function(data) {
-             response(data);
-         }
-     });
-      },
-      select: function (event, ui) {
-         $('#searchUser').val(ui.item.label);
-         return false;
-     }
- });
-</script>
 
 
-<script type="text/javascript">
-    var path = "{{ route('get-search-city') }}";
-    $( "#searchCity" ).autocomplete({
-        source: function( request, response ) {
-            $.ajax({
-                url: path,
-                type: 'GET',
-                dataType: "json",
-                data: {
-                    search: request.term
-                },
-                success: function(data) {
 
 
-                    if(!data.length){
-                        var result = [
-                        {
-                            label: 'No matches found',
-                            value: response.term
-                        }
-                        ];
-                        response(result);
-                    }
-                    else{
-
-
-                        response(data);
-                    }
-                }
-            });
-        },
-        select: function (event, ui) {
-            $('#searchCity').val(ui.item.label);
-            return false;
-        }
-    });
-</script>
 
 <script type="text/javascript">
     $(document).on('click', '.wt-searchgbtn', function(event) {
@@ -422,98 +365,9 @@ $(document).ready(function(){
         $(this).parents('.filterlist').find('.wt-checkbox:not(:contains(' + content + '))').hide();
     });
 
-    $("#clear_filter").click(function() {
-        window.location.href = "{{ route('marketplace.creators') }}";
-    });
-
-    $(".wishlist").click(function() {
-
-        var user_id = "{{ auth()->user() ? auth()->user()->id : '' }}";
-
-        if(user_id == ''){
-            window.location.href = "{{ url('/login') }}";
-            return false;
-        }
-
-        var creator_id  = $(this).data('creator-id');
-
-        var token = "{{ csrf_token() }}";
 
 
-        var status = 0;
-        if($(this).attr('class') === 'fa  fa-heart-o  wishlist'){
-            status = 1;
-        }
 
-        $(this).toggleClass('fa-heart-o');
-        $(this).toggleClass('fa-heart');
-
-        $.ajax({
-            method: 'post',
-            url: "{{ route('add-to-favorite') }}",
-            data: { user_id: user_id, creator_id: creator_id, status: status, _token: token},
-            success: function(msg) {
-                if(msg.success){
-                    setTimeout(() => {
-                        alert(msg.message)
-                        location.reload();
-                    }, 500)
-                }else{
-                    alert('Something went wrong!');
-                }
-                console.log(msg);
-            },
-            error: function(XMLHttpRequest, textStatus, errorThrown) {
-                console.log("some error");
-            }
-        });
-    });
-
-
-    $('.plateform-check').on('click', function () {
-        var value = $(this).val();
-
-        var paramName = 'platform[]';
-        var paramValue = value;
-
-        const url = new URL(window.location.href);
-        const queryMap = url.searchParams;
-
-        if (queryMap.has(paramName)) {
-
-            let parms = queryMap.getAll(paramName);
-            console.log('parms',parms);
-
-            const newId=value;
-
-            if(!parms.includes(newId)){
-                parms.push(newId);
-            }else{
-                parms.splice(parms.indexOf(newId), 1);
-            }
-
-            let url1 = new URL(location.href);
-            url1.searchParams.delete('platform[]');
-
-            let paramsStr = new URLSearchParams(url1.search);
-
-            parms.forEach(function(parm) {
-                console.log('parm',parm);
-                paramsStr.append('platform[]', parm);
-            });
-
-            window.location.href = "{{ route('marketplace.creators') }}"+'?'+paramsStr;
-
-
-        } else {
-            let url1 = new URL(location.href);
-            let paramsStr = new URLSearchParams(url1.search);
-            paramsStr.append('platform[]', value);
-            window.location.href = "{{ route('marketplace.creators') }}"+'?'+paramsStr;
-        }
-
-
-    });
 
 
     $('.category-check').on('click', function () {
@@ -521,320 +375,15 @@ $(document).ready(function(){
 
         window.location.href = "{{ url('category') }}/"+value;
         return;
-        var paramName = 'category[]';
-        var paramValue = value;
-
-        const url = new URL(window.location.href);
-        const queryMap = url.searchParams;
-
-        console.log(queryMap.has(paramName));
-
-        if (queryMap.has(paramName)) {
-
-            let parms = queryMap.getAll(paramName);
-            console.log('parms',parms);
-
-            const newId=value;
-
-            if(!parms.includes(newId)){
-                parms.push(newId);
-            }else{
-                parms.splice(parms.indexOf(newId), 1);
-            }
-
-            let url1 = new URL(location.href);
-            url1.searchParams.delete('category[]');
-
-            let paramsStr = new URLSearchParams(url1.search);
-
-            parms.forEach(function(parm) {
-                console.log('parm',parm);
-                paramsStr.append('category[]', parm);
-            });
-
-            window.location.href = "{{ route('marketplace.creators') }}"+'?'+paramsStr;
-
-
-        } else {
-            let url1 = new URL(location.href);
-            let paramsStr = new URLSearchParams(url1.search);
-            paramsStr.append('category[]', value);
-            window.location.href = "{{ route('marketplace.creators') }}"+'?'+paramsStr;
-        }
+        
 
 
     });
 
 
-    $('.country-check').on('change', function () {
-        var value = $(this).val();
 
-        var paramName = 'country';
-        var paramValue = value;
 
-        const url = new URL(window.location.href);
-        const queryMap = url.searchParams;
 
-
-        if (queryMap.has(paramName)) {
-
-            let parms = queryMap.get(paramName);
-
-            let url1 = new URL(location.href);
-            url1.searchParams.delete('country');
-
-
-            let paramsStr = new URLSearchParams(url1.search);
-
-            paramsStr.set('country', value);
-
-            window.location.href = "{{ route('marketplace.creators') }}"+'?'+paramsStr;
-
-
-        } else {
-            let url1 = new URL(location.href);
-            let paramsStr = new URLSearchParams(url1.search);
-            paramsStr.set('country', value);
-            window.location.href = "{{ route('marketplace.creators') }}"+'?'+paramsStr;
-        }
-
-
-    });
-
-
-    $('.state-check').on('change', function () {
-        var value = $(this).val();
-
-        var paramName = 'state';
-        var paramValue = value;
-
-        const url = new URL(window.location.href);
-        const queryMap = url.searchParams;
-
-
-        if (queryMap.has(paramName)) {
-
-            let parms = queryMap.get(paramName);
-
-            let url1 = new URL(location.href);
-            url1.searchParams.delete('state');
-
-
-            let paramsStr = new URLSearchParams(url1.search);
-
-            paramsStr.set('state', value);
-
-            window.location.href = "{{ route('marketplace.creators') }}"+'?'+paramsStr;
-
-
-        } else {
-            let url1 = new URL(location.href);
-            let paramsStr = new URLSearchParams(url1.search);
-            paramsStr.set('state', value);
-            window.location.href = "{{ route('marketplace.creators') }}"+'?'+paramsStr;
-        }
-
-
-    });
-
-    $('.city-check').on('change', function () {
-        var value = $(this).val();
-
-        var paramName = 'city';
-        var paramValue = value;
-
-        const url = new URL(window.location.href);
-        const queryMap = url.searchParams;
-
-
-        if (queryMap.has(paramName)) {
-
-            let parms = queryMap.get(paramName);
-
-            let url1 = new URL(location.href);
-            url1.searchParams.delete('city');
-
-
-            let paramsStr = new URLSearchParams(url1.search);
-
-            paramsStr.set('city', value);
-
-            window.location.href = "{{ route('marketplace.creators') }}"+'?'+paramsStr;
-
-
-        } else {
-            let url1 = new URL(location.href);
-            let paramsStr = new URLSearchParams(url1.search);
-            paramsStr.set('city', value);
-            window.location.href = "{{ route('marketplace.creators') }}"+'?'+paramsStr;
-        }
-
-
-    });
-
-     $('.gender-check').on('click', function () {
-        var value = $(this).val();
-
-        var paramName = 'gender[]';
-        var paramValue = value;
-
-        const url = new URL(window.location.href);
-        const queryMap = url.searchParams;
-
-        console.log(queryMap.has(paramName));
-
-        if (queryMap.has(paramName)) {
-
-            let parms = queryMap.getAll(paramName);
-            console.log('parms',parms);
-
-            const newId=value;
-
-            if(!parms.includes(newId)){
-                parms.push(newId);
-            }else{
-                parms.splice(parms.indexOf(newId), 1);
-            }
-
-            let url1 = new URL(location.href);
-            url1.searchParams.delete('gender[]');
-
-            let paramsStr = new URLSearchParams(url1.search);
-
-            parms.forEach(function(parm) {
-                console.log('parm',parm);
-                paramsStr.append('gender[]', parm);
-            });
-
-            window.location.href = "{{ route('marketplace.creators') }}"+'?'+paramsStr;
-
-
-        } else {
-            let url1 = new URL(location.href);
-            let paramsStr = new URLSearchParams(url1.search);
-            paramsStr.append('gender[]', value);
-            window.location.href = "{{ route('marketplace.creators') }}"+'?'+paramsStr;
-        }
-
-
-    });
-
-
-     $('.followers-check').on('click', function () {
-        var value = $(this).val();
-
-        var paramName = 'followers[]';
-        var paramValue = value;
-
-        const url = new URL(window.location.href);
-        const queryMap = url.searchParams;
-
-        console.log(queryMap.has(paramName));
-
-        if (queryMap.has(paramName)) {
-
-            let parms = queryMap.getAll(paramName);
-            console.log('parms',parms);
-
-            const newId=value;
-
-            if(!parms.includes(newId)){
-                parms.push(newId);
-            }else{
-                parms.splice(parms.indexOf(newId), 1);
-            }
-
-            let url1 = new URL(location.href);
-            url1.searchParams.delete('followers[]');
-
-            let paramsStr = new URLSearchParams(url1.search);
-
-            parms.forEach(function(parm) {
-                console.log('parm',parm);
-                paramsStr.append('followers[]', parm);
-            });
-
-            window.location.href = "{{ route('marketplace.creators') }}"+'?'+paramsStr;
-
-
-        } else {
-            let url1 = new URL(location.href);
-            let paramsStr = new URLSearchParams(url1.search);
-            paramsStr.append('followers[]', value);
-            window.location.href = "{{ route('marketplace.creators') }}"+'?'+paramsStr;
-        }
-
-
-    });
-
-
-      $('.rating-check').on('click', function () {
-        var value = $(this).val();
-
-        var paramName = 'rating[]';
-        var paramValue = value;
-
-        const url = new URL(window.location.href);
-        const queryMap = url.searchParams;
-
-        console.log(queryMap.has(paramName));
-
-        if (queryMap.has(paramName)) {
-
-            let parms = queryMap.getAll(paramName);
-            console.log('parms',parms);
-
-            const newId=value;
-
-            if(!parms.includes(newId)){
-                parms.push(newId);
-            }else{
-                parms.splice(parms.indexOf(newId), 1);
-            }
-
-            let url1 = new URL(location.href);
-            url1.searchParams.delete('rating[]');
-
-            let paramsStr = new URLSearchParams(url1.search);
-
-            parms.forEach(function(parm) {
-                console.log('parm',parm);
-                paramsStr.append('rating[]', parm);
-            });
-
-            window.location.href = "{{ route('marketplace.creators') }}"+'?'+paramsStr;
-
-
-        } else {
-            let url1 = new URL(location.href);
-            let paramsStr = new URLSearchParams(url1.search);
-            paramsStr.append('rating[]', value);
-            window.location.href = "{{ route('marketplace.creators') }}"+'?'+paramsStr;
-        }
-
-
-    });
-
-    $('#country').on('change', function () {
-        var idCountry = $(this).find(':selected').data('country-id');
-        $("#state").html('');
-        $.ajax({
-            url: "{{route('fetch-states')}}",
-            type: "POST",
-            data: {
-                country_id: idCountry,
-                _token: '{{csrf_token()}}'
-            },
-            dataType: 'json',
-            success: function (result) {
-                $('#state').html('<option value="">Select State</option>');
-                $.each(result.states, function (key, value) {
-                    $("#state").append('<option value="' + value
-                        .state + '">' + value.state + '</option>');
-                });
-            }
-        });
-    });
 
     function check_slider(text_id,range_id) {
       document.getElementById('input-right').value=document.getElementById(range_id).value;
@@ -866,7 +415,7 @@ $(document).ready(function(){
             paramsStr.set('max-price', max);
             paramsStr.set('min-price', min);
 
-            window.location.href = "{{ route('marketplace.creators') }}"+'?'+paramsStr;
+            window.location.href = "{{ route('categories.index', 'music') }}"+'?'+paramsStr;
 
 
         } else {
@@ -874,7 +423,7 @@ $(document).ready(function(){
             let paramsStr = new URLSearchParams(url1.search);
             paramsStr.set('max-price', max);
             paramsStr.set('min-price', min);
-            window.location.href = "{{ route('marketplace.creators') }}"+'?'+paramsStr;
+            window.location.href = "{{ route('categories.index', 'music') }}"+'?'+paramsStr;
         }
     });
 
@@ -902,14 +451,14 @@ $(document).ready(function(){
 
             paramsStr.set('sortby', value);
 
-            window.location.href = "{{ route('marketplace.creators') }}"+'?'+paramsStr;
+            window.location.href = "{{ route('categories.index', 'music') }}"+'?'+paramsStr;
 
 
         } else {
             let url1 = new URL(location.href);
             let paramsStr = new URLSearchParams(url1.search);
             paramsStr.set('sortby', value);
-            window.location.href = "{{ route('marketplace.creators') }}"+'?'+paramsStr;
+            window.location.href = "{{ route('categories.index', 'music') }}"+'?'+paramsStr;
         }
     });
 

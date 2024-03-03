@@ -4,10 +4,9 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 
-use App\Models\Creator;
+use App\Models\Brand;
 use App\Models\User;
-use App\Models\Campaign;
-use App\Models\Earning;
+use App\Models\Category;
 use App\Models\Enquiry;
 
 class DashboardController extends Controller
@@ -20,16 +19,10 @@ class DashboardController extends Controller
     public function index()
     {
 
-        $creators_count =  Creator::count();
-        $sponsor_count =  User::count();
-        $campaign_count =  Campaign::count();
-        $earning_count =  Earning::sum('amount');
+        $brands_count =  Brand::count();
+        $category_count =  Category::count();
         $enquiry_count =  Enquiry::count();
 
-        $sponsors = User::orderBy('id', 'desc')->paginate(10);
-        $creators = Creator::orderBy('id', 'desc')->paginate(10);
-        $campaigns = Campaign::orderBy('id', 'desc')->paginate(10);
-
-        return view('admin.dashboard.dashboard', compact('creators_count', 'sponsor_count', 'campaign_count', 'earning_count', 'enquiry_count', 'sponsors', 'creators', 'campaigns'));
+        return view('admin.dashboard.dashboard', compact('brands_count', 'category_count', 'enquiry_count'));
     }
 }

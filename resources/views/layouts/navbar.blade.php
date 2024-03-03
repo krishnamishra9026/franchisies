@@ -63,7 +63,7 @@ $footer_logo = $setting ? asset('storage/uploads/logo/'.$setting->footer_logo) :
         <nav id="menu">
             <ul>
                 <li>
-                    <a href="{{ route('marketplace.creators') }}">Explore Marketplace</a>
+                    <a href="{{ route('categories.index', 'music') }}">Explore Brands</a>
                 </li>
   
                 <a href="{{ route('join') }}" class="joinus btn btn-primary">Join</a>

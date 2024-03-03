@@ -282,7 +282,7 @@
                 </div>
             </div>
             <div class="text-center button-center mt-2">
-                    <a href="{{ route('marketplace.creators') }}" class="btn btn-secondary btn-lg">EXPLORE ALL</a>
+                    <a href="{{ route('categories.index', 'music') }}" class="btn btn-secondary btn-lg">EXPLORE ALL</a>
             </div>
         </div>
     </div>
@@ -502,28 +502,7 @@
 @push('scripts')
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
-    <script type="text/javascript">
-        var path = "{{ route('get-search-keywords') }}";
-        $("#searchUser").autocomplete({
-            source: function(request, response) {
-                $.ajax({
-                    url: path,
-                    type: 'GET',
-                    dataType: "json",
-                    data: {
-                        search: request.term
-                    },
-                    success: function(data) {
-                        response(data);
-                    }
-                });
-            },
-            select: function(event, ui) {
-                $('#searchUser').val(ui.item.label);
-                return false;
-            }
-        });
-    </script>
+
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             new Splide('#hiw', {
@@ -673,57 +652,6 @@
          });*/
 
 
-        $(".wishlist").click(function() {
-
-            var user_id = "{{ auth()->user() ? auth()->user()->id : '' }}";
-            var url = "{{ route('add-to-favorite') }}";
-            if (user_id == '') {
-                var user_id = "{{ auth()->guard('creator')->user()? auth()->guard('creator')->user()->id: '' }}";
-                var url = "{{ route('creator.add-to-favorite') }}";
-            }
-
-            if (user_id == '') {
-                window.location.href = "{{ url('/login') }}";
-                return false;
-            }
-
-            var creator_id = $(this).data('creator-id');
-
-            var token = "{{ csrf_token() }}";
-
-
-            var status = 0;
-            if ($(this).attr('class') === 'fa  fa-heart-o  wishlist') {
-                status = 1;
-            }
-
-            $(this).toggleClass('fa-heart-o');
-            $(this).toggleClass('fa-heart');
-
-            $.ajax({
-                method: 'post',
-                url: url,
-                data: {
-                    user_id: user_id,
-                    creator_id: creator_id,
-                    status: status,
-                    _token: token
-                },
-                success: function(msg) {
-                    if (msg.success) {
-                        setTimeout(() => {
-                            alert(msg.message)
-                            location.reload();
-                        }, 500)
-                    } else {
-                        alert('Something went wrong!');
-                    }
-                    console.log(msg);
-                },
-                error: function(XMLHttpRequest, textStatus, errorThrown) {
-                    console.log("some error");
-                }
-            });
-        });
+  
     </script>
 @endpush

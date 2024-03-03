@@ -32,14 +32,6 @@
                 </a>
             </li>
 
-
-            <li class="side-nav-item">
-                <a href="{{ route('admin.sponsors.index') }}" class="side-nav-link">
-                    <i class="mdi mdi-account-tie"></i>
-                    <span> Sponsors </span>
-                </a>
-            </li>
-
             <li class="side-nav-item">
                 <a href="{{ route('admin.brands.index') }}" class="side-nav-link">
                     <i class="mdi mdi-account-tie"></i>
@@ -47,22 +39,7 @@
                 </a>
             </li>
 
-
-            <li class="side-nav-item">
-                <a href="{{ route('admin.creators.index') }}" class="side-nav-link">
-                    <i class="uil-user"></i>
-                    <span> Content Creators </span>
-                </a>
-            </li>
-
-
-
-            <li class="side-nav-item">
-                <a href="{{ route('admin.campaigns.index') }}" class="side-nav-link">
-                    <i class="mdi mdi-card-bulleted-outline"></i>
-                    <span> Ad Campaign </span>
-                </a>
-            </li>
+            
 
 
             <li class="side-nav-item">
@@ -70,54 +47,8 @@
                     <i class="mdi mdi-collage"></i>
                     <span> Categories </span>
                 </a>
-            </li>
+            </li>           
 
-
-            <li class="side-nav-item">
-                <a href="{{ route('admin.content-types.index') }}" class="side-nav-link">
-                    <i class="dripicons-view-list-large
-"></i>
-                    <span> Content type </span>
-                </a>
-            </li>
-
-
-            <li class="side-nav-item">
-                <a href="{{ route('admin.search-keywords.index') }}" class="side-nav-link">
-                    <i class="dripicons-search"></i>
-                    <span> Search Keywords </span>
-                </a>
-            </li>
-
-            <li class="side-nav-item">
-                <a href="{{ route('admin.tags.index') }}" class="side-nav-link">
-                    <i class="mdi mdi-tag-outline"></i>
-                    <span> Tags </span>
-                </a>
-            </li>
-
-
-            <li class="side-nav-item">
-                <a href="{{ route('admin.packages.index') }}" class="side-nav-link">
-                    <i class="uil-home-alt"></i>
-                    <span> Package </span>
-                </a>
-            </li>
-
-
-            <li class="side-nav-item">
-                <a href="{{ route('admin.badges.index') }}" class="side-nav-link">
-                    <i class="mdi mdi-police-badge-outline"></i>
-                    <span> Badges </span>
-                </a>
-            </li>
-
-            <li class="side-nav-item">
-                <a href="{{ route('admin.earnings.index') }}" class="side-nav-link">
-                    <i class="uil-usd-circle"></i>
-                    <span> Earnings </span>
-                </a>
-            </li>
 
 
             <li class="side-nav-item">
@@ -146,6 +77,7 @@
                     <span> Information Pages </span>
                 </a>
             </li>
+            
             <li class="side-nav-item">
                 <a data-bs-toggle="collapse" href="#ContentManagement" aria-expanded="false"
                     aria-controls="ContentManagement" class="side-nav-link">
@@ -156,28 +88,14 @@
                 <div class="collapse" id="ContentManagement">
                     <ul class="side-nav-second-level">
                         <li>
-                            <a href="{{ route('admin.creator-dashboard.index') }}">Creator dashboard</a>
-                        </li>
-                        <li>
                             <a href="{{ route('admin.contact-setting.index') }}">Contact</a>
                         </li>
                     </ul>
                 </div>
             </li>
 
-            <li class="side-nav-item">
-                <a href="{{ route('admin.reviews.index') }}" class="side-nav-link">
-                    <i class="mdi mdi-card-account-details-star-outline"></i>
-                    <span> Reviews </span>
-                </a>
-            </li>
-
-            <li class="side-nav-item">
-                <a href="{{ route('admin.promo-codes.index') }}" class="side-nav-link">
-                    <i class="mdi mdi-cash"></i>
-                    <span> Promo  code </span>
-                </a>
-            </li>
+  
+            
 
             <li class="side-nav-item">
                 <a data-bs-toggle="collapse" href="#userManagement" aria-expanded="false"

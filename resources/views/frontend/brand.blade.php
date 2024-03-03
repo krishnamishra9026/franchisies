@@ -321,7 +321,7 @@
             <div class="alert alert-success show-sucess-message" style="display:none;">
                 {{ session()->get('success') }}
             </div>
-            <form method="POST" action="{{ route('creator.save-conatct-us') }}" id="contactForm">
+            <form method="POST" action="{{ route('save-conatct-us') }}" id="contactForm">
                 @csrf
                 @method('POST')
                 <input type="hidden" name="user_id" id="creator-id" value="{{ @$brand->id }}">
@@ -372,7 +372,7 @@
                 <button type="button" class="btn-close" id="clickClose" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
             <h5>Rate your recent experience</h5>
-            <form method="POST" action="{{ route('creator.save-conatct-us') }}" id="ReviewForm">
+            <form method="POST" action="{{ route('save-conatct-us') }}" id="ReviewForm">
                 @csrf
                 @method('POST')
 
@@ -459,55 +459,13 @@
 <script type="text/javascript">
 
 
-    $(".wishlist").click(function() {
-
-        var user_id = "{{ auth()->user() ? auth()->user()->id : '' }}";
-
-        if(user_id == ''){
-            window.location.href = "{{ url('/login') }}";
-            return false;
-        }
-
-        var creator_id  = $(this).data('creator-id');
-
-        var token = "{{ csrf_token() }}";
-
-
-        var status = 0;
-        if($(this).attr('class') === 'fa  fa-heart-o  wishlist'){
-            status = 1;
-        }
-
-        $(this).toggleClass('fa-heart-o');
-        $(this).toggleClass('fa-heart');
-
-        $.ajax({
-            method: 'post',
-            url: "{{ route('add-to-favorite') }}",
-            data: { user_id: user_id, creator_id: creator_id, status: status, _token: token},
-            success: function(msg) {
-                if(msg.success){
-                    setTimeout(() => {
-                        alert(msg.message)
-                        location.reload();
-                    }, 500)
-                }else{
-                    alert('Something went wrong!');
-                }
-                console.log(msg);
-            },
-            error: function(XMLHttpRequest, textStatus, errorThrown) {
-                console.log("some error");
-            }
-        });
-    });
 
     $(document).on('submit','#contactForm',function(e){
         e.preventDefault();
         console.log($(this).serialize())
         $.ajax({
             method: 'post',
-            url: "{{ route('save-quote') }}",
+            url: "{{ route('save-conatct-us') }}",
             data: $(this).serialize(),
             success: function(msg) {
                 if(msg.success){
@@ -528,35 +486,6 @@
         });
     });
 
-    $(document).on('submit','#ReviewForm',function(e){
 
-        var user_id = "{{ auth()->user() ? auth()->user()->id : '' }}";
-
-        if(user_id == ''){
-            window.location.href = "{{ url('/login') }}";
-            return false;
-        }
-
-        e.preventDefault();
-        $.ajax({
-            method: 'post',
-            url: "{{ route('save-review') }}",
-            data: $(this).serialize(),
-            success: function(msg) {
-                if(msg.success){
-                    $(".show-sucess").show().html(msg.message);
-                    setTimeout(function () {
-                        location.reload(true);
-                    }, 1500);
-                }else{
-                    alert('Something went wrong!');
-                }
-                console.log(msg);
-            },
-            error: function(XMLHttpRequest, textStatus, errorThrown) {
-                console.log("some error");
-            }
-        });
-    });
 </script>
 @endpush

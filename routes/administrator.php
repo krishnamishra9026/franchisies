@@ -7,19 +7,8 @@ use App\Http\Controllers\Admin\Auth\MyAccountController;
 use App\Http\Controllers\Admin\Auth\ResetPasswordController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\BrandController;
-use App\Http\Controllers\Admin\SponsorController;
-use App\Http\Controllers\Admin\CreatorController;
-use App\Http\Controllers\Admin\CollabController;
-use App\Http\Controllers\Admin\CampaignController;
-use App\Http\Controllers\Admin\CreatorDashboardSettingController;
 use App\Http\Controllers\Admin\WebsiteContactSettingController;
 use App\Http\Controllers\Admin\CategoryController;
-use App\Http\Controllers\Admin\BadgeController;
-use App\Http\Controllers\Admin\ContentTypeController;
-use App\Http\Controllers\Admin\TagController;
-use App\Http\Controllers\Admin\SearchKeywordController;
-use App\Http\Controllers\Admin\PackageController;
-use App\Http\Controllers\Admin\PromoCodeController;
 use App\Http\Controllers\Admin\HomePageSettingController;
 use App\Http\Controllers\Admin\ContentManagementController;
 use App\Http\Controllers\Admin\EnquiryController;
@@ -29,8 +18,6 @@ use App\Http\Controllers\Admin\WebsiteSettingController;
 use App\Http\Controllers\Admin\HomePageReviewController;
 use App\Http\Controllers\Admin\HomePageServiceController;
 use App\Http\Controllers\Admin\RoleController;
-use App\Http\Controllers\Admin\ReviewController;
-use App\Http\Controllers\Admin\EarningController;
 use App\Http\Controllers\Admin\FaqController;
 use App\Http\Controllers\Admin\BlogController;
 use Illuminate\Support\Facades\Route;
@@ -74,42 +61,7 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.'], function () {
 
 
 
-    /*
-    |--------------------------------------------------------------------------
-    | Sponsor Route
-    |--------------------------------------------------------------------------
-    */
-
-    Route::resource('sponsors', SponsorController::class);
-
-
-    /*
-    |--------------------------------------------------------------------------
-    | Creator Route
-    |--------------------------------------------------------------------------
-    */
-
-    Route::resource('creators', CreatorController::class);
-    Route::get('create-phyllo-user', [CreatorController::class, 'createPhylloUser']);
-
-
-    /*
-    |--------------------------------------------------------------------------
-    | Collabs Route
-    |--------------------------------------------------------------------------
-    */
-
-    Route::resource('collabs', CollabController::class);
-
-    /*
-    |--------------------------------------------------------------------------
-    | Campaigns Route
-    |--------------------------------------------------------------------------
-    */
-
-    Route::resource('campaigns', CampaignController::class);
-
-
+   
     /*
     |--------------------------------------------------------------------------
     | Categories Route
@@ -130,66 +82,11 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.'], function () {
 
     /*
     |--------------------------------------------------------------------------
-    | Reviews Route
-    |--------------------------------------------------------------------------
-    */
-
-    Route::resource('reviews', ReviewController::class);
-
-
-    /*
-    |--------------------------------------------------------------------------
-    | Badge Route
-    |--------------------------------------------------------------------------
-    */
-
-    Route::resource('badges', BadgeController::class);
-
-
-
-    /*
-    |--------------------------------------------------------------------------
     | Enquiry Route
     |--------------------------------------------------------------------------
     */
 
     Route::resource('enquiries', EnquiryController::class);
-
-
-    /*
-    |--------------------------------------------------------------------------
-    | Content type Route
-    |--------------------------------------------------------------------------
-    */
-
-    Route::resource('content-types',ContentTypeController::class);
-
-    /*
-    |--------------------------------------------------------------------------
-    | Tags Route
-    |--------------------------------------------------------------------------
-    */
-
-    Route::resource('tags', TagController::class);
-
-    Route::resource('search-keywords', SearchKeywordController::class);
-
-    /*
-    |--------------------------------------------------------------------------
-    | Package Route
-    |--------------------------------------------------------------------------
-    */
-
-    Route::resource('packages', PackageController::class);
-
-
-     /*
-    |--------------------------------------------------------------------------
-    | Promo Code Route
-    |--------------------------------------------------------------------------
-    */
-
-    Route::resource('promo-codes', PromoCodeController::class);
 
     /*
     |--------------------------------------------------------------------------
@@ -252,7 +149,6 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.'], function () {
     Route::resource('reviews-setting', HomePageReviewController::class);
     Route::resource('earnings', EarningController::class);
 
-    Route::resource('creator-dashboard', CreatorDashboardSettingController::class);
 
     Route::resource('contact-setting', WebsiteContactSettingController::class);
 
