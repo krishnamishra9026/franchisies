@@ -1,0 +1,2187 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+@media screen and (max-width:767px){
+#mm-blocker {
+    background: rgb(3 2 1 / 40%)!important;
+}
+.desktopheader {
+    display: none
+}
+#menu:not( .mm-menu ) {
+    display: none;
+}
+#mm-blocker {
+    background: rgb(3 2 1 / 40%)!important
+}
+.mm-listview .mm-next {
+    min-width: 100%!important;
+}
+.mm-slideout {
+    z-index: 0;
+}
+.mm-menu {
+    background: #fff!important;
+    border-color: #ddd!important;
+    color: #000!important;
+    font-size: 14px!important;
+    font-weight: 500!important;
+    text-align: left!important;
+    z-index: 4!important
+}
+.mm-menu .mm-navbar a{
+    color: #000!important;
+    font-size: 16px!important;
+    font-weight: 500!important;
+    text-align: center!important
+}
+.mm-menu a{
+    font-size: 13px!important;
+    font-weight: 500!important;
+    color: #000;
+}
+.mm-listview>li:not(.mm-divider):after {
+    border-color: #ddd!important;
+    left: 0!important
+}
+
+.mm-menu .mm-listview>li .mm-arrow:after,.mm-menu .mm-listview>li .mm-next:after {
+    border-color: #020202e6!important
+}
+
+.mm-menu .mm-btn:after,.mm-menu .mm-btn:before {
+    border-color: #020202e6!important
+}
+.ppc-page h1 {
+  font-size: 24px;
+  margin-top: 20px;
+  line-height: 30px;
+  text-align: center;
+}
+.inf-banner p{
+  font-size: 14px;
+  line-height: 25px;
+  text-align: justify;
+}
+.ppc-page .trustedby{
+  text-align: center;
+  margin: 0 auto;
+  display: flex;
+}
+.ppc-page .trustedby ul li a span img{
+  max-width: 100px !important;
+  height: unset !important;
+}
+.ppc-page .action-button{
+  text-align: center;
+  margin-bottom: 30px;
+}
+.ppc-page .inf-banner img{
+  width: 100%;
+}
+.ppc-page .ppc-button{
+  padding: 9px 30px;
+  font-size: 15px;
+}
+.ppc-page .rp-platform{
+  padding: 0;
+}
+.ppc-page .revolutionize h4 {
+  margin-top: 30px;
+  font-size: 15px;
+}
+.ppc-page .revolutionize h2{
+  font-size: 21px;
+  line-height: 27px;
+}
+.ppc-wordings .revp{
+  max-width: 100%;
+  font-size: 14px;
+} 
+.ppc-page .word-grid{
+  padding: 15px 20px 15px 20px;
+}
+.ppc-page .word-grid h4{
+  margin-top: 8px;
+  line-height: 26px;
+}
+.ppc-page .word-avatar img{
+  max-width: 60px;
+}
+.ppc-page .word-name p span{
+  margin-left: 0px;
+  display: block;
+}
+.ppc-page .word-name p span i{
+  font-size: 15px;
+  margin-left: 2px;
+}
+.ppc-page .word-grid .word-desc {
+  font-size: 14px;
+  line-height: 24px;
+}
+.ppc-page .ppc-invitation h3{
+  font-size: 24px;
+  line-height: 30px;
+}
+.ppc-page .ppc-invitation p{
+  max-width: 100%;
+  text-align: center;
+  line-height: 25px;
+}
+.ppc-page
+.ppc-page
+.mobile-header {
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    width: 100%;
+    transition: all 0.2s ease-in-out;
+    height: auto;
+}
+.mobile-header .midheader {
+    background-color: #40003f;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.mobile-header.active .midheader{
+    background-color: #fff;
+}
+
+.mobile-header.active .m-triger .navbar-toggle .icon-bar {
+    display: block;
+    width: 30px;
+    height: 2px;
+    border-radius: 0;
+    background: #222;
+    margin-bottom: 6px
+}
+
+.m-triger .navbar-toggle .icon-bar {
+    display: block;
+    width: 30px;
+    height: 2px;
+    border-radius: 0;
+    background: #fff;
+    margin-bottom: 6px
+}
+
+.joinus.btn-primary {
+    width: 40%;
+    color: #fff;
+    text-align: center;
+    padding-left: 10px;
+    margin: 15px auto;
+    display: table;
+}
+.headerinnerdesktop{
+    display: none;
+}
+.Lcaption .user .avtar-profile-image {
+  width: 40px;
+  height: 40px;
+}
+.mobile-header-inner{
+    display: block;
+    background-color: #400040;
+}
+#navbarDropdown .avtar-profile-image {
+  width: 30px;
+  height: 30px;
+}
+.mobile-header-inner .midheader img {
+    width: 100%;
+    max-width: 300px;
+    margin: 2px 0 0 0;
+}
+.mobile-header-inner .m-triger .navbar-toggle {
+  margin-top: 12px;
+}
+
+.mobile-header-inner .m-triger .navbar-toggle .icon-bar {
+    display: block;
+    width: 22px;
+    height: 2px;
+    border-radius: 0;
+    background: #fff;
+    margin-bottom: 5px;
+}
+.mobile-header-inner .midheader {
+    padding: 5px;
+}
+.mob-toggle {
+  margin: auto 10px auto 0;
+}
+.mob-menu{
+  margin: auto 0;
+}
+.mobile-align{
+  display: flex;
+  justify-content: end;
+}
+.mm-listview>li>a .badge {
+    display: inline-block;
+    padding: 5px 4px;
+    font-size: 9px;
+    font-weight: 700;
+    line-height: 1;
+    color: #fff;
+    background-color: #814e81;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: 100px;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+.msearch a.penBtn img {
+    width: 20px;
+}
+.msearch {
+    text-align: center;
+    line-height: 36px;
+}
+.logeduser ul {
+    margin: 0;
+    padding: 0;
+}
+.logeduser ul li{
+    list-style-type: none;
+}
+.logeduser ul li.dropdown a {
+    color: #fff;
+    font-weight: 300;
+    font-size: 11px;
+    display: flex;
+}
+.logeduser ul li a.dropdown-item {
+    color: #000;
+    font-weight: 300;
+    font-size: 11px;
+    padding: 6px 0px;
+    display: flex;
+}
+.logeduser ul li.dropdown a .account-user-name {
+    font-weight: 500;
+}
+.hidden-xs {
+    display: none;
+}
+.logeduser ul li.dropdown a .account-user-name span {
+    display: block;
+    font-size: 9px;
+    color: #d1d1d1;
+}
+.faq h6 {
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 25px;
+}
+.faq h1 {
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 25px;
+}
+.faq .accordion-item .accordion-body p {
+    font-size: 13px;
+}
+.faq .accordion-item .accordion-body {
+    font-size: 13px;
+}
+.faq .accordion-button{
+    font-size: 15px;
+}
+.faqpage {
+    padding-bottom: 0px;
+}
+.faqpage .faq {
+    padding-top: 25px;
+}
+}
+@media screen and (max-width: 575px){
+  #my-service-price{
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+    padding: 15px;
+    background: #f1f1f1;
+}
+
+#my-service-price .form-label{
+    display: none;
+}
+#basic-addon1{
+  height: 36px;
+}
+.pricelist-remove{
+  padding: 0px 0 0 15px;
+}
+.pricelist-addmore {
+  padding: 0 0 0 15px;
+}
+#my-service-price .form-control, #dynamicAddRemovePricing .form-control, #my-service-price .SocialPlatformSelect, #dynamicAddRemovePricing .SocialPlatformSelect, #my-service-price .input-group, #dynamicAddRemovePricing .input-group{
+    margin-bottom: 10px;
+}
+#dynamicAddRemovePricing .row2 {
+  height: unset;
+}
+.social-presence .social-logo img{
+  width: 100px;
+}
+.social-connect button{
+  font-size: 13px;
+}
+#basictab4{
+  margin-top: 20px;
+}
+.account-dec p {
+  font-size: 13px;
+  max-width: 100%;
+  text-align: left;
+  font-weight: 500;
+  font-style: italic;
+  line-height: 22px;
+}
+#basicwizard .form-wizard-header {
+  display: inline list-item;
+}
+#basicwizard .tab-content {
+  margin-top: 25px;
+}
+#creatorsEditForm .uploaded-image, .showcase-example .uploaded-image {
+    margin-bottom: 30px;
+    height: 180px;
+  }
+  #creatorsEditForm .uploaded-image img, .showcase-example .uploaded-image img {
+    height: 180px;
+  }
+.logeduser ul li.dropdown a.dropdown-toggle::after {
+    border-top: 0.5em solid;
+    border-right: 0.4em solid transparent;
+    border-bottom: 0;
+    border-left: 0.4em solid transparent;
+    position: relative;
+    top: 6px;
+}
+.or-label {
+  height: 26px;
+  line-height: 26px;
+  font-size: 11px;
+  font-weight: 500;
+}
+.Lcaption .user .location ul {
+    display: grid;
+  }
+  .Lcaption .user .location ul li:last-child {
+    margin-top: 2px;
+    margin-left: -2px;
+  }
+  .Lcaption h4 {
+    font-size: 15px;
+    margin-top: 5px;
+  }
+  .Sponsorlist .LRight .price {
+    padding-top: 0;
+  }
+  .searchbar .nav-tabs > li > a, .nav-pills > li > a {
+    font-size: 14px;
+  }
+  .LRight .price p span {
+    font-size: 18px;
+  }
+  .FDetails {
+    padding: 15px;
+  }
+  .user-profile-image {
+    height: 40px;
+    width: 40px;
+  }
+  .user-profile-image img {
+    height: 40px;
+  }
+  .Lcaption .user {
+    display: -webkit-box;
+  }
+  .createUF {
+    display: grid;
+  }
+  .createUF .followers ul li a span img {
+    width: 20px;
+    height: 20px;
+  }
+  .Lcaption .followers ul li {
+    margin-right: 10px;
+  }
+  .createUF .followers ul li a span {
+    font-size: 13px;
+    margin-bottom: 5px;
+  }
+  .creatorPro .Lcaption .disc p {
+    font-size: 13px;
+  }
+  .createR .add-favorites {
+    margin-top: 20px;
+  }
+  .add-favorites p {
+    font-size: 13px;
+  }
+  .mywork .panel-heading {
+    font-size: 20px;
+  }
+  .ContentType h5 {
+    margin-bottom: 13px;
+    margin-top: 13px;
+    font-size: 14px;
+  }
+  .MyServices h4 {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+  .consumers h4 {
+    font-size: 20px;
+  }
+  .LetsConnect h4 {
+    font-size: 20px;
+  }
+  .mywork {
+    padding: 15px;
+  }
+  .ContentType {
+    padding: 15px;
+  }
+  .MyServices {
+    padding: 15px;
+  }
+  .consumers {
+    padding: 15px;
+  }
+  .LetsConnect {
+    padding: 15px;
+  }
+  .textleft {
+    display: unset;
+  }
+  .textcenter {
+    display: unset;
+  }
+  .textright {
+    display: unset;
+  }
+  #consumers .splide__slide .Consumer-logo {
+    width: 100%;
+  }
+  .CustomerReviews {
+    padding: 15px;
+  }
+  .supportinfo h1 {
+    font-size: 22px;
+  }
+  .supportinfo p {
+    font-size: 13px;
+    max-width: 85%;
+    color: #555;
+    font-weight: 400;
+  }
+  .contact-grid {
+    background: #fff;
+    margin-top: 20px;
+    padding: 15px;
+    min-height: 130px;
+  }
+  .myservices .mobile-dropdown .nav-pills{
+    display: inline;
+  }
+  .contact-grid h4 {
+    font-size: 14px;
+  }
+  .contact-grid p,.contact-grid a {
+    color: #222;
+    font-size: 13px;
+  }
+  .contactform h2 {
+    font-size: 20px;
+  }
+  .recently {
+    padding: 15px;
+  }
+  .recently h2 {
+    font-size: 16px;
+    line-height: 22px;
+  }
+  .sponsor-Profile .card .card-header .userName h5 {
+    font-size: 16px;
+  }
+  .promote-content h4{
+    font-size: 15px;
+  }
+  .edit a {
+    font-size: 13px;
+  }
+  .promote-content p {
+    font-size: 13px;
+    max-width: 100%;
+    line-height: 21px;
+  }
+  .back-more-save button, .back-more-save a{
+    font-size: 13px;
+    padding: 8px 10px;
+}
+  .myservices .nav-pills {
+    max-width: 100%;
+    margin: 0;
+    padding-bottom: 0;
+  }
+  .myservices .nav-pills li {
+    width: auto;
+    margin: 0 auto;
+    position: relative;
+  }
+  .viewbtn a {
+    width: unset!important;
+}
+.creatorlist .col-sm-3 {
+  width: 100%;
+}
+  .myservices .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+    width: auto;
+    height: auto;
+  }
+  .myservices .nav-pills .nav-link {
+    background: #eee;
+    width: auto;
+    height: auto;
+    font-size: 13px;
+    text-align: center;
+    line-height: 17px;
+  }
+  .tablestyle tr td span.price b {
+    font-size: 15px;
+  }
+  .tablestyle tr td span b {
+    color: #400040;
+    font-size: 13px;
+  }
+  .FProfile .user .username {
+    font-size: 13px;
+  }
+  .FProfile .caption p.price {
+    font-size: 13px;
+  }
+  .FProfile .caption p.price span {
+    font-weight: 700;
+    font-size: 15px;
+  }
+  .searchbar {
+    padding: 15px 15px 0 15px;
+  }
+  .paid-service h1 {
+    font-size: 20px;
+  }
+  .upgrade-box span {
+    font-size: 12px;
+  }
+#btnwizard .form-wizard-header span{
+    font-size: 12px;
+}
+.have-promo p {
+  font-size: 14px;
+}
+.packages h1 {
+  font-size: 20px;
+}
+.allpackages h2 {
+  font-size: 18px;
+}
+.packages-tabs .nav-pills .nav-link {
+  margin-right: 8px;
+  padding: 7px 7px;
+  font-size: 11px;
+}
+.chat-avatar img {
+  height: 30px;
+}
+.chat-avatar {
+  height: 30px;
+  width: 30px;
+}
+.conversation-list .ctext-wrap p {
+  font-size: 12px;
+}
+.conversation-list .odd .ctext-wrap {
+  padding: 8px;
+}
+.conversation-list .ctext-wrap {
+  background-color: #f1f1f1;
+  padding: 8px;
+}
+.flex-chat{
+  display: flex;
+  justify-content: space-between;
+}
+.f-width{
+  width: 100%;
+}
+.packages-tabs .nav-pills2 li.nav-item span.off {
+  font-size: 9px;
+  left: 6px;
+}
+.package-plan {
+  padding: 15px;
+  margin-top: 10px;
+}
+.allpackages {
+  padding: 15px;
+}
+.package-plan h3 {
+  font-size: 16px;
+}
+.package-plan .planprice span.dollar {
+  font-size: 30px;
+}
+
+.package-plan .planprice h4 {
+  font-size: 30px;
+}
+  .popular-servicesD {
+    margin-top: 25px;
+  }
+  .RecentChats .panel.panel-default .panel-heading h4 {
+    font-size: 14px;
+  }
+  .tooltip img{
+    width: 20px;
+  }
+  .tooltip {
+    margin-top: 0;
+  }
+  .supportinfo {
+    padding: 25px 6px;
+  }
+  .supportbanner {
+    width: 100%;
+    height: auto;
+    background-size: cover !important;
+    background-position: left center !important;
+  }
+  .createUF .followers ul li a span.follow {
+    font-size: 13px;
+    left: 13px;
+  }
+  .createUF .followers {
+    padding-top: 0;
+    padding-left: 0;
+  }
+  .FDetails .user .username {
+    font-size: 15px;
+  }
+  .MSearch h1 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    margin-top: 15px;
+  }
+  .creatorlist .LRight {
+    padding-top: 10px;
+    text-align: start;
+    display: flex;
+    justify-content: space-between;
+  }
+  .Lcaption .user .rating span,.Lcaption .user .location ul li span {
+    font-size: 13px;
+  }
+  .LRight .price {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  .LRight .wish-list {
+    justify-content: unset;
+  }
+  .viewbtn{
+    margin-bottom: 15px;
+  }
+.listing-image-box {
+    height: 300px;
+  }
+  .listing-image-box img {
+    height: 300px;
+  }
+.paddingleft {
+    padding-right: 0;
+  }
+.LProfile .image img {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 5px;
+  }
+.search-creators .col-sm-9 {
+    width: 100%;
+  }
+#Creator-list {
+    padding: 15px;
+  }
+.result{
+    margin-bottom: 10px;
+}
+.logeduser ul li.dropdown a span {
+    line-height: 16px;
+    margin-left: 2px;
+}
+.logeduser ul li.dropdown a img {
+    width: 30px;
+    height: 30px;
+}
+.logeduser ul li.dropdown ul.dropdown-menu li a {
+    padding: 6px 15px;
+    color: #111;
+    font-size: 12px;
+    font-weight: 500;
+}
+.logeduser ul li.dropdown ul.dropdown-menu {
+    border: 1px solid #ddd;
+}
+.logeduser ul li.dropdown ul.dropdown-menu li {
+    border-bottom: 1px solid #ddd;
+}
+.overlay-content{
+    width: 90%;
+}
+.overlay input[type=text]{
+    width: 90%;
+}
+.overlay .closebtn{
+    right: 30px;
+}
+/**********header-end********/
+.mainbanner .BannerCaption h1 {
+    color: #fff;
+    font-size: 22px;
+    padding-right: 0px;
+    line-height: 26px;
+}
+.Hfooter {
+    text-align: center;
+}
+.social-login ul {
+    justify-content: center;
+}
+.footerinfoM {
+    display: block;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+#HideFilter{
+    display: none;
+}
+#HideFilter,#ShowFilter{
+    width: 100%;
+}
+.footerinfoD {
+    display: none;
+}
+#hiw .splide__arrow--prev{
+    left: -12px!important;
+}
+#hiw .splide__arrow--next{
+    right: -12px!important;
+}
+.footerinfoM ul li {
+    padding-right: 0px;
+    line-height: 34px;
+}
+.footerinfoM ul {
+    display: block;
+    justify-content: center;
+    margin-bottom: 0px;
+}
+.blogs h5 {
+    text-align: center;
+    font-size: 20px;
+}
+.blogs p {
+    margin-bottom: 25px;
+    font-size: 13px;
+}
+#filter {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    display: none;
+  }
+  #filter button {
+    width: 100%;
+    border-radius: 2px;
+    margin-top: 10px;
+    font-size: 13px;
+    padding: 10px 15px;
+    margin-bottom: 10px;
+  }
+  .my-campaigns h1 {
+    font-size: 20px;
+  }
+#filter_me{
+    margin-right: 8px;
+}
+.allcampaigns {
+    padding: 15px;
+  }
+  .campaigns-tabs {
+    padding: 10px;
+    display: grid;
+    justify-content: normal;
+  }
+#clear_filter{
+    margin-left: 8px;
+}
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+    font-weight: 400;
+  }
+  .nav-pills .nav-link {
+    margin-right: 10px;
+    padding: 7px 12px;
+    font-size: 13px;
+  }
+  .CreateCampaign h1 {
+    font-size: 18px;
+    line-height: 27px;
+  }
+  .DRight-Sec {
+    padding: 15px;
+  }
+  .Campaignadd {
+    padding: 15px;
+  }
+  .upbtn {
+    width: 32px;
+    height: 32px;
+    padding: 4px 6px;
+    margin-left: 43px;
+    position: relative;
+    z-index: 1111;
+  }
+  .upload #preview_img {
+    top: -18px;
+    left: -19px;
+  }
+  .pay-with .visa-card{
+    display: grid;
+}
+.avtar-profile-image img{
+  height: 40px;
+}
+.modalform {
+  padding: 10px;
+}
+.modalform h5 {
+  font-size: 16px;
+}
+.packages-tabs .nav-pills2 {
+  margin-top: 30px;
+}
+.connectedaccount ul li {
+  padding: 14px;
+}
+.connectedaccount ul li span p {
+  margin-top: 4px;
+  font-size: 12px;
+}
+.connectedaccount {
+  padding: 7px 0;
+}
+.sponsor-Profile .avtar-profile-image {
+  width: 40px;
+  height: 40px;
+}
+.pay-with .visa-card h4{
+  font-size: 16px;
+}
+  .featured-checkbox {
+    margin-bottom: 15px;
+  }
+  .SponsorInfo h4 {
+    margin-bottom: 15px;
+    font-size: 16px;
+    margin-top: 0;
+  }
+  #creatorsEditForm h4{
+    font-size: 16px;
+  }
+  .upgrade-box h3 {
+    font-size: 16px;
+  }
+.search-creators .col-sm-3 {
+    width: 100%;
+  }
+  .allcampaigns .nav-pills{
+    margin-bottom: 10px;
+  }
+  .messages h1 {
+    font-size: 20px;
+  }
+  .favorites h1 {
+    font-size: 20px;
+  }
+  .payments h1 {
+    font-size: 20px;
+  }
+  .Standard ul li {
+    line-height: 24px;
+    font-size: 13px;
+    margin-bottom: 15px;
+  }
+  .Standard p {
+    font-size: 14px;
+  }
+  .planprice h4 {
+    font-size: 40px;
+  }
+  .planprice p {
+    font-size: 13px;
+  }
+  .planprice a.btn-primary {
+    margin-top: 6px;
+  }
+  .planprice {
+    text-align: left;
+  }
+  .dashboard h1 {
+    font-size: 20px;
+  }
+.blog-grid {
+    margin-bottom: 25px;
+}
+.blog-grid h4{
+    font-size: 15px;
+}
+.contactbg {
+    padding: 25px;
+}
+.contactbg h5 {
+    font-size: 20px;
+    margin-top: 0;
+    line-height: 30px;
+  }
+  .blogs {
+    padding-top: 30px;
+  }
+.contactbg p {
+    max-width: 100%;
+    margin-bottom: 15px;
+}
+.btn-lg {
+    font-size: 13px;
+    padding: 6px 20px;
+}
+.our-client {
+    margin-bottom: 20px;
+}
+.our-clients h5 {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+.getthe-best h6 {
+    font-size: 14px;
+}
+.best-for-less h5 {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+.business-grow h5 {
+    font-size: 18px;
+    max-width: 100%;
+    margin-bottom: 20px;
+    line-height: 30px;
+  }
+.business-grow .container .row .col-sm-8 {
+    width: 100%;
+    text-align: center;
+}
+.business-grow .container .row .col-sm-4 {
+    width: 100%;
+    text-align: center;
+}
+.business-grow .BG-image {
+    position: relative;
+    top: 30px;
+}
+.trustedby ul{
+    padding-top: 30px;
+    display: flex;
+    justify-content: center;
+}
+.trustedby ul li:first-child{
+    position: absolute;
+    margin-top: -35px;
+}
+.trustedby ul li {
+    display: block;
+    padding-right: 0px;
+}
+.trustedby ul li a span {
+    float: left;
+    margin-right: 20px;
+}
+.trustedby ul li a:last-child{
+    margin-right: 0px;
+}
+.trustedby ul li a span img {
+    max-width: 90px;
+}
+.trustedby ul li span {
+    font-size: 15px;
+    display: block;
+}
+.how-it-work h2 {
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+.work-grid h4{
+    font-size: 16px;
+}
+.chooselogin label > input + .forcustom{
+    padding: 7px 20px;
+}
+.modal-backdrop {
+    display: none;
+}
+.mainbanner {
+    width: 100%;
+    background-size: cover;
+    background-position: center right;
+    padding-top: 80px;
+    padding-bottom: 50px;
+    background-image: url('../images/frontend/Hom2.jpg')!important;
+}
+.desktop-P{
+    display: none;
+}
+.mobile-P{
+    display: block;
+}
+.exp-platform.mobile-P h6 span{
+    color: #fff;
+    font-size: 13px;
+    font-weight: 400;
+}
+.exp-platform.mobile-P ul li a span {
+    padding: 5px 14px;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+.exp-platform.mobile-P ul li span {
+    color: #fff;
+    font-size: 13px;
+}
+.exp-platform.mobile-P ul li:last-child{
+    padding-right: 0px;
+}
+.work-grid .image img {
+    width: 100%;
+}
+.exp-platform.mobile-P ul li {
+    padding-right: 8px;
+}
+.success .card {
+    padding: 0px;
+    display: inline-block;
+    margin: 0 auto;
+    background-color: #fff;
+    padding-top: 60px;
+    padding-bottom: 50px;
+}
+.success p {
+    font-size: 13px;
+    color: #777;
+    max-width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+.how-it-work {
+    padding-top: 30px;
+}
+.popular-services {
+    padding-top: 20px;
+}
+.featured-profiles {
+    padding-top: 20px;
+  }
+  .featured-profiles h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+  .business-grow {
+    padding-top: 30px;
+  }
+  .favorites{
+    min-height: 100vh;
+  }
+.popular-services h2{
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+#popular-services .splide__slide img {
+    margin: 0 auto;
+    display: block;
+}
+.step2, .step4 {
+    margin-top: 0;
+}
+.Creator-Details{
+    display: none;
+}
+.mobile-hide{
+    display: none;
+}
+.account-pages{
+  min-height: 50vh;
+}
+.lookingfor {
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+}
+@media screen and (min-device-width: 576px) and (max-device-width: 767px){
+.showcase-example .col-6,.show-work .col-6{
+  width: 50%;
+}
+.client-logo .col-6{
+  width: 30%;
+}
+.col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12{
+  width: 100%;
+}
+#HideFilter {
+  display: none;
+}
+  #HideFilter, #ShowFilter {
+    width: 100%;
+  }
+
+.best-for-less .container {
+  max-width: 540px;
+}
+#my-service-price{
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+    padding: 15px;
+    background: #f1f1f1;
+}
+
+#my-service-price .form-label{
+    display: none;
+}
+#basic-addon1{
+  height: 36px;
+}
+.pricelist-remove{
+  padding: 0px 0 0 15px;
+}
+.pricelist-addmore {
+  padding: 0 0 0 15px;
+}
+#my-service-price .form-control, #dynamicAddRemovePricing .form-control, #my-service-price .SocialPlatformSelect, #dynamicAddRemovePricing .SocialPlatformSelect, #my-service-price .input-group, #dynamicAddRemovePricing .input-group{
+    margin-bottom: 10px;
+}
+#dynamicAddRemovePricing .row2 {
+  height: unset;
+}
+.social-presence .social-logo img{
+  width: 100px;
+}
+.social-connect button{
+  font-size: 13px;
+}
+#basictab4{
+  margin-top: 20px;
+}
+.account-dec p {
+  font-size: 13px;
+  max-width: 100%;
+  text-align: left;
+  font-weight: 500;
+  font-style: italic;
+  line-height: 22px;
+}
+#basicwizard .form-wizard-header {
+  display: inline list-item;
+}
+#basicwizard .tab-content {
+  margin-top: 25px;
+}
+#creatorsEditForm .uploaded-image, .showcase-example .uploaded-image {
+    margin-bottom: 30px;
+    height: 180px;
+  }
+  #creatorsEditForm .uploaded-image img, .showcase-example .uploaded-image img {
+    height: 180px;
+  }
+.logeduser ul li.dropdown a.dropdown-toggle::after {
+    border-top: 0.5em solid;
+    border-right: 0.4em solid transparent;
+    border-bottom: 0;
+    border-left: 0.4em solid transparent;
+    position: relative;
+    top: 6px;
+}
+.or-label {
+  height: 26px;
+  line-height: 26px;
+  font-size: 11px;
+  font-weight: 500;
+}
+.Lcaption .user .location ul {
+    display: grid;
+  }
+  .Lcaption .user .location ul li:last-child {
+    margin-top: 2px;
+    margin-left: -2px;
+  }
+  .Lcaption h4 {
+    font-size: 15px;
+    margin-top: 5px;
+  }
+  .Sponsorlist .LRight .price {
+    padding-top: 0;
+  }
+  .searchbar .nav-tabs > li > a, .nav-pills > li > a {
+    font-size: 14px;
+  }
+  .LRight .price p span {
+    font-size: 18px;
+  }
+  .FDetails {
+    padding: 15px;
+  }
+  .user-profile-image {
+    height: 40px;
+    width: 40px;
+  }
+  .user-profile-image img {
+    height: 40px;
+  }
+  .Lcaption .user {
+    display: -webkit-box;
+  }
+  .createUF {
+    display: grid;
+  }
+  .createUF .followers ul li a span img {
+    width: 20px;
+    height: 20px;
+  }
+  .Lcaption .followers ul li {
+    margin-right: 10px;
+  }
+  .createUF .followers ul li a span {
+    font-size: 13px;
+    margin-bottom: 5px;
+  }
+  .creatorPro .Lcaption .disc p {
+    font-size: 13px;
+  }
+  .createR .add-favorites {
+    margin-top: 20px;
+  }
+  .add-favorites p {
+    font-size: 13px;
+  }
+  .mywork h2 {
+    font-size: 20px;
+  }
+  .ContentType h5 {
+    margin-bottom: 13px;
+    margin-top: 13px;
+    font-size: 14px;
+  }
+  .MyServices h4 {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+  .consumers h4 {
+    font-size: 20px;
+  }
+  .LetsConnect h4 {
+    font-size: 20px;
+  }
+  .mywork {
+    padding: 15px;
+  }
+  .ContentType {
+    padding: 15px;
+  }
+  .MyServices {
+    padding: 15px;
+  }
+  .consumers {
+    padding: 15px;
+  }
+  .LetsConnect {
+    padding: 15px;
+  }
+  .textleft {
+    display: unset;
+  }
+  .textcenter {
+    display: unset;
+  }
+  .textright {
+    display: unset;
+  }
+  #consumers .splide__slide .Consumer-logo {
+    width: 100%;
+  }
+  .CustomerReviews {
+    padding: 15px;
+  }
+  .supportinfo h1 {
+    font-size: 22px;
+  }
+  .supportinfo p {
+    font-size: 13px;
+    max-width: 85%;
+    color: #555;
+    font-weight: 400;
+  }
+  .contact-grid {
+    background: #fff;
+    margin-top: 20px;
+    padding: 15px;
+    min-height: 130px;
+  }
+  .myservices .mobile-dropdown .nav-pills{
+    display: inline;
+  }
+  .contact-grid h4 {
+    font-size: 14px;
+  }
+  .contact-grid p,.contact-grid a {
+    color: #222;
+    font-size: 13px;
+  }
+  .contactform h2 {
+    font-size: 20px;
+  }
+  .recently {
+    padding: 15px;
+  }
+  .recently h2 {
+    font-size: 16px;
+    line-height: 22px;
+  }
+  .sponsor-Profile .card .card-header .userName h5 {
+    font-size: 16px;
+  }
+  .promote-content h4{
+    font-size: 15px;
+  }
+  .edit a {
+    font-size: 13px;
+  }
+  .promote-content p {
+    font-size: 13px;
+    max-width: 100%;
+    line-height: 21px;
+  }
+  .back-more-save button, .back-more-save a{
+    font-size: 13px;
+    padding: 8px 10px;
+}
+  .myservices .nav-pills {
+    max-width: 100%;
+    margin: 0;
+    padding-bottom: 0;
+  }
+  .myservices .nav-pills li {
+    width: auto;
+    margin: 0 auto;
+    position: relative;
+  }
+  .viewbtn a {
+    width: unset!important;
+}
+.creatorlist .col-sm-3 {
+  width: 100%;
+}
+  .myservices .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+    width: auto;
+    height: auto;
+  }
+  .myservices .nav-pills .nav-link {
+    background: #eee;
+    width: auto;
+    height: auto;
+    font-size: 13px;
+    text-align: center;
+    line-height: 17px;
+  }
+  .tablestyle tr td span.price b {
+    font-size: 15px;
+  }
+  .tablestyle tr td span b {
+    color: #400040;
+    font-size: 13px;
+  }
+  .FProfile .user .username {
+    font-size: 13px;
+  }
+  .FProfile .caption p.price {
+    font-size: 13px;
+  }
+  .FProfile .caption p.price span {
+    font-weight: 700;
+    font-size: 15px;
+  }
+  .searchbar {
+    padding: 15px 15px 0 15px;
+  }
+  .paid-service h1 {
+    font-size: 20px;
+  }
+  .upgrade-box span {
+    font-size: 12px;
+  }
+#btnwizard .form-wizard-header span{
+    font-size: 12px;
+}
+.have-promo p {
+  font-size: 14px;
+}
+.packages h1 {
+  font-size: 20px;
+}
+.allpackages h2 {
+  font-size: 18px;
+}
+.packages-tabs .nav-pills .nav-link {
+  margin-right: 8px;
+  padding: 7px 7px;
+  font-size: 11px;
+}
+.chat-avatar img {
+  height: 30px;
+}
+.chat-avatar {
+  height: 30px;
+  width: 30px;
+}
+.conversation-list .ctext-wrap p {
+  font-size: 12px;
+}
+.conversation-list .odd .ctext-wrap {
+  padding: 8px;
+}
+.conversation-list .ctext-wrap {
+  background-color: #f1f1f1;
+  padding: 8px;
+}
+.flex-chat{
+  display: flex;
+  justify-content: space-between;
+}
+.f-width{
+  width: 100%;
+}
+.packages-tabs .nav-pills2 li.nav-item span.off {
+  font-size: 9px;
+  left: 6px;
+}
+.package-plan {
+  padding: 15px;
+  margin-top: 10px;
+}
+.allpackages {
+  padding: 15px;
+}
+.package-plan h3 {
+  font-size: 16px;
+}
+.package-plan .planprice span.dollar {
+  font-size: 30px;
+}
+
+.package-plan .planprice h4 {
+  font-size: 30px;
+}
+  .popular-servicesD {
+    margin-top: 25px;
+  }
+  .RecentChats .panel.panel-default .panel-heading h4 {
+    font-size: 14px;
+  }
+  .tooltip img{
+    width: 20px;
+  }
+  .tooltip {
+    margin-top: 0;
+  }
+  .supportinfo {
+    padding: 25px 6px;
+  }
+  .supportbanner {
+    width: 100%;
+    height: auto;
+    background-size: cover !important;
+    background-position: left center !important;
+  }
+  .createUF .followers ul li a span.follow {
+    font-size: 13px;
+    left: 13px;
+  }
+  .createUF .followers {
+    padding-top: 0;
+    padding-left: 0;
+  }
+  .FDetails .user .username {
+    font-size: 15px;
+  }
+  .MSearch h1 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    margin-top: 15px;
+  }
+  .creatorlist .LRight {
+    padding-top: 10px;
+    text-align: start;
+    display: flex;
+    justify-content: space-between;
+  }
+  .Lcaption .user .rating span,.Lcaption .user .location ul li span {
+    font-size: 13px;
+  }
+  .LRight .price {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  .LRight .wish-list {
+    justify-content: unset;
+  }
+  .viewbtn{
+    margin-bottom: 15px;
+  }
+.listing-image-box {
+    height: 300px;
+  }
+  .listing-image-box img {
+    height: 300px;
+  }
+.paddingleft {
+    padding-right: 0;
+  }
+.LProfile .image img {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 5px;
+  }
+.search-creators .col-sm-9 {
+    width: 100%;
+  }
+#Creator-list {
+    padding: 15px;
+  }
+.result{
+    margin-bottom: 10px;
+}
+.logeduser ul li.dropdown a span {
+    line-height: 16px;
+    margin-left: 2px;
+}
+.logeduser ul li.dropdown a img {
+    width: 30px;
+    height: 30px;
+}
+.logeduser ul li.dropdown ul.dropdown-menu li a {
+    padding: 6px 15px;
+    color: #111;
+    font-size: 12px;
+    font-weight: 500;
+}
+.logeduser ul li.dropdown ul.dropdown-menu {
+    border: 1px solid #ddd;
+}
+.logeduser ul li.dropdown ul.dropdown-menu li {
+    border-bottom: 1px solid #ddd;
+}
+.overlay-content{
+    width: 90%;
+}
+.overlay input[type=text]{
+    width: 90%;
+}
+.overlay .closebtn{
+    right: 30px;
+}
+/**********header-end********/
+.mainbanner .BannerCaption h1 {
+    color: #fff;
+    font-size: 22px;
+    padding-right: 0px;
+    line-height: 26px;
+}
+.Hfooter {
+    text-align: center;
+}
+.social-login ul {
+    justify-content: center;
+}
+.footerinfoM {
+    display: block;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+.footerinfoD {
+    display: none;
+}
+#hiw .splide__arrow--prev{
+    left: -12px!important;
+}
+#hiw .splide__arrow--next{
+    right: -12px!important;
+}
+.footerinfoM ul li {
+    padding-right: 0px;
+    line-height: 34px;
+}
+.footerinfoM ul {
+    display: block;
+    justify-content: center;
+    margin-bottom: 0px;
+}
+.blogs h5 {
+    text-align: center;
+    font-size: 20px;
+}
+.blogs p {
+    margin-bottom: 25px;
+    font-size: 13px;
+}
+#filter {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    display: none;
+  }
+  #filter button {
+    width: 100%;
+    border-radius: 2px;
+    margin-top: 10px;
+    font-size: 13px;
+    padding: 10px 15px;
+    margin-bottom: 10px;
+  }
+  .my-campaigns h1 {
+    font-size: 20px;
+  }
+#filter_me{
+    margin-right: 8px;
+}
+.allcampaigns {
+    padding: 15px;
+  }
+  .campaigns-tabs {
+    padding: 10px;
+    display: grid;
+    justify-content: normal;
+  }
+#clear_filter{
+    margin-left: 8px;
+}
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+    font-weight: 400;
+  }
+  .nav-pills .nav-link {
+    margin-right: 10px;
+    padding: 7px 12px;
+    font-size: 13px;
+  }
+  .CreateCampaign h1 {
+    font-size: 18px;
+    line-height: 27px;
+  }
+  .DRight-Sec {
+    padding: 15px;
+  }
+  .Campaignadd {
+    padding: 15px;
+  }
+  .upbtn {
+    width: 32px;
+    height: 32px;
+    padding: 4px 6px;
+    margin-left: 43px;
+    position: relative;
+    z-index: 1111;
+  }
+  .upload #preview_img {
+    top: -18px;
+    left: -19px;
+  }
+  .pay-with .visa-card{
+    display: grid;
+}
+.avtar-profile-image img{
+  height: 40px;
+}
+.modalform {
+  padding: 10px;
+}
+.modalform h5 {
+  font-size: 16px;
+}
+.packages-tabs .nav-pills2 {
+  margin-top: 30px;
+}
+.connectedaccount ul li {
+  padding: 14px;
+}
+.connectedaccount ul li span p {
+  margin-top: 4px;
+  font-size: 12px;
+}
+.connectedaccount {
+  padding: 7px 0;
+}
+.sponsor-Profile .avtar-profile-image {
+  width: 40px;
+  height: 40px;
+}
+.pay-with .visa-card h4{
+  font-size: 16px;
+}
+  .featured-checkbox {
+    margin-bottom: 15px;
+  }
+  .SponsorInfo h4 {
+    margin-bottom: 15px;
+    font-size: 16px;
+    margin-top: 0;
+  }
+  #creatorsEditForm h4{
+    font-size: 16px;
+  }
+  .upgrade-box h3 {
+    font-size: 16px;
+  }
+.search-creators .col-sm-3 {
+    width: 100%;
+  }
+  .allcampaigns .nav-pills{
+    margin-bottom: 10px;
+  }
+  .messages h1 {
+    font-size: 20px;
+  }
+  .favorites h1 {
+    font-size: 20px;
+  }
+  .payments h1 {
+    font-size: 20px;
+  }
+  .Standard ul li {
+    line-height: 24px;
+    font-size: 13px;
+    margin-bottom: 15px;
+  }
+  .Standard p {
+    font-size: 14px;
+  }
+  .planprice h4 {
+    font-size: 40px;
+  }
+  .planprice p {
+    font-size: 13px;
+  }
+  .planprice a.btn-primary {
+    margin-top: 6px;
+  }
+  .planprice {
+    text-align: left;
+  }
+  .dashboard h1 {
+    font-size: 20px;
+  }
+.blog-grid {
+    margin-bottom: 25px;
+}
+.blog-grid h4{
+    font-size: 15px;
+}
+.contactbg {
+    padding: 25px;
+}
+.contactbg h5 {
+    font-size: 20px;
+    margin-top: 0;
+    line-height: 30px;
+  }
+  .blogs {
+    padding-top: 30px;
+  }
+.contactbg p {
+    max-width: 100%;
+    margin-bottom: 15px;
+}
+.btn-lg {
+    font-size: 13px;
+    padding: 6px 20px;
+}
+.our-client {
+    margin-bottom: 20px;
+}
+.our-clients h5 {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+.getthe-best h6 {
+    font-size: 14px;
+}
+.best-for-less h5 {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+.business-grow h5 {
+    font-size: 18px;
+    max-width: 100%;
+    margin-bottom: 20px;
+    line-height: 30px;
+  }
+.business-grow .container .row .col-sm-8 {
+    width: 100%;
+    text-align: center;
+}
+.business-grow .container .row .col-sm-4 {
+    width: 100%;
+    text-align: center;
+}
+.business-grow .BG-image {
+    position: relative;
+    top: 30px;
+}
+.trustedby ul{
+    padding-top: 30px;
+    display: flex;
+    justify-content: center;
+}
+.trustedby ul li:first-child{
+    position: absolute;
+    margin-top: -35px;
+}
+.trustedby ul li {
+    display: block;
+    padding-right: 0px;
+}
+.trustedby ul li a span {
+    float: left;
+    margin-right: 20px;
+}
+.trustedby ul li a:last-child{
+    margin-right: 0px;
+}
+.trustedby ul li a span img {
+    max-width: 90px;
+}
+.trustedby ul li span {
+    font-size: 15px;
+    display: block;
+}
+.how-it-work h2 {
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+.work-grid h4{
+    font-size: 16px;
+}
+.chooselogin label > input + .forcustom{
+    padding: 7px 20px;
+}
+.modal-backdrop {
+    display: none;
+}
+.mainbanner {
+    width: 100%;
+    background-size: cover;
+    background-position: center right;
+    padding-top: 80px;
+    padding-bottom: 50px;
+    background-image: url('../images/frontend/Hom2.jpg')!important;
+}
+.desktop-P{
+    display: none;
+}
+.mobile-P{
+    display: block;
+}
+.exp-platform.mobile-P h6 span{
+    color: #fff;
+    font-size: 13px;
+    font-weight: 400;
+}
+.exp-platform.mobile-P ul li a span {
+    padding: 5px 14px;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+.exp-platform.mobile-P ul li span {
+    color: #fff;
+    font-size: 13px;
+}
+.exp-platform.mobile-P ul li:last-child{
+    padding-right: 0px;
+}
+.work-grid .image img {
+    width: 100%;
+}
+.exp-platform.mobile-P ul li {
+    padding-right: 8px;
+}
+.success .card {
+    padding: 0px;
+    display: inline-block;
+    margin: 0 auto;
+    background-color: #fff;
+    padding-top: 60px;
+    padding-bottom: 50px;
+}
+.success p {
+    font-size: 13px;
+    color: #777;
+    max-width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+.how-it-work {
+    padding-top: 30px;
+}
+.popular-services {
+    padding-top: 20px;
+}
+.featured-profiles {
+    padding-top: 20px;
+  }
+  .featured-profiles h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+  .business-grow {
+    padding-top: 30px;
+  }
+  .favorites{
+    min-height: 100vh;
+  }
+.popular-services h2{
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+#popular-services .splide__slide img {
+    margin: 0 auto;
+    display: block;
+}
+.step2, .step4 {
+    margin-top: 0;
+}
+.Creator-Details{
+    display: none;
+}
+.mobile-hide{
+    display: none;
+}
+.account-pages{
+  min-height: 50vh;
+}
+.lookingfor {
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+}
+@media screen and (min-device-width: 768px) and (max-device-width: 991px){
+.navbar-toggler{
+  background: #814e81;
+}
+.navbar-toggler:focus{
+  outline: 0;
+  box-shadow: none;
+}
+.mainbanner .col-sm-8{
+  width: 100%;
+}
+.mainbanner .BannerCaption h1 {
+  font-size: 30px;
+  padding-right: 30px;
+  line-height: 38px;
+}
+.mainbanner {
+  padding-top: 120px;
+  padding-bottom: 40px;
+}
+.how-it-work {
+  padding-top: 25px;
+}
+.popular-services {
+  padding-top: 20px;
+}
+.featured-profiles {
+  padding-top: 20px;
+}
+.business-grow {
+  padding-top: 30px;
+}
+.business-grow .container {
+  padding-left: 20px;
+}
+.business-grow .container .row .col-sm-8 {
+  width: 65%;
+}
+.business-grow .BG-image {
+  top: 0;
+}
+.best-for-less {
+  padding-top: 25px;
+}
+.getthe-best h6 {
+  font-size: 15px;
+}
+.step4 {
+  margin-top: 60px;
+}
+.step2 {
+  margin-top: 60px;
+}
+.our-clients {
+  padding-top: 25px;
+}
+.blogs h5 {
+  font-size: 24px;
+}
+.contactbg {
+  padding: 30px;
+}
+.contactbg h5 {
+  font-size: 25px;
+}
+.contactbg h5 {
+  font-size: 25px;
+}
+.blogs {
+  padding-top: 30px;
+}
+.blogs p {
+  margin-bottom: 25px;
+}
+.footerB .col-sm-5, .footerB .col-sm-7{
+  width: 100%;
+}
+.footerinfo ul {
+  justify-content: start;
+  margin-top: 12px;
+}
+.business-grow h5 {
+  font-size: 24px;
+  max-width: 100%;
+  margin-bottom: 16px;
+  margin-top: 0;
+  line-height: 34px;
+}
+.how-it-work h2, .popular-services h2, .featured-profiles h3, .best-for-less h5,  .our-clients h5 {
+  margin-bottom: 30px;
+  font-size: 24px;
+}
+.mdi-menu{
+  color: #fff;
+}
+.desktopheader.active .navbar-collapse{
+  background-color: #fff;
+  border-top: 1px solid #000;
+}
+.headerinnerdesktop .navbar-collapse,.desktopheader .navbar-collapse{
+  background-color: #000;
+  top: 100%;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  border-top: 1px solid #000;
+}
+.headerinnerdesktop .navbar-collapse .navbar-nav,.desktopheader .navbar-collapse .navbar-nav{
+  display: block ruby!important;
+  text-align: center;
+  flex-direction: unset;
+}
+.navbar-nav .dropdown-menu {
+  position: absolute;
+}
+#filter {
+  width: 31%;
+  padding: 12px;
+}
+#Creator-list {
+  padding: 15px;
+  width: 69%;
+}
+.display-control .col-sm-3 {
+  width: 33%;
+}
+.display-control .col-sm-6 {
+  width: 33%;
+}
+.creatorlist .col-sm-3, .creatorlist .col-sm-6{
+  width: 100%;
+  padding-right: 0;
+}
+.creatorlist .LRight {
+  padding-top: 0;
+  text-align: end;
+  display: flex;
+  justify-content: space-between;
+}
+.LRight .price {
+  margin-right: 15px;
+}
+.LProfile .image img {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 0px;
+  border-bottom-left-radius: 0px;
+}
+.Sponsorlist .LRight .price {
+  padding-top: 0;
+}
+.createUF {
+  display: grid;
+}
+.createR .add-favorites {
+  margin-top: 40px;
+}
+.add-favorites p {
+  font-size: 13px;
+  margin-right: 10px;
+}
+.Lcaption .followers {
+  margin-bottom: 0;
+}
+.viewbtn {
+  text-align: center;
+  width: 50%;
+  margin: 0 auto 15px auto;
+}
+}
+
+@media (min-width: 768px){
+    .hidden-lg {
+        display: none;
+    }
+}
+
+@media (min-width: 1371px) and (max-width: 1440px){
+
+}
+@media (min-width: 1441px) and (max-width: 1600px){
+
+}
+@media (min-width: 1641px) and (max-width: 2560px){
+  .mainbanner {
+    background-position: center center;
+    padding-top: 200px;
+    height: 700px;
+  }
+}

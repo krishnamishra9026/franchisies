@@ -1,0 +1,265 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Lexend:wght@100;200;300;400;500;600;700;800;900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+.select2-container--default .select2-results__option--highlighted[aria-selected] {
+    background-color: #f49e3f !important;
+  }
+.custom-cardheight {
+    min-height: 275px;
+}
+.invalid-feedback{
+    display: block;
+}
+body {
+    font-family: 'Inter', sans-serif;
+    background: #8984891f;
+}
+h1,h2,h3,h4,h5,h6{
+    font-family: 'Lexend', sans-serif;
+}
+.page-title-box .page-title{
+    color: #111;
+font-weight: 600;
+font-size: 22px;
+}
+.form-row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+.form-row>.col, .form-row>[class*=col-] {
+    padding-right: 5px;
+    padding-left: 5px;
+}
+.btn-primary {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+.btn-check:checked + .btn-primary:focus, .btn-check:active + .btn-primary:focus, .btn-primary:active:focus, .btn-primary.active:focus, .show > .btn-primary.dropdown-toggle:focus{
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+.btn-primary {
+    color: #fff;
+    background-color: #814E81;
+    border-color: #814E81;
+}
+.btn-primary:hover {
+    color: #fff;
+    background-color: #814E81;
+    border-color: #814E81;
+}
+.btn-check:checked + .btn-primary, .btn-check:active + .btn-primary, .btn-primary:active, .btn-primary.active, .show > .btn-primary.dropdown-toggle{
+    color: #fff;
+    background-color: #814E81;
+    border-color: #814E81;
+}
+.btn-check:focus + .btn-primary, .btn-primary:focus{
+    color: #fff;
+    background-color: #814E81;
+    border-color: #814E81;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+.btn-danger {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+.btn-danger {
+    color: #fff;
+    background-color: red;
+    border-color: #ff0000;
+}
+.btn-danger:hover{
+    color: #fff;
+    background-color: red;
+    border-color: #ff0000;
+}
+.btn-check:focus + .btn-danger, .btn-danger:focus {
+    color: #fff;
+    background-color: #ff0000;
+    border-color: #ff0000;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+.btn-check:checked + .btn-danger, .btn-check:active + .btn-danger, .btn-danger:active, .btn-danger.active, .show > .btn-danger.dropdown-toggle {
+    color: #fff;
+    background-color: #ff0000;
+    border-color: #ff0000;
+}
+.btn-check:checked + .btn-danger:focus, .btn-check:active + .btn-danger:focus, .btn-danger:active:focus, .btn-danger.active:focus, .show > .btn-danger.dropdown-toggle:focus {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+input.form-control{
+    font-size: 13px;
+    font-weight: 400;
+    color: #222;
+    border: 1px solid #ddd;
+}
+input.form-control:focus {
+    color: #222;
+    border-color: #ddd;
+    outline: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+select.form-select{
+    font-size: 13px;
+    font-weight: 400;
+    color: #222;
+    border: 1px solid #ddd;
+}
+select.form-select:focus {
+    color: #222;
+    border-color: #ddd;
+    outline: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+textarea.form-control{
+    font-size: 13px;
+    font-weight: 400;
+    color: #222;
+    border: 1px solid #ddd;
+}
+textarea.form-control:focus {
+    color: #222;
+    border-color: #ddd;
+    outline: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+    color: #fff;
+    background-color: #814E81;
+    font-weight: 500;
+}
+.nav-pills .nav-link {
+    background: #d2d2d2;
+    border: 0;
+    border-radius: 3px;
+    font-size: 13px;
+    font-weight: 500;
+    margin-right: 10px;
+    padding: 9px 20px;
+}
+.sp-info {
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+.sp-info .form-group label {
+    color: #000;
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+.sp-info .form-group p {
+    font-size: 14px;
+    color: #555;
+}
+.form-label {
+    margin-bottom: 0.5rem;
+    color: #000;
+    font-size: 14px;
+    font-weight: 700;
+}
+table, thead, tr, th{
+    color: #000;
+}
+table, tbody, tr, td{
+    vertical-align: middle;
+}
+.table tbody tr td .uname{
+    position: relative;
+    top: 13px;
+    left: 5px;
+}
+.sponsorid h2 {
+    color: #222;
+}
+.badge {
+    display: inline-block;
+    padding: 5px 10px;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: 50px;
+}
+.filter .input-group > .form-control, .input-group > .form-select {
+    font-size: 13px;
+}
+.filter {
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+.filter h4 {
+    color: #000;
+    margin-top: 0;
+}
+.filter label {
+    color: #111;
+    font-size: 14px;
+}
+.table tbody tr td span.connect p {
+    color: #28ad05;
+    margin-left: 4px;
+}
+.table tbody tr td span.connect {
+    display: flex;
+}
+.table tbody tr td span.notconnect p {
+    color: #ff0000;
+    margin-left: 4px;
+}
+.table tbody tr td span.notconnect {
+    display: flex;
+}
+.creator-services h4 {
+    color: #222;
+    margin-bottom: 15px;
+}
+.form-label span.ovisible {
+    font-size: 12px;
+    font-weight: 500;
+}
+.add {
+    margin-top: 29px;
+}
+.add .btn-primary{
+    font-size: 13px;
+    padding: 7px 6px;
+}
+.uploadfile{
+    width: 90.5%;
+}
+.row2{
+    margin-top: 10px;
+}
+.pricelist-addmore {
+    margin-top: 29px;
+}
+.pricelist-addmore .btn-primary {
+    font-size: 12px;
+    padding: 8px 8px;
+}
+.pricelist-remove .btn-danger {
+    font-size: 12px;
+    width: 100%;
+}
+.imagesize {
+    font-size: 12px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+.side-nav .side-nav-link{
+    padding: 10px 20px;
+}
