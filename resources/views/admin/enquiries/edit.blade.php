@@ -88,6 +88,38 @@
                             </div>
 
 
+                            <div class="col-md-12 mb-2">
+                                <label for="brand_name" class="form-label">Brand Name </label>
+                                <textarea type="text" class="form-control" readonly name="brand_name" placeholder="Brand Name">{{ old('brand_name',$enquiry->brand_name) }}</textarea>
+                                @error('brand_name')
+                                    <code id="brand_name-error" class="text-danger">{{ $message }}</code>
+                                @enderror
+                            </div>
+
+                            <div class="col-md-12 mb-2">
+                                <label for="available_slot" class="form-label">Available Slot </label>
+                                <textarea type="text" class="form-control" readonly name="available_slot" placeholder="Available Slot">{{ old('available_slot',$enquiry->available_slot) }}</textarea>
+                                @error('available_slot')
+                                    <code id="available_slot-error" class="text-danger">{{ $message }}</code>
+                                @enderror
+                            </div>
+
+                            <div class="col-md-12 mb-2">
+                                <label for="available_slot" class="form-label">Category </label>
+                                <textarea type="text" class="form-control" readonly name="available_slot" placeholder="Category">{{ old('available_slot',$enquiry->available_slot) }}</textarea>
+                                @error('available_slot')
+                                    <code id="available_slot-error" class="text-danger">{{ $message }}</code>
+                                @enderror
+                            </div>
+
+                            <div class="col-md-12 mb-2">
+                                <label for="city" class="form-label">City </label>
+                                <textarea type="text" class="form-control" readonly name="city" placeholder="City">{{ old('city',$enquiry->city) }}</textarea>
+                                @error('city')
+                                    <code id="city-error" class="text-danger">{{ $message }}</code>
+                                @enderror
+                            </div>
+
            
                             
                             <div class="col-md-12 mb-2">

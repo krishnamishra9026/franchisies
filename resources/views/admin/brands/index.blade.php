@@ -70,7 +70,7 @@
                             <button type="button" class="btn btn-light dropdown-toggle arrow-none card-drop" data-bs-toggle="dropdown" aria-expanded="false"><i class="mdi mdi-dots-vertical"></i></button>
                             <div class="dropdown-menu">
                                 <a class="dropdown-item" href="{{ route('admin.brands.edit', $brand->id ) }}">Edit</a>
-                                <a class="dropdown-item" href="{{ route('admin.brands.show', $brand->id) }}">View</a>
+                                <!-- <a class="dropdown-item" href="{{ route('admin.brands.show', $brand->id) }}">View</a> -->
                                 <a class="dropdown-item" onclick="confirmDelete({{ $brand->id }})" >Delete</a>
                             </div>
 

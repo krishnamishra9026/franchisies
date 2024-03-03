@@ -269,6 +269,9 @@
                                                         </p>
                                                 </div>
                                             </a>
+                                            <div style="text-align: center;">
+                                            <a class="btn btn-primery" href="{{ route('brands.index', $brand->slug) }}">View Detail</a>
+                                            </div>
                                         </div>
                                     </div>
                                 @endforeach

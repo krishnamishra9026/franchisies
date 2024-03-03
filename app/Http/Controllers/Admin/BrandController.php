@@ -158,7 +158,7 @@ class BrandController extends Controller
      */
     public function show(string $id)
     {
-        $brand   = Brand::with('orders')->find($id);
+        $brand   = Brand::find($id);
 
         return view('admin.brands.show', compact('brand'));
     }
