@@ -47,10 +47,12 @@ Route::get('profile/{id}', [ProfileShowController::class, 'index'])->name('profi
 
 Route::post('/save-conatct-us', [IndexController::class, 'saveContactUs'])->name('save-conatct-us');
 Route::post('/save-join-us', [IndexController::class, 'saveJoinUs'])->name('save-join-us');
+Route::post('/save-become-state-partner', [IndexController::class, 'saveBecomeStatePartner'])->name('save-become-state-partner');
 
 
 
 Route::get('/support', [IndexController::class, 'support'])->name('support');
+Route::get('/become-state-partner', [IndexController::class, 'becomeStatePartner'])->name('become-state-partner');
 Route::get('/join', [IndexController::class, 'join'])->name('join');
 
 Route::get('/faq', [IndexController::class, 'faq'])->name('faq');

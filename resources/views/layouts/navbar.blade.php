@@ -24,7 +24,7 @@ $footer_logo = $setting ? asset('storage/uploads/logo/'.$setting->footer_logo) :
                       <a href="{{ route('join') }}" class="nav-link btn btn-primary">Join</a>
                     </li>
                     <li class="nav-item">
-                        <a href="{{ route('support') }}" class="nav-link btn btn-primary">Support</a>
+                        <a href="{{ route('become-state-partner') }}" class="nav-link btn btn-primary">Become State partner</a>
                     </li>
                 </ul>
             </div>

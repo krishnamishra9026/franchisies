@@ -120,6 +120,62 @@
                                 @enderror
                             </div>
 
+
+                            <div class="form-group {{ $errors->has('state') ? 'has-error' : '' }} mb-2">
+                                    <label for="exampleFormControlInput1" class="form-label">State</label>
+                                    <input type="text" required class="form-control" readonly value="{{ old('state', $enquiry->state) }}" name="state">
+                                </div>
+
+
+                                <div class="form-group {{ $errors->has('brandagreement') ? 'has-error' : '' }} mb-2">
+                                    <label for="basicText" class="form-label">Have standard Brand Agreement</label>
+                                    <div class="col-sm-12">
+                                        <input id="brandagreement" type="radio" value="Yes" @if($enquiry->brandagreement == 'Yes') checked @endif  name="brandagreement" style=" margin:10px 0 0;"  > &nbsp;&nbsp;Yes &nbsp;&nbsp;
+                                        <input id="brandagreement" type="radio" value="No" @if($enquiry->brandagreement == 'No') checked @endif  name="brandagreement"  style=" margin:10px 0 0;"  > &nbsp;&nbsp;No
+                                    </div>
+                                </div>
+
+
+                                <div class="form-group {{ $errors->has('business_experience') ? 'has-error' : '' }} mb-2">
+                                    <label for="basicText" class="form-label">Do you have any experience in operating similar business</label>
+                                    <div class="col-sm-12">
+                                        <input id="business_experience" type="radio" value="Yes" @if($enquiry->business_experience == 'Yes') checked @endif  name="business_experience" style=" margin:10px 0 0;"  > &nbsp;&nbsp;Yes &nbsp;&nbsp;
+                                        <input id="business_experience" type="radio" value="No" @if($enquiry->business_experience == 'No') checked @endif  name="business_experience"  style=" margin:10px 0 0;"  > &nbsp;&nbsp;No
+                                    </div>
+                                </div>
+
+
+                                <div class="form-group {{ $errors->has('investment_range') ? 'has-error' : '' }} mb-2">
+                                    <label for="basicText" class="form-label">Investment Range</label>
+                                    <div class="col-sm-12">
+                                        <input id="investment_range" type="radio" value="Below 3 Lacs"  @if($enquiry->investment_range == 'Below 3 Lacs') checked @endif   name="investment_range" style=" margin:10px 0 0;"  > &nbsp;&nbsp;Below 3 Lacs  &nbsp;&nbsp;
+                                        <input id="investment_range" type="radio" value="3 to 5 Lacs" @if($enquiry->investment_range == '3 to 5 Lacs') checked @endif  name="investment_range"  style=" margin:10px 0 0;"  > &nbsp;&nbsp;3 to 5 Lacs
+                                        <input id="investment_range" type="radio" value="5 Lacs+" @if($enquiry->investment_range == '5 Lacs+') checked @endif  name="investment_range"  style=" margin:10px 0 0;"  > &nbsp;&nbsp;5 Lacs+
+                                    </div>
+                                </div>
+
+
+                                <div class="form-group {{ $errors->has('associate_time') ? 'has-error' : '' }} mb-2">
+                                    <label for="basicText" class="form-label">How soon do you want to associate:</label>
+                                    <div class="col-sm-12">
+                                        <input id="associate_time" type="radio" value="Immediately"  @if($enquiry->associate_time == 'Immediately') checked @endif   name="associate_time" style=" margin:10px 0 0;"  > &nbsp;&nbsp;Immediately &nbsp;&nbsp;
+                                        <input id="associate_time" type="radio" value="Within 3 Months" @if($enquiry->associate_time == 'Within 3 Months') checked @endif  name="associate_time"  style=" margin:10px 0 0;"  > &nbsp;&nbsp;Within 3 Months
+                                        <input id="associate_time" type="radio" value="After 3 Months"  @if($enquiry->associate_time == 'After 3 Months') checked @endif name="associate_time"  style=" margin:10px 0 0;"  > &nbsp;&nbsp;After 3 Months
+                                    </div>
+                                </div>
+
+                                <div class="form-group {{ $errors->has('how_to_know_me') ? 'has-error' : '' }} mb-2">
+                                    <label for="basicText" class="form-label">How did you get to know about FranchiseBazaar partnership program:</label>
+                                    <div class="col-sm-12">
+                                        <input id="how_to_know_me" type="radio" value="Social Media"  @if($enquiry->how_to_know_me == 'Social Media') checked @endif   name="how_to_know_me" style=" margin:10px 0 0;"  > &nbsp;&nbsp;Social Media &nbsp;&nbsp;
+                                        <input id="how_to_know_me" type="radio" value="Referral"  @if($enquiry->how_to_know_me == 'Referral') checked @endif name="how_to_know_me"  style=" margin:10px 0 0;"  > &nbsp;&nbsp;Referral
+                                        <input id="how_to_know_me" type="radio" value="Webinars"  @if($enquiry->how_to_know_me == 'Webinars') checked @endif name="how_to_know_me"  style=" margin:10px 0 0;"  > &nbsp;&nbsp;Webinars
+                                        <input id="how_to_know_me" type="radio" value="Partner Companies"   @if($enquiry->how_to_know_me == 'Partner Companies') checked @endif name="how_to_know_me" style=" margin:10px 0 0;"  > &nbsp;&nbsp;Partner Companies &nbsp;&nbsp;
+                                        <input id="how_to_know_me" type="radio" value="Newspaper"  @if($enquiry->how_to_know_me == 'Newspaper') checked @endif name="how_to_know_me"  style=" margin:10px 0 0;"  > &nbsp;&nbsp;Newspaper
+                                        <input id="how_to_know_me" type="radio" value="TV Advertisement"  @if($enquiry->how_to_know_me == 'TV Advertisement') checked @endif name="how_to_know_me"  style=" margin:10px 0 0;"  > &nbsp;&nbsp;TV Advertisement                                        
+                                        <input id="how_to_know_me" type="radio" value="Others"  @if($enquiry->how_to_know_me == 'Others') checked @endif name="how_to_know_me"  style=" margin:10px 0 0;"  > &nbsp;&nbsp;Others
+                                    </div>
+
            
                             
                             <div class="col-md-12 mb-2">

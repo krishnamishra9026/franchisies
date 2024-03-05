@@ -65,6 +65,10 @@ class IndexController extends Controller
         return view('frontend.support');
     }
 
+    public function becomeStatePartner(){
+        return view('frontend.become-state-partner');
+    }
+
     public function join(){
         $categories = Category::get(['name', 'id']);
         return view('frontend.join', compact('categories'));
@@ -126,6 +130,21 @@ class IndexController extends Controller
 
     public function saveJoinUs(Request $request)
     {              
+        $request->validate([
+            'name'                  => ['required'],
+            'email'                 => ['required'],
+        ]);
+
+        $input = $request->except('_token');
+
+        $product = Enquiry::create($input);
+
+        return redirect()->back()->with('message', 'Enquiry submitted successfully!');
+    }
+
+
+    public function saveBecomeStatePartner(Request $request)
+    {           
         $request->validate([
             'name'                  => ['required'],
             'email'                 => ['required'],
