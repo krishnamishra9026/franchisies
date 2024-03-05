@@ -12,6 +12,17 @@
                 <div class="informationcontent">
                 <h1>{{ $information->name }}</h1>
                 <p>{!! $information->editor !!}</p>
+
+                @if($information->name == 'Contact Us')
+                <br></br>
+                <br></br>
+                <br></br>
+                <br></br>
+                <div class="row col-md-1">
+                <a href="/support" class="nav-link btn btn-primary">Support</a>
+                </div>
+                @endif
+
                 </div>
             </div>
         </div>
