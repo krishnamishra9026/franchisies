@@ -121,6 +121,7 @@
                     <div class="trustedby">
                         <ul class="list-inline">
                             <li><span>Business Failed? We've got your back.</span></li>
+                            </br>
                             <li><span>Get your full investment back from Franchisee Bazaar and turn setbacks into future success.</span></li>
                         </ul>
                     </div>
