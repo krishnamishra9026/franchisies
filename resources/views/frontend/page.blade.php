@@ -15,9 +15,6 @@
 
                 @if($information->name == 'Contact Us')
                 <br></br>
-                <br></br>
-                <br></br>
-                <br></br>
                 <div class="row col-md-1">
                 <a href="/support" class="nav-link btn btn-primary">Support</a>
                 </div>
