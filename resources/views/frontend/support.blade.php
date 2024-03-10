@@ -47,7 +47,7 @@ $setting =  \App\Models\WebsiteContactSetting::first();
                 <div class="row">
                     <div class="col-sm-12 col-xs-12">
                         <div class="contactform BoxShadow formstyle">
-                            <h2>Get in touch with us</h2>
+                            <h2 class="row col-sm-6">Get in touch with us</h2>
 
                             @if(session()->has('message'))
                             <div class="alert alert-success">
@@ -55,7 +55,7 @@ $setting =  \App\Models\WebsiteContactSetting::first();
                             </div>
                             @endif
 
-                            <form method="POST" action="{{ route('save-conatct-us') }}" id="contactForm">
+                            <form method="POST" class="row col-sm-6" action="{{ route('save-conatct-us') }}" id="contactForm">
                                 @csrf
                                 @method('POST')
                                 <div class="form-group {{ $errors->has('name') ? 'has-error' : '' }} mb-2">

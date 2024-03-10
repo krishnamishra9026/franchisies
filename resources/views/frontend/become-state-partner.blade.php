@@ -61,7 +61,7 @@ $setting =  \App\Models\WebsiteContactSetting::first();
                                 </div>
 
 
-                                <div class="form-group {{ $errors->has('brandagreement') ? 'has-error' : '' }} mb-2">
+                                <div style="display: none;" class="form-group {{ $errors->has('brandagreement') ? 'has-error' : '' }} mb-2">
                                     <label for="basicText" class="form-label">Have standard Brand Agreement</label>
                                     <div class="col-sm-12">
                                         <input id="brandagreement" type="radio" value="Yes"   name="brandagreement" style=" margin:10px 0 0;"  > &nbsp;&nbsp;Yes &nbsp;&nbsp;
