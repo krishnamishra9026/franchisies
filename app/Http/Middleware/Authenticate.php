@@ -20,6 +20,10 @@ class Authenticate extends Middleware
             return route('admin.login');
         }
 
+        if ($request->is('franchisor') || $request->is('franchisor/*')) {
+            return route('franchisor.login');
+        }
+        
         if (! $request->expectsJson()) {
             return route('login');
         }

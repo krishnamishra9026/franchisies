@@ -18,8 +18,12 @@ class RedirectIfAuthenticated
     public function handle(Request $request, Closure $next, string ...$guards): Response
     {
 
-        if (Auth::guard('creator')->check()) {
-            return redirect(route('creator.dashboard'));
+        if (Auth::guard('administrator')->check()) {
+            return redirect(route('admin.dashboard'));
+        }
+
+        if (Auth::guard('franchisor')->check()) {
+            return redirect(route('franchisor.dashboard'));
         }
 
         if (Auth::guard('web')->check()) {

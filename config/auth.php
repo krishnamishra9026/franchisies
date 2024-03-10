@@ -44,9 +44,9 @@ return [
             'driver' => 'session',
             'provider' => 'administrators',
         ],
-        'creator' => [
+        'franchisor' => [
             'driver' => 'session',
-            'provider' => 'creators',
+            'provider' => 'franchisors',
         ],
     ],
 
@@ -78,9 +78,9 @@ return [
             'model' => App\Models\Administrator::class,
         ],
 
-        'creators' => [
+        'franchisors' => [
             'driver' => 'eloquent',
-            'model' => App\Models\Creator::class,
+            'model' => App\Models\Franchisor::class,
         ],
     ],
 
@@ -118,8 +118,8 @@ return [
             'throttle' => 60,
         ],
 
-        'creators' => [
-            'provider' => 'creators',
+        'franchisors' => [
+            'provider' => 'franchisors',
             'table' => 'password_reset_tokens',
             'expire' => 60,
             'throttle' => 60,

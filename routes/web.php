@@ -86,20 +86,5 @@ Route::get('account-setting', [AccountSettingController::class, 'accountSetting'
 
 
 
-Route::controller(LoginWithFacebookController::class)->group(function(){
-    Route::get('auth/facebook', 'redirectToFacebook')->name('auth.facebook');
-    Route::get('auth/facebook/callback', 'handleFacebookCallback');
-});
-
-
-Route::controller(LoginWithGoogleController::class)->group(function(){
-    Route::get('auth/google', 'redirectToGoogle')->name('auth.google');
-    Route::get('auth/google/callback', 'handleGoogleCallback');
-});
-
-
-if(auth()->guard('web') && request()->path() != 'admin') {
-Route::get('{slug}', [IndexController::class, 'viewProfileBySlug'])->name('profileview');
-}
 
 });
