@@ -18,7 +18,7 @@ $footer_logo = $setting ? asset('storage/uploads/logo/'.$setting->footer_logo) :
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                      <a class="nav-link" href="{{ url('category/music') }}">Explore Brands</a>
+                      <a class="nav-link btn btn-primary" href="{{ url('category/music') }}">Explore Brands</a>
                     </li>
                     <li class="nav-item">
                       <a href="{{ route('franchisor.register') }}" class="nav-link btn btn-primary">Join</a>
@@ -40,8 +40,8 @@ $footer_logo = $setting ? asset('storage/uploads/logo/'.$setting->footer_logo) :
 	            <div class="col-9 mobilepadding">
 	                <div class="text-right">
 	                  <a href="{{ url('/') }}">
-	                    <img src="{{asset('assets/images/frontend/winlogo-white.png')}}" alt="logo" class="before img-fluid">
-	                    <img src="{{asset('assets/images/frontend/winlogo-black.png')}}" alt="logo" style="display: none;" class="after img-fluid">
+	                    <img src="{{  $logo }}" alt="logo" class="before img-fluid">
+	                    <img src="{{ $logo }}" alt="logo" style="display: none;" class="after img-fluid">
 	                </a>
 	                </div>
 	            </div>
@@ -65,8 +65,15 @@ $footer_logo = $setting ? asset('storage/uploads/logo/'.$setting->footer_logo) :
                 <li>
                     <a href="{{ route('categories.index', 'music') }}">Explore Brands</a>
                 </li>
+
+                <li >
   
-                <a href="{{ route('join') }}" class="joinus btn btn-primary">Join</a>
+                <a href="{{ route('join') }}" >Join</a>
+
+                </li>
+                <li >
+                        <a href="{{ route('become-state-partner') }}" >Become State partner</a>
+                    </li>
             </ul>
         </nav>
     </div>

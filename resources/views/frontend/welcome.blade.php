@@ -40,12 +40,12 @@
                     </div>
                     <div class="exp-platform desktop-P">
                         <ul class="list-inline">
-                            <li><span>Explore by Categories: Healthcare, Automobile, Foodtech, Explore All</span></li>
+                            <li><span>Explore by Categories: Healthcare, Automobile, Foodtech, <a href="{{ url('category/music') }}"> Explore All</a></span></li>
                            
                         </ul>
                     </div>
                     <div class="exp-platform mobile-P">
-                        <h6><span>Explore by platform:</span></h6>
+                        <h6><span>Explore by Categories: Healthcare, Automobile, Foodtech, <a href="{{ url('category/music') }}"> Explore All</a></span></h6>
                         
                     </div>
                 </div>
