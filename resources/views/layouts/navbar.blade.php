@@ -9,7 +9,7 @@ $footer_logo = $setting ? asset('storage/uploads/logo/'.$setting->footer_logo) :
         <div class="container">
             <a class="navbar-brand" href="{{ url('/') }}">
                 <img src="{{ $logo }}" class="before" alt="logo" width="300" height="61" />
-                <img src="{{ $footer_logo }}" style="display: none;" class="after" alt="logo" width="300" height="61" />
+                <img src="{{ $logo }}" style="display: none;" class="after" alt="logo" width="300" height="61" />
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 

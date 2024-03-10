@@ -3,12 +3,19 @@ $setting = \DB::table('website_settings')->first();
 $pages = \DB::table('information_page_management')->get(['slug', 'name', 'id']);
 
 @endphp
+
+@php
+use App\Models\WebsiteSetting;
+$setting = WebsiteSetting::first();
+$logo = $setting ? asset('storage/uploads/logo/'.$setting->logo) : asset('assets/images/frontend/winlogo-white.png');
+$footer_logo = $setting ? asset('storage/uploads/logo/'.$setting->footer_logo) : asset('assets/images/frontend/winlogo-black.png');
+@endphp
 <footer class="Hfooter">
 <div class="container">
     <div class="row">
         <div class="col-sm-6">
             <div class="logo-sec">
-                <a href="#"><img src="{{ asset('assets/images/frontend/winlogo-black.png') }}" alt="footer-logo" /></a>
+                <a href="#"><img src="{{ $logo }}" alt="footer-logo" /></a>
             </div>
         </div>
         <div class="col-sm-6">
