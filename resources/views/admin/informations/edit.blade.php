@@ -1,5 +1,8 @@
 @extends('layouts.admin')
 @section('title', 'Edit Information')
+@section('head')
+<link href="{{ asset('assets/summernote/summernote-bs4.css') }}" rel="stylesheet" type="text/css" />
+@endsection
 @section('content')
     <!-- Start Content-->
     <div class="container-fluid">
@@ -53,7 +56,7 @@
 
                             <div class="col-md-12 mb-2">
                                 <label for="name" class="form-label">Description </label>
-                                <textarea id="editor-content" class="form-control" name="editor">{{ old('editor', $information->editor) }}</textarea>
+                                <textarea id="editor-content" class="form-control summernote" name="editor">{{ old('editor', $information->editor) }}</textarea>
                                 @error('editor')
                                     <code id="title-error" class="text-danger">{{ $message }}</code>
                                 @enderror
@@ -97,24 +100,13 @@
     </form>
 @endsection
 @push('scripts')
-
-<script src="{{ asset('assets/js/tinymce/tinymce.min.js') }}"></script>
-<script>
-    tinymce.init({
-        selector: 'textarea#editor-content',
-        height: 300,
-        menubar: false,
-        plugins: [
-            'advlist autolink lists link image charmap print preview anchor',
-            'searchreplace visualblocks code fullscreen',
-            'insertdatetime media table paste code help wordcount'
-        ],
-        toolbar: 'undo redo | formatselect | ' +
-            'bold italic backcolor | alignleft aligncenter ' +
-            'alignright alignjustify | bullist numlist outdent indent | ' +
-            'removeformat | help',
-            content_style: 'body { font-family:roboto; font-size:16px }'
-    });
+<script type="text/javascript" src="{{ asset('assets/summernote/summernote-bs4.min.js') }}"></script>
+<script type="text/javascript">
+    $(document).ready(function() {
+  $('.summernote').summernote({
+        tabsize: 5,
+        height: 200
+      });
+});
 </script>
-
 @endpush

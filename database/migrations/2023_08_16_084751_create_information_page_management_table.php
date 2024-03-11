@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('slug')->nullable();
             $table->string('meta_title')->nullable();
             $table->text('meta_description')->nullable();
-            $table->text('editor')->nullable();
+            $table->longText('editor')->nullable();
             $table->boolean('status')->default(true);
             $table->timestamps();
         });

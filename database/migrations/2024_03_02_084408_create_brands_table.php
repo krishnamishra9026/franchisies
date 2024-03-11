@@ -64,7 +64,7 @@ return new class extends Migration
             $table->enum('ispremiumtop', ['Yes', 'No'])->default('No')->nullable();
             $table->enum('masterbrand', ['Yes', 'No'])->default('No')->nullable();
             $table->enum('verifybrand', ['Yes', 'No'])->default('No')->nullable();
-            $table->string('busioverview')->nullable();
+            $table->longText('busioverview')->nullable();
             $table->string('video_url')->nullable();
             $table->string('logo')->nullable();
             $table->string('banner')->nullable();
