@@ -88,6 +88,8 @@ class RegisterController extends Controller
         $franchisor =  Franchisor::create([
             'firstname' => $data['firstname'],
             'lastname' => $data['lastname'],
+            'phone' => $data['phone'],
+            'brand' => $data['brand'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
         ]);
