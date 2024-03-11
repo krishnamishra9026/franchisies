@@ -52,7 +52,7 @@
                                     <div class="filter">
                                         <h4>Filter </h4>
 
-                                        <div class="filter-content">
+                                        <div class="filter-content" style="display: none;">
                                             <div class="filtertitle">
                                                 <ul class="list-inline">
                                                     <li><span>Quotation Price</span></li>
@@ -165,10 +165,15 @@
                                             <div class="LProfile">
                                                 <div class="image">
                                                     <div class="listing-image-box">
-                                                          
+                                                        @if(isset($brand->banner))
+                                                        <a href="#">
+                                                            <img src="{{ asset('storage/uploads/brands/'.$brand->id.'/banner/'.$brand->banner) }}"  alt="{{$brand->firstname.' '.$brand->lastname }}">
+                                                        </a>
+                                                        @else
                                                         <a href="#">
                                                             <img src="{{ asset('assets/images/frontend/creator-placeholder.jpeg') }}" class="img-fluid" alt="{{ $brand->talent_title }}">
                                                         </a>
+                                                        @endif
 
                                                     </div>
                                                 </div>
