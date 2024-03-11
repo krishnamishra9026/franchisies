@@ -255,23 +255,13 @@
                                 </div>
                             </div>
                         </div>
-                        @if(!isset($category_h2_tag))
-                        <h2>Winwinpromo: Where customers meet content creators</h2>
-                        <p>Winwinpromo is a platform where content creators can connect with individuals or businesses looking for creative services. These marketplaces serve as a bridge between those seeking content and those who can produce it. Here are some key features and aspects commonly found in content creator marketplaces</p>
-                        @endif
+                   
                     </div>
                    </form>
                 </div>
 
 
-                @if(isset($category_h2_tag))
-                <h2>{{ $category_h2_tag }}</h2>
-                @endif
-
-
-                @if(isset($category_page_description))
-                <p>{{ $category_page_description }}</p>
-                @endif
+           
 
             </div>
 
