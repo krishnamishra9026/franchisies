@@ -90,6 +90,7 @@ class MyAccountController extends Controller
         $franchisor->lastname        = $request->lastname;
         $franchisor->email           = $request->email;
         $franchisor->phone           = $request->phone;
+        $franchisor->brand           = $request->brand;
 
         if($request->hasfile('avatar')){
 

@@ -64,6 +64,14 @@
                                 <span id="name-error" class="error invalid-feedback">{{ $message }}</span>
                             @enderror
                         </div>
+                        <div class="form-group mb-2 {{ $errors->has('brand') ? 'has-error' : '' }}">
+                            <label for="brand">Brand</label>
+                            <input type="text" class="form-control" id="brand" name="brand"
+                                placeholder="Enter Last Name" value="{{ old('brand', $franchisor->brand) }}">
+                            @error('brand')
+                                <span id="name-error" class="error invalid-feedback">{{ $message }}</span>
+                            @enderror
+                        </div>
                         <div class="form-group mb-3">
                             <label for="avatar">Profile Picture</label>
                             <div class="input-group">
