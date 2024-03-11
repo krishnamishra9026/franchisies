@@ -13,7 +13,7 @@ $footer_logo = $setting ? asset('storage/uploads/logo/'.$setting->footer_logo) :
 <footer class="Hfooter">
 <div class="container">
     <div class="row">
-        <div class="col-sm-6">
+        <div class="col-sm-6" style="display: none;">
             <div class="logo-sec">
                 <a href="#"><img src="{{ $logo }}" alt="footer-logo" /></a>
             </div>

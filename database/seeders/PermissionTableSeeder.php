@@ -14,19 +14,18 @@ class PermissionTableSeeder extends Seeder
     public function run(): void
     {
      $permissions = [
+
                'Dashboard',
-               'Sponsors',
-               'Creators',
-               'Collabs',
-               'Campaign',
+               'Brands',
+               'Enquiries',
+               'FAQs',
+               'Blogs',
                'Categories',
-               'Content Type',
-               'Tags',
                'Users',
-               'Package',
+               'Content Management',
                'Roles',
                'Settings',
-               'Information Page Management',
+               'Information Pages',
                'My Account',
                'Change Password',
                'Website Settings',

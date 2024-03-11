@@ -56,24 +56,16 @@ class DatabaseSeeder extends Seeder
 
         \App\Models\Administrator::factory(5)->create();
 
-        \App\Models\Creator::factory()->create([
+        \App\Models\Franchisor::factory()->create([
             'firstname' => 'John',
             'lastname' => 'Doe',
             'email' => 'creator@admin.com'
         ]);
 
-        \App\Models\Creator::factory(20)->create();
+        \App\Models\Franchisor::factory(20)->create();
 
         
-        $this->call(SponsorSeeder::class);
-        $this->call(CollabSeeder::class);
-        $this->call(CampaignSeeder::class);
         $this->call(CategorySeeder::class);
-        $this->call(ContentTypeSeeder::class);
-        $this->call(TagSeeder::class);
-        $this->call(PackageSeeder::class);
-        $this->call(StateSeed::class);
-        $this->call(CountrySeed::class);
         $this->call(HomePageSettingSeeder::class);
         $this->call(HomePageReviewSeeder::class);
         $this->call(HomePageServiceSeeder::class);

@@ -19,7 +19,6 @@ return new class extends Migration
             $table->string('tiktok_license_key')->nullable();
             $table->string('tiktok_username')->nullable();
             $table->timestamps();
-            $table->foreign('creator_id')->references('id')->on('creators')->onDelete('cascade');
         });
     }
 
