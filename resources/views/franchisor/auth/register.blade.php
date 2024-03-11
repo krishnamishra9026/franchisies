@@ -51,12 +51,9 @@ $logo = $setting ? asset('storage/uploads/logo/'.$setting->logo) : asset('assets
                     </div>
 
                     <br>
-                    <br>
-                    <br>
 
                     <!-- title-->
                     <h4 class="mt-0">Franchisor Registration</h4>
-                    <p class="text-muted mb-4">Enter your email address and password to access account.</p>
 
                     <!-- form -->
                     @if ($message = Session::get('message'))
@@ -91,15 +88,49 @@ $logo = $setting ? asset('storage/uploads/logo/'.$setting->logo) : asset('assets
                             </div>
                         </div>
                     </div>
-                    <div class="mb-3">
-                        <label for="email" class="control-label mb-1">{{ __('Email Address') }}</label>
-                        <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" placeholder="Email address">
-                        @error('email')
-                            <span class="invalid-feedback" role="alert">
-                                <strong>{{ $message }}</strong>
-                            </span>
-                        @enderror
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="mb-3">
+                                <label for="email" class="control-label mb-1">{{ __('Email Address') }}</label>
+                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" placeholder="Email address">
+                                @error('email')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                                @enderror
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6">
+                            <div class="mb-3">
+                                <label for="phone" class="control-label mb-1">{{ __('Mobile Number') }}</label>
+                                <input id="phone" type="number" class="form-control @error('phone') is-invalid @enderror" name="phone" value="{{ old('phone') }}" required autocomplete="phone" placeholder="Mobile Number">
+                                @error('phone')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                                @enderror
+                            </div>
+                        </div>
+
                     </div>
+
+                    <div class="row">
+
+                        <div class="col-sm-6">
+                            <div class="mb-3">
+                                <label for="brand" class="control-label mb-1">{{ __('Brand Name') }}</label>
+                                <input id="brand" type="text" class="form-control @error('brand') is-invalid @enderror" name="brand" value="{{ old('brand') }}" required autocomplete="brand" placeholder="Brand Name">
+                                @error('brand')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                                @enderror
+                            </div>
+                        </div>
+
+                    </div>
+
                     <div class="row">
                         <div class="col-sm-6">
                             <div class="mb-3">

@@ -14,7 +14,6 @@ class PermissionTableSeeder extends Seeder
     public function run(): void
     {
      $permissions = [
-
                'Dashboard',
                'Brands',
                'Enquiries',

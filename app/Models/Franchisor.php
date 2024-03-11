@@ -24,6 +24,7 @@ class Franchisor extends Authenticatable
         'firstname',
         'lastname',
         'email',
+        'brand',
         'phone',
         'password',
         'avatar',
