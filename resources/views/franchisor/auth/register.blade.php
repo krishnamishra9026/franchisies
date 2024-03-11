@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-
+@php
+use App\Models\WebsiteSetting;
+$setting = WebsiteSetting::first();
+$logo = $setting ? asset('storage/uploads/logo/'.$setting->logo) : asset('assets/images/frontend/winlogo-white.png');
+@endphp
 <head>
     <meta charset="utf-8" />
     <title>Login | Administrator</title>
@@ -39,10 +43,10 @@
                     <!-- Logo -->
                     <div class="auth-brand text-center">
                         <a href="/" class="logo-dark">
-                            <span><img src="{{ asset('assets/images/logo.png') }}"></span>
+                            <span><img src="{{ $logo }}"></span>
                         </a>
                         <a href="/" class="logo-light">
-                            <span><img src="{{ asset('assets/images/logo.png') }}"></span>
+                            <span><img src="{{ $logo }}"></span>
                         </a>
                     </div>
 
