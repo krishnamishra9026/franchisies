@@ -55,29 +55,34 @@ $setting =  \App\Models\WebsiteContactSetting::first();
                             </div>
                             @endif
 
-                            <form method="POST" class="row col-sm-6" action="{{ route('save-conatct-us') }}" id="contactForm">
-                                @csrf
-                                @method('POST')
-                                <div class="form-group {{ $errors->has('name') ? 'has-error' : '' }} mb-2">
-                                    <label for="exampleFormControlInput1" class="form-label">Name</label>
-                                    <input type="text" required class="form-control" value="{{ old('name') }}" name="name">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <img src="{{ asset('assets/images/h5_hard.png') }}" class="img-fluid img-responsive w-100 p-3">
                                 </div>
-                                <div class="form-group {{ $errors->has('email') ? 'has-error' : '' }} mb-2">
-                                    <label for="exampleFormControlInput1" class="form-label">Email</label>
-                                    <input type="email" required class="form-control" value="{{ old('email') }}" name="email">
-                                </div>
-                                <div class="form-group {{ $errors->has('mobile') ? 'has-error' : '' }} mb-2">
-                                    <label for="exampleFormControlInput1" class="form-label">Mobile Number</label>
-                                    <input type="number" required class="form-control" value="{{ old('mobile') }}" name="mobile">
-                                </div>
-                                <div class="form-group {{ $errors->has('query') ? 'has-error' : '' }} mb-2">
-                                    <label for="exampleFormControlInput1" class="form-label">Your Enquiry</label>
-                                    <textarea class="form-control" required rows="5" name="query">{{ old('query') }}</textarea>
-                                </div>
-                                <div class="form-group text-center">
-                                    <button class="btn btn-primary" type="submit">Submit</button>
-                                </div>
-                            </form>
+                                <form method="POST" class="row col-sm-6" action="{{ route('save-conatct-us') }}" id="contactForm">
+                                    @csrf
+                                    @method('POST')
+                                    <div class="form-group {{ $errors->has('name') ? 'has-error' : '' }} mb-2">
+                                        <label for="exampleFormControlInput1" class="form-label">Name</label>
+                                        <input type="text" required class="form-control" value="{{ old('name') }}" name="name">
+                                    </div>
+                                    <div class="form-group {{ $errors->has('email') ? 'has-error' : '' }} mb-2">
+                                        <label for="exampleFormControlInput1" class="form-label">Email</label>
+                                        <input type="email" required class="form-control" value="{{ old('email') }}" name="email">
+                                    </div>
+                                    <div class="form-group {{ $errors->has('mobile') ? 'has-error' : '' }} mb-2">
+                                        <label for="exampleFormControlInput1" class="form-label">Mobile Number</label>
+                                        <input type="number" required class="form-control" value="{{ old('mobile') }}" name="mobile">
+                                    </div>
+                                    <div class="form-group {{ $errors->has('query') ? 'has-error' : '' }} mb-2">
+                                        <label for="exampleFormControlInput1" class="form-label">Your Enquiry</label>
+                                        <textarea class="form-control" required rows="5" name="query">{{ old('query') }}</textarea>
+                                    </div>
+                                    <div class="form-group text-center">
+                                        <button class="btn btn-primary" type="submit">Submit</button>
+                                    </div>
+                                </form>
+                            </div>
                         </div>
                     </div>
                 </div>

@@ -767,7 +767,7 @@ header.active .account-user-name span, header.active .navbar .navbar-nav li.drop
     padding-top: 50px;
 }
 .best-for-less .container {
-    max-width: 1100px;
+/*    max-width: 1100px;*/
 }
 .best-for-less h5 {
     text-align: center;
