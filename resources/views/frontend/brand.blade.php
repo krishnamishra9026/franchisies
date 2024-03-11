@@ -274,7 +274,7 @@
               </div>
               <div class="col-md-3">
                 <div class="BoxShadow p-3 formSticky">
-                    <h4>Enquery Form:</h4>
+                    <h4>Enquiry Form:</h4>
                     @if(session()->has('message'))
                     <div class="alert alert-success">
                         {{ session()->get('message') }}
