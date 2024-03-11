@@ -178,12 +178,12 @@
                                         <div class="FProfile custom-scale">
                                             <div class="image">
                                                 @if (isset($brand->logo))
-                                                    <a href="">
+                                                    <a href="{{ route('brands.index', $brand->slug) }}">
                                                         <img src="{{ asset('storage/uploads/brands/'.$brand->id.'/logo/' . $brand->logo) }}"
                                                             class="img-fluid" alt="{{ $brand->brandname }}">
                                                     </a>
                                                 @else
-                                                    <a href="">
+                                                    <a href="{{ route('brands.index', $brand->slug) }}">
                                                         <img src="{{ asset('assets/images/frontend/creator-placeholder.jpeg') }}"
                                                             class="img-fluid" alt="{{ $brand->firstname }}
                                                             {{ $brand->lastname }}">
