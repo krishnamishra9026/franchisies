@@ -274,77 +274,34 @@
               </div>
               <div class="col-md-3">
                 <div class="BoxShadow p-3 formSticky">
-                    <h4>APPLY FOR FRANCHISE:</h4>
-                    <form>
+                    <h4>Enquery Form:</h4>
+                    @if(session()->has('message'))
+                    <div class="alert alert-success">
+                        {{ session()->get('message') }}
+                    </div>
+                    @endif
+
+                    <form method="POST"  action="{{ route('save-conatct-us') }}" id="contactForm">
+                        @csrf
+                        @method('POST')
                         <div class="form-group mb-2">
-                            <input type="text" name="" class="form-control" placeholder="First Name">
-                        </div>
-                        <div class="form-group mb-2">
-                            <input type="email" name="" class="form-control" placeholder="Email">
-                        </div>
-                        <div class="form-group mb-2">
-                            <input type="number" name="" class="form-control" placeholder="Mobile no.">
-                        </div>
-                        <div class="form-group mb-2">
-                            <select class="form-control">
-                                <option>India</option>
-                            </select>
+                            <input type="text" name="name" required class="form-control" placeholder="Name">
                         </div>
                         <div class="form-group mb-2">
-                            <select name="state" class="form-control">
-                                <option value="">Select State</option>
-                                <option value="Andhra Pradesh">Andhra Pradesh</option>
-                                <option value="Arunachal Pradesh">Arunachal Pradesh</option>
-                                <option value="Assam">Assam</option>
-                                <option value="Bihar">Bihar</option>
-                                <option value="Chandigarh">Chandigarh</option>
-                                <option value="Chhattisgarh">Chhattisgarh</option>
-                                <option value="Daman &amp; Diu">Daman &amp; Diu</option>
-                                <option value="Goa">Goa</option>
-                                <option value="Gujarat">Gujarat</option>
-                                <option value="Haryana">Haryana</option>
-                                <option value="Himachal&nbsp;Pradesh">Himachal&nbsp;Pradesh</option>
-                                <option value="Jammu &amp;&nbsp;Kashmir">Jammu &amp;&nbsp;Kashmir</option>
-                                <option value="Jharkhand">Jharkhand</option>
-                                <option value="Karnataka">Karnataka</option>
-                                <option value="Kerala">Kerala</option>
-                                <option value="Lakshadweep">Lakshadweep</option>
-                                <option value="Madhya Pradesh">Madhya Pradesh</option>
-                                <option value="Maharashtra">Maharashtra</option>
-                                <option value="Manipur">Manipur</option>
-                                <option value="Meghalaya">Meghalaya</option>
-                                <option value="Mizoram">Mizoram</option>
-                                <option value="Nagaland">Nagaland</option>
-                                <option value="New Delhi">New Delhi</option>
-                                <option value="Orissa">Orissa</option>
-                                <option value="Pondicherry">Pondicherry</option>
-                                <option value="Punjab">Punjab</option>
-                                <option value="Rajasthan">Rajasthan</option>
-                                <option value="Sikkim">Sikkim</option>
-                                <option value="Tamil Nadu">Tamil Nadu</option>
-                                <option value="Tripura">Tripura</option>
-                                <option value="Uttaranchal">Uttaranchal</option>
-                                <option value="Uttar Pradesh">Uttar Pradesh</option>
-                                <option value="West Bengal">West Bengal</option>
-                             </select>
+                            <input type="email" name="email" required class="form-control" placeholder="Email">
                         </div>
                         <div class="form-group mb-2">
-                            <input type="text" name="" class="form-control" placeholder="City">
+                            <input type="number" name="mobile" required class="form-control" placeholder="Mobile no.">
                         </div>
                         <div class="form-group mb-2">
-                            <input type="text" name="" class="form-control" placeholder="Zip Code">
+                            <textarea class="form-control" name="query" placeholder="Address"></textarea>
                         </div>
-                        <div class="form-group mb-2">
-                            <textarea class="form-control" placeholder="Address"></textarea>
-                        </div>
-                        <div class="mb-2 form-check">
-                            <input type="checkbox" class="form-check-input border" id="exampleCheck1">
-                            <label class="form-check-label" for="exampleCheck1">I/We have carefully read and agree to the terms and conditions .</label>
-                        </div>
-                        <div>
-                            <input type="submit" class="btn btn-primary w-100 mt-2" id="applynow" name="applynow" value="APPLY NOW">
+
+                        <div class="form-group  mb-2">
+                            <button class="btn btn-primary" type="submit">Submit</button>
                         </div>
                     </form>
+                </form>
                 </div>
             </div>
         </div>
@@ -437,7 +394,7 @@
 <script type="text/javascript">
 
 
-
+/*
     $(document).on('submit','#contactForm',function(e){
         e.preventDefault();
         console.log($(this).serialize())
@@ -463,7 +420,7 @@
             }
         });
     });
-
+*/
 
 </script>
 @endpush
