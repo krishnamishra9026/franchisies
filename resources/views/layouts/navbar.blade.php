@@ -68,7 +68,7 @@ $footer_logo = $setting ? asset('storage/uploads/logo/'.$setting->footer_logo) :
 
                 <li >
   
-                <a href="{{ route('join') }}" >Join</a>
+                <a href="{{ route('franchisor.register') }}" >Join</a>
 
                 </li>
                 <li >

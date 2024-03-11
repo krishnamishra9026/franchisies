@@ -32,7 +32,7 @@
                 </a>
             </li>
 
-            <li class="side-nav-item">
+            <li class="side-nav-item" style="display: none;">
                 <a href="{{ route('franchisor.brands.index') }}" class="side-nav-link">
                     <i class="mdi mdi-account-tie"></i>
                     <span> Brands </span>
