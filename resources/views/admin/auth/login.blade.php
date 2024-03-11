@@ -29,6 +29,9 @@ $logo = $setting ? asset('storage/uploads/logo/'.$setting->logo) : asset('assets
         label{
             font-weight: 500;
         }
+        .auth-fluid .auth-fluid-form-box {
+            max-width: 620px !important;
+        }
     </style>
 </head>
 
