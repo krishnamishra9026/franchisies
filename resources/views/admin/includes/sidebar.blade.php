@@ -29,59 +29,72 @@ $logo = $setting ? asset('storage/uploads/logo/'.$setting->logo) : asset('assets
         <!--- Sidemenu -->
         <ul class="side-nav">
 
+            @can('Dashboard')
             <li class="side-nav-item">
                 <a href="{{ route('admin.dashboard') }}" class="side-nav-link">
                 <i class="dripicons-meter"></i>
                     <span> Dashboard </span>
                 </a>
             </li>
+            @endcan
 
+            @can('Brands')
             <li class="side-nav-item">
                 <a href="{{ route('admin.brands.index') }}" class="side-nav-link">
                     <i class="mdi mdi-account-tie"></i>
                     <span> Brands </span>
                 </a>
             </li>
+            @endcan          
 
-            
 
-
+            @can('Categories')
             <li class="side-nav-item">
                 <a href="{{ route('admin.categories.index') }}" class="side-nav-link">
                     <i class="mdi mdi-collage"></i>
                     <span> Categories </span>
                 </a>
-            </li>           
+            </li>
+            @endcan           
 
 
 
+            @can('Enquiries')
             <li class="side-nav-item">
                 <a href="{{ route('admin.enquiries.index') }}" class="side-nav-link">
                     <i class="mdi mdi-headset"></i>
                     <span> Enquiries </span>
                 </a>
             </li>
+            @endcan
+            @can('FAQs')
             <li class="side-nav-item">
                 <a href="{{ route('admin.faqs.index') }}" class="side-nav-link">
                     <i class="mdi mdi-help-circle-outline"></i>
                     <span> FAQs </span>
                 </a>
             </li>
+            @endcan
 
+            @can('Blogs')
             <li class="side-nav-item">
                 <a href="{{ route('admin.blogs.index') }}" class="side-nav-link">
                     <i class="mdi mdi-help-circle-outline"></i>
                     <span> Blogs </span>
                 </a>
             </li>
+            @endcan
 
+            @can('Information Page Management')
             <li class="side-nav-item">
                 <a href="{{ route('admin.information-page-management.index') }}" class="side-nav-link">
                     <i class="mdi mdi-note-multiple-outline"></i>
                     <span> Information Pages </span>
                 </a>
             </li>
+            @endcan
             
+            @can('Content Management')
             <li class="side-nav-item">
                 <a data-bs-toggle="collapse" href="#ContentManagement" aria-expanded="false"
                     aria-controls="ContentManagement" class="side-nav-link">
@@ -97,10 +110,10 @@ $logo = $setting ? asset('storage/uploads/logo/'.$setting->logo) : asset('assets
                     </ul>
                 </div>
             </li>
-
-  
+            @endcan 
             
 
+            @can('User Management')
             <li class="side-nav-item">
                 <a data-bs-toggle="collapse" href="#userManagement" aria-expanded="false"
                     aria-controls="userManagement" class="side-nav-link">
@@ -110,16 +123,22 @@ $logo = $setting ? asset('storage/uploads/logo/'.$setting->logo) : asset('assets
                 </a>
                 <div class="collapse" id="userManagement">
                     <ul class="side-nav-second-level">
+                        @can('Roles')
                         <li>
                             <a href="{{ route('admin.roles.index') }}">Roles</a>
                         </li>
+                        @endcan
+                        @can('Users')
                         <li>
                             <a href="{{ route('admin.user-management.index') }}">Users</a>
                         </li>
+                        @endcan
                     </ul>
                 </div>
             </li>
+            @endcan
 
+            @can('Settings')
             <li class="side-nav-item">
                 <a data-bs-toggle="collapse" href="#sidebarSettings" aria-expanded="false"
                     aria-controls="sidebarSettings" class="side-nav-link">
@@ -129,11 +148,13 @@ $logo = $setting ? asset('storage/uploads/logo/'.$setting->logo) : asset('assets
                 </a>
                 <div class="collapse" id="sidebarSettings">
                     <ul class="side-nav-second-level">
-
+                        @can('Website Settings')
                         <li>
                             <a href="{{ route('admin.website-settings.index') }}">General</a>
                         </li>
+                        @endcan
 
+                        @can('Brands')
                         <li class="side-nav-item">
                             <a data-bs-toggle="collapse" href="#file-management-tracking" aria-expanded="false" aria-controls="file-management-tracking" class="">
                                 <span> Home Page </span>
@@ -181,18 +202,21 @@ $logo = $setting ? asset('storage/uploads/logo/'.$setting->logo) : asset('assets
                                 </ul>
                             </div>
                         </li>
-
+                        @can('My Account')
                         <li>
                             <a href="{{ route('admin.my-account.edit', Auth::guard('administrator')->id()) }}">My Account</a>
                         </li>
-
+                        @endcan
+                        @can('Change Password')
                         <li>
                             <a href="{{ route('admin.password.form') }}">Change Password</a>
                         </li>
+                        @endcan
 
                     </ul>
                 </div>
             </li>
+            @endcan
         </ul>
         <div class="clearfix"></div>
     </div>
