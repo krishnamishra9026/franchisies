@@ -43,14 +43,7 @@
                         </div>
 
 
-                        <div class="form-group mb-2 {{ $errors->has('description1') ? 'has-error' : '' }}">
-                            <label for="description1">Section 1 Description</label>
-                            <textarea type="text" class="form-control" id="description1" name="description1"
-                                placeholder="Enter Section 1 Description">{{ old('description1', $setting->description1) }}</textarea>
-                            @error('description1')
-                                <span id="description1-error" class="error invalid-feedback">{{ $message }}</span>
-                            @enderror
-                        </div>
+                        
 
                         <div class="form-group mb-2 {{ $errors->has('title2') ? 'has-error' : '' }}">
                             <label for="title2">Section 2 Title</label>
@@ -62,14 +55,7 @@
                         </div>
 
 
-                        <div class="form-group mb-2 {{ $errors->has('description2') ? 'has-error' : '' }}">
-                            <label for="description2">Section 2 Description</label>
-                            <textarea type="text" class="form-control" id="description2" name="description2"
-                                placeholder="Enter Section 2 Description">{{ old('description2', $setting->description2) }}</textarea>
-                            @error('description2')
-                                <span id="description2-error" class="error invalid-feedback">{{ $message }}</span>
-                            @enderror
-                        </div>
+                        
 
 
                         <div class="form-group mb-2 {{ $errors->has('title3') ? 'has-error' : '' }}">
@@ -82,35 +68,7 @@
                         </div>
 
 
-                        <div class="form-group mb-2 {{ $errors->has('description3') ? 'has-error' : '' }}">
-                            <label for="description3">Section 3 Description</label>
-                            <textarea type="text" class="form-control" id="description3" name="description3"
-                                placeholder="Enter Section 3 Description">{{ old('description3', $setting->description3) }}</textarea>
-                            @error('description3')
-                                <span id="description3-error" class="error invalid-feedback">{{ $message }}</span>
-                            @enderror
-                        </div>
-
-
-                        <div class="form-group mb-2 {{ $errors->has('title4') ? 'has-error' : '' }}">
-                            <label for="title4">Section 4 Title</label>
-                            <input type="text" class="form-control" id="title4" name="title4"
-                                placeholder="Enter Section 4 Title" value="{{ old('title4', $setting->title4) }}">
-                            @error('title4')
-                                <span id="title4-error" class="error invalid-feedback">{{ $message }}</span>
-                            @enderror
-                        </div>
-
-
-                        <div class="form-group mb-2 {{ $errors->has('description4') ? 'has-error' : '' }}">
-                            <label for="description4">Section 4 Description</label>
-                            <textarea type="text" class="form-control" id="description4" name="description4"
-                                placeholder="Enter Section 4 Description">{{ old('description4', $setting->description4) }}</textarea>
-                            @error('description4')
-                                <span id="description4-error" class="error invalid-feedback">{{ $message }}</span>
-                            @enderror
-                        </div>
-
+                        
 
                          <div class="form-group mb-3">
                             <label for="image">Upload Image</label>
