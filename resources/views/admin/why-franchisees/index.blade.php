@@ -1,5 +1,5 @@
 @extends('layouts.admin')
-@section('title', 'Packages')
+@section('title', 'Why Franchisees')
 @section('head')
     <link href="{{ asset('assets/css/vendor/dataTables.bootstrap4.css') }}" rel="stylesheet" type="text/css" />
     <link href="{{ asset('assets/css/vendor/responsive.bootstrap4.css') }}" rel="stylesheet" type="text/css" />
@@ -13,10 +13,10 @@
                     <div class="page-title-right">
                         <ol class="breadcrumb m-0">
                             <li class="breadcrumb-item"><a href="{{ url('/') }}">Dashboard</a></li>
-                            <li class="breadcrumb-item active">Packages</li>
+                            <li class="breadcrumb-item active">Why Franchisees</li>
                         </ol>
                     </div>
-                    <h4 class="page-title">Packages</h4>
+                    <h4 class="page-title">Why Franchisees</h4>
                 </div>
             </div>
         </div>
@@ -27,7 +27,7 @@
                     <div class="card-header">
                         <div class="row">
                             <div class="col-md-2 col-12 text-left">
-                                <a href="{{ route('admin.packages.create') }}" class="btn btn-sm btn-danger"><i class="mdi mdi-plus-circle mr-1"></i>Add New</a>
+                                <a href="{{ route('admin.why-franchisees.create') }}" class="btn btn-sm btn-danger"><i class="mdi mdi-plus-circle mr-1"></i>Add New</a>
                             </div>
                         </div>
                     </div>
@@ -38,31 +38,25 @@
                                     <thead>
                                         <tr>
                                             <th>ID</th>
-                                            <th>Name</th>
-                                            <th>Monthly Price</th>
-                                            <th>Yearly Price</th>
-                                            <th>User Type</th>
+                                            <th>Title</th>
                                             <th>STATUS</th>
                                             <th>ACTION</th>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        @foreach ($packages as $package)
+                                        @foreach ($why_franchisees as $why_franchisee)
                                             <tr>
-                                                <td>{{ $package->id }}</td>
-                                                <td>{{ $package->name }}</td>
-                                                <td>{{ $package->monthly_price }}</td>
-                                                <td>{{ $package->yearly_price }}</td>
-                                                <td>{{ $package->user_type }}</td>
-                                                <td>@if($package->status) Active @else In-active @endif</td>
+                                                <td>{{ $why_franchisee->id }}</td>
+                                                <td>{{ $why_franchisee->title }}</td>
+                                                <td>@if($why_franchisee->status) Active @else In-active @endif</td>
                                                 <td>
                                                     <div class="mb-2">
-                                                        <a href="{{ route('admin.packages.edit', $package->id) }}" class="btn btn-sm btn-primary mr-1"><i class="mdi mdi-square-edit-outline"></i></a>
-                                                        <button type="button" class="btn btn-sm btn-danger cus-danger" onclick="confirmDelete({{ $package->id }})"><i class="mdi mdi-trash-can"></i></button>
+                                                        <a href="{{ route('admin.why-franchisees.edit', $why_franchisee->id) }}" class="btn btn-sm btn-primary mr-1"><i class="mdi mdi-square-edit-outline"></i></a>
+                                                        <button type="button" class="btn btn-sm btn-danger cus-danger" onclick="confirmDelete({{ $why_franchisee->id }})"><i class="mdi mdi-trash-can"></i></button>
                                                     </div>
 
-                                                    <form id='delete-form{{ $package->id }}'
-                                                        action='{{ route('admin.packages.destroy', $package->id) }}'
+                                                    <form id='delete-form{{ $why_franchisee->id }}'
+                                                        action='{{ route("admin.why-franchisees.destroy", $why_franchisee->id) }}'
                                                         method='POST'>
                                                         <input type='hidden' name='_token'
                                                             value='{{ csrf_token() }}'>
@@ -76,7 +70,7 @@
                                 </table>
                             </div>
                             <div class="col-12 bordertop">
-                                {{ $packages->appends(request()->query())->links('pagination::bootstrap-4') }}
+                                {{ $why_franchisees->appends(request()->query())->links('pagination::bootstrap-4') }}
                             </div>
                         </div>
                     </div>

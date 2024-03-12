@@ -11,6 +11,7 @@ use App\Http\Controllers\Admin\WebsiteContactSettingController;
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\HomePageSettingController;
 use App\Http\Controllers\Admin\ContentManagementController;
+use App\Http\Controllers\Admin\WhyFranchiseeController;
 use App\Http\Controllers\Admin\EnquiryController;
 use App\Http\Controllers\Admin\InformationPageManagementController;
 use App\Http\Controllers\Admin\UserManagementController;
@@ -153,6 +154,7 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.'], function () {
     Route::resource('contact-setting', WebsiteContactSettingController::class);
 
     Route::resource('faqs', FaqController::class);
+    Route::resource('why-franchisees', WhyFranchiseeController::class);
     Route::resource('blogs', BlogController::class);
 
     /*

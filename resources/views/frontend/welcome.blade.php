@@ -300,68 +300,34 @@
             <div class="row">
                 <div class="col-sm-3 col-12">
 
-                        <h4>Franchisees</h4>
+                    <h4>Franchisees</h4>
+                    @if($wf_left && count($wf_left))
+                    @foreach($wf_left as $key => $wfLeft)
+                    <div class="getthe-best left-text">
+                        <p>{{ $wfLeft->title }}</p>
+                    </div>
+                    @endforeach
+                    @endif
 
-                            <!-- <div class="getthe-best left-text ">
-                                <p>{{ $settings->description1 }}</p>
-                            </div> -->
-
-                             <div class="getthe-best left-text">
-                                <p>Bridge between Franchisee and Franchisors to Build Trust</p>
-                            </div>
-                            <div class="getthe-best left-text">
-                                <p>Proper Understanding of Business & Legal Terms</p>
-                            </div>
-                            <div class="getthe-best left-text">
-                                <p>Support by Franchisee Bazaar in Running</p>
-                            </div>
-                            <div class="getthe-best left-text">
-                                <p>Always in Touch with Franchisors for Business Operations</p>
-                            </div>
-                            <div class="getthe-best left-text">
-                                <p>Comparison of different Businesses as per Your Need</p>
-                            </div>
-                            <div class="getthe-best left-text">
-                                <p>Lifetime Business Assurance by Franchisee Bazaar</p>
-                            </div>
-
-
-                        
                 </div>
                 <div class="col-sm-6 col-12 m-auto">
                     <div class="comm-image text-center">
                         <img src="{{ asset('storage/uploads/settings/best-for-less/' . $settings->image) }}"
-                            class="img-fluid" width="526" height="354" />
+                        class="img-fluid" width="526" height="354" />
                     </div>
                 </div>
                 <div class="col-sm-3 col-12">
 
-                        <h4>Francisess</h4>
-                        <!-- <div class="getthe-best right-text">
-                            <p>{{ $settings->description3 }}</p>
-                        </div> -->
-                                                   
-                        <div class="getthe-best right-text">
-                            <p>Low Acquisition Cost</p>
-                        </div>
-                        <div class="getthe-best right-text">
-                            <p>Lead Generation by Franchisee Bazaar</p>
-                        </div>
-                        <div class="getthe-best right-text">
-                            <p>Complete Sale Focus by Franchisee Bazaar</p>
-                        </div>
-                        <div class="getthe-best right-text">
-                            <p>Bridge between Franchisor & Franchisee to Build Trust</p>
-                        </div>
-                        <div class="getthe-best right-text">
-                            <p>Assistance in Developing Franchisee Business</p>
-                        </div>
-                        <div class="getthe-best right-text">
-                            <p>Business Assurance to Franchisee through Francisee Bazaar</p>
-                        </div>
+                    <h4>Francisors</h4>
 
-                       
-
+                    @if($wf_right && count($wf_right))
+                    @foreach($wf_right as $key => $wfRight)      
+                    <div class="getthe-best right-text">
+                        <p>{{ $wfRight->title }}</p>
+                    </div>
+                    @endforeach
+                    @endif
+                    
                 </div>
             </div>
         </div>

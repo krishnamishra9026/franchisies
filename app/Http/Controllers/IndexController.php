@@ -8,6 +8,7 @@ use App\Models\InformationPageManagement;
 use App\Models\HomePageSetting;
 use App\Models\Category;
 use App\Models\User;
+use App\Models\WhyFranchisee;
 use App\Models\Review;
 use App\Models\Brand;
 use App\Models\ChatMessage;
@@ -32,6 +33,10 @@ class IndexController extends Controller
         $reviews = HomePageReview::latest()->take(5)->get();
 
         $services = HomePageService::latest('sort_order')->take(5)->get();
+
+        $wf_left = WhyFranchisee::where(['direction' => '0', 'status' => 1])->latest('sort_order')->take(10)->get();
+        $wf_right = WhyFranchisee::where(['direction' => '1', 'status' => 1])->latest('sort_order')->take(10)->get();
+
         $settings = HomePageSetting::first();
         $brands = Brand::where('status', 1)->inRandomOrder()->take(12)->get();
 
@@ -39,7 +44,7 @@ class IndexController extends Controller
 
         $faqs = Faq::where('status', 1)->orderBy('sort_order', 'asc')->take(5)->get();
 
-        return view('frontend.welcome', compact('reviews', 'services', 'settings', 'brands', 'responses', 'faqs'));
+        return view('frontend.welcome', compact('reviews', 'services', 'settings', 'brands', 'responses', 'faqs', 'wf_left', 'wf_right'));
     }
 
     public function generateSiteMap()
