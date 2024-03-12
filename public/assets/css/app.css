@@ -12069,8 +12069,10 @@ body.auth-fluid-pages[data-leftbar-compact-mode=condensed] {
 
 @media (min-width: 992px) {
   .auth-brand {
-    position: absolute;
-    top: 3rem; } }
+    /*position: absolute;
+    top: 3rem; */
+  } 
+  }
 
 @media (max-width: 991.98px) {
   .auth-fluid {

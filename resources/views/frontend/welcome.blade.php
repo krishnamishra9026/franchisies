@@ -19,7 +19,7 @@
 @section('content')
     @if (isset($settings->background_image))
         <div class="mainbanner"
-            style="background-image: url('{{ asset('storage/uploads/homebanner/' . $settings->background_image) }}')">
+            style="background-image: url('{{ asset('storage/uploads/homebanner/' . $settings->background_image) }}') !important">
         @else
             <div class="mainbanner" style="background-image: url('{{ asset('assets/images/frontend/home-banner.jpg') }}')">
     @endif
