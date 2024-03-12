@@ -492,6 +492,10 @@
         </div>
     </div>
 
+    <div class="vertical-btn">
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"><img src="{{ asset('assets/images/frontend/icons/b-chat.png') }}" class="me-1" />Connect with me</a>
+</div>
+
      <div class="modal fade" id="exampleModal" data-backdrop="static" data-keyboard="false">
         <div class="modal-dialog modal-dialog-center" role="document">
             <div class="modal-content">
