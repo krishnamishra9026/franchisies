@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('title', @$brand->firstname.' '. @$brand->lastname.' - '.@$brand->talent_title.' | Winwinpromo')
+@section('title', @$brand->firstname.' '. @$brand->lastname.' - '.@$brand->talent_title.' | Franchisee Bazaar')
 @section('description', \Str::limit(@$brand->bio, 200))
 
 @section('head')

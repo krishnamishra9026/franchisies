@@ -1,7 +1,7 @@
 @extends('layouts.homeapp')
 
 @if ($settings->page_title) @section('title')
-    {{ $settings->page_title ?? 'Best online Influencer marketer for Youtube | Instagram video promotion - Winwinpromo' }}
+    {{ $settings->page_title ?? 'Best online Influencer marketer for Youtube | Instagram video promotion - Franchisee Bazaar' }}
     @endsection @endif
 @if ($settings->meta_description) @section('description')
     {{ $settings->meta_description }}

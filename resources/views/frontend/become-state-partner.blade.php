@@ -1,6 +1,6 @@
 @extends('layouts.app')
-@section('title', 'Support and Assistant | winwinpromo')
-@section('description', 'Need to get in touch? Contact us to get help with any questions or feedback you have with us | winwinpromo')
+@section('title', 'Support and Assistant | Franchisee Bazaar')
+@section('description', 'Need to get in touch? Contact us to get help with any questions or feedback you have with us | Franchisee Bazaar')
 @php
 $setting =  \App\Models\WebsiteContactSetting::first();
 @endphp

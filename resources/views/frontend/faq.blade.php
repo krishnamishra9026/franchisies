@@ -1,6 +1,6 @@
 @extends('layouts.app')
-@section('title', 'Frequently Asked Questions | winwinpromo')
-@section('description', 'Frequently asked questions when using winpromo. Find influencers to create Instagram, TikTok, YouTube and User Generated Content | winwinpromo')
+@section('title', 'Frequently Asked Questions | Franchisee Bazaar')
+@section('description', 'Frequently asked questions when using winpromo. Find influencers to create Instagram, TikTok, YouTube and User Generated Content | Franchisee Bazaar')
 
 
 @section('content')

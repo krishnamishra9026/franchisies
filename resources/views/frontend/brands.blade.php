@@ -3,8 +3,8 @@
 @section('title', $category_meta_title)
 @section('description', $category_meta_description)
 @else
-@section('title', 'Revolutionize Your Channel: Content Creators Are Dominating the Digital Landscape! - Winwinpromo')
-@section('description', "The ultimate guide for content creators! We unravel the secrets and proven strategies that can elevate your content to new heights. Whether you're a seasoned creator or just starting, unleash your creative potential and pave the way for success - Winwinpromo")
+@section('title', 'Revolutionize Your Channel: Content Creators Are Dominating the Digital Landscape! - Franchisee Bazaar')
+@section('description', "The ultimate guide for content creators! We unravel the secrets and proven strategies that can elevate your content to new heights. Whether you're a seasoned creator or just starting, unleash your creative potential and pave the way for success - Franchisee Bazaar")
 @endif
 @section('head')
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">

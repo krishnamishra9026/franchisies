@@ -1,6 +1,6 @@
 @extends('layouts.app')
-@section('title', 'Want to increase YouTube video engagement, views, and Subscriptions organically? Register Now! on Winwinpromo.')
-@section('description', 'Winwinpromo provides the best Influencer Service to promote your YouTube promotion and Instagram video promotion Channels at the best prices and offers. Register Now!')
+@section('title', 'Want to increase YouTube video engagement, views, and Subscriptions organically? Register Now! on Franchisee Bazaar.')
+@section('description', 'Franchisee Bazaar provides the best Influencer Service to promote your YouTube promotion and Instagram video promotion Channels at the best prices and offers. Register Now!')
 
 <style>
 .field-icon {
