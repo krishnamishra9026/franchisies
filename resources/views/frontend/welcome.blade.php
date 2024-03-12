@@ -531,7 +531,7 @@
                             </select>
                         </div>
 
-                        <div class="form-group">
+                        <div class="form-group show-brand" style="display: none;">
                             <label>Interested Brand(if selected)</label>
                             <input type="text" name="brand_name" id="brand_name" class="form-control"/>
                         </div>
@@ -741,6 +741,12 @@
         });
     </script>
     <script type="text/javascript">
+        $("#category").change(function() {
+            if ($(this).val() != '') {
+                $(".show-brand").show();
+            }
+        });
+
         $("#find").click(function() {
             if ($("#serchForm input").val() == '') {
                 return false;
