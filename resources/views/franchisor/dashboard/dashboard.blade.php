@@ -20,7 +20,7 @@
 
         </div>
 
-        <div class="row">
+        <div class="row" style="display: none;">
 
             <div class="col-lg-2">
                 <div class="card widget-flat">
