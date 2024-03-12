@@ -63,7 +63,7 @@ $footer_logo = $setting ? asset('storage/uploads/logo/'.$setting->footer_logo) :
         <nav id="menu">
             <ul>
                 <li>
-                    <a href="{{ route('categories.index', 'music') }}">Explore Brands</a>
+                    <a href="{{ route('categories.index', 'all') }}">Explore Brands</a>
                 </li>
 
                 <li >
