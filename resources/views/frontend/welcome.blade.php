@@ -45,12 +45,12 @@
                     </div>
                     <div class="exp-platform desktop-P">
                         <ul class="list-inline">
-                            <li><span>Explore by Categories: Healthcare, Automobile, Foodtech, <a href="{{ url('category/music') }}"> Explore All</a></span></li>
+                            <li><span>Explore by Categories: Healthcare, Automobile, Foodtech, <a href="{{ url('category/all') }}"> Explore All</a></span></li>
                            
                         </ul>
                     </div>
                     <div class="exp-platform mobile-P">
-                        <h6><span>Explore by Categories: Healthcare, Automobile, Foodtech, <a href="{{ url('category/music') }}"> Explore All</a></span></h6>
+                        <h6><span>Explore by Categories: Healthcare, Automobile, Foodtech, <a href="{{ url('category/all') }}"> Explore All</a></span></h6>
                         
                     </div>
                 </div>
@@ -148,7 +148,7 @@
                                 @foreach ($services as $service)
                                     <div class="col-sm-2 splide__slide">
                                         
-                                        <a href="{{ route('categories.index', ($service->categoryData->slug ?? 'music')) }}">
+                                        <a href="{{ route('categories.index', ($service->categoryData->slug ?? 'all')) }}">
                                         <div class="slide-caption">
                                             <h5>{{ $service->title }}</h5>
                                         </div>
@@ -228,7 +228,7 @@
                 </div>
             </div>
             <div class="text-center button-center mt-2">
-                    <a href="{{ route('categories.index', 'music') }}" class="btn btn-secondary btn-lg">EXPLORE ALL</a>
+                    <a href="{{ route('categories.index', 'all') }}" class="btn btn-secondary btn-lg">EXPLORE ALL</a>
             </div>
         </div>
     </div>
