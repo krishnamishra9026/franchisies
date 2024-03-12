@@ -106,6 +106,19 @@
                                                     </div>
                                                 </div>
                                                 <ul>
+
+                                                    <li>
+                                                        <div class="form-group">
+                                                            <label class="form-check wt-checkbox">
+                                                                <input class="form-check-input category-check" name="category" type="checkbox" @if($slug == "all") checked @endif value="all">
+                                                                <span class="form-check-label">
+                                                                    All Categorties
+                                                                </span>
+                                                            </label>
+                                                        </div>
+                                                    </li>
+
+
                                                     @if($categories)
                                                     @foreach($categories as $category)
                                                    
@@ -122,17 +135,7 @@
                                                     @endforeach
                                                     @endif
 
-                                                    <li>
-                                                        <div class="form-group">
-                                                            <label class="form-check wt-checkbox">
-                                                                <input class="form-check-input category-check" name="category" type="checkbox" @if($slug == "all") checked @endif value="all">
-                                                                <span class="form-check-label">
-                                                                    All Categorties
-                                                                </span>
-                                                            </label>
-                                                        </div>
-                                                    </li>
-
+                                                    
                                                 </ul>
                                             </div>
 
