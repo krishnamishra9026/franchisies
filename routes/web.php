@@ -47,6 +47,9 @@ Route::get('profile/{id}', [ProfileShowController::class, 'index'])->name('profi
 
 Route::post('/save-conatct-us', [IndexController::class, 'saveContactUs'])->name('save-conatct-us');
 Route::post('/save-join-us', [IndexController::class, 'saveJoinUs'])->name('save-join-us');
+
+Route::post('/save-lead',[IndexController::class, 'saveLead'])->name('save-lead');
+
 Route::post('/save-become-state-partner', [IndexController::class, 'saveBecomeStatePartner'])->name('save-become-state-partner');
 
 

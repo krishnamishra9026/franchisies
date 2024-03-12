@@ -33,7 +33,6 @@
         @include('frontend.includes.footer')
     </div>
 
-
     @include('frontend.includes.script')
 </body>
 

@@ -10,6 +10,11 @@
 @section('head')
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css" />
+    <style type="text/css">
+        .modal-dialog-center {
+    margin-top: 10%;
+}
+    </style>
 @endsection
 @section('content')
     @if (isset($settings->background_image))
@@ -487,6 +492,59 @@
         </div>
     </div>
 
+     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-center" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Thinking to start something of your own</h5>
+                    <button style="display: none;" type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <form class="image-upload" method="POST" action="">
+                    <div class="modal-body">
+                        <div class="alert alert-danger" style="display:none"></div>
+                        <div class="alert alert-success" style="display:none">Your Lead submitted successfully</div>
+                        @csrf
+                        <div class="form-group">
+                            <label>Name</label>
+                            <input type="text" required name="name" id="name" class="form-control"/>
+                        </div>  
+
+                        <div class="form-group">
+                            <label>Mobile No.</label>
+                            <input type="number" required name="mobile" id="mobile" class="form-control"/>
+                        </div>  
+
+                        <div class="form-group">
+                            <label>City</label>
+                            <input type="text" name="city" id="city" class="form-control"/>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Interested Category</label>
+                            <select  class="form-control" id="category"  name="category">
+                                <option value="">Select Category</option>
+                                @foreach($categories as $category)
+                                <option value="{{ $category->name }}">{{ $category->name }}</option>
+                                @endforeach
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Interested Brand(if selected)</label>
+                            <input type="text" name="brand_name" id="brand_name" class="form-control"/>
+                        </div>
+
+                    </div>
+                    <div class="modal-footer">
+                        <!-- <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button> -->
+                        <button type="button" class="btn btn-success" id="formSubmit">Save</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
 
 
 @endsection
@@ -494,6 +552,59 @@
 @push('scripts')
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+
+
+    <script type="text/javascript">
+        $(window).on('load', function() {
+            $('#exampleModal').modal('show');
+        });
+    </script>
+
+
+     <script>
+        $(document).ready(function(){
+            $('#formSubmit').click(function(e){
+                e.preventDefault();
+                $.ajaxSetup({
+                    headers: {
+                        'X-CSRF-TOKEN': "{{ csrf_token() }}"
+                    }
+                });
+                $.ajax({
+                    url: "{{ route('save-lead') }}",
+                    method: 'post',
+                    data: {
+                        name: $('#name').val(),
+                        mobile: $('#mobile').val(),
+                        category: $('#category').val(),
+                        city: $('#city').val(),
+                        brand_name: $('#brand_name').val(),
+                    },
+                    success: function(result){
+                        if(result.errors)
+                        {
+                            $('.alert-danger').html('');
+
+                            $.each(result.errors, function(key, value){
+                                $('.alert-danger').show();
+                                $('.alert-danger').append('<li>'+value+'</li>');
+                            });
+                        }
+                        else
+                        {
+                            $('.alert-danger').hide();
+                            $('.alert-success').show();
+
+                            setTimeout(function() {
+                                $('#exampleModal').modal('hide');
+                            }, 1500);
+
+                        }
+                    }
+                });
+            });
+        });
+    </script>
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {

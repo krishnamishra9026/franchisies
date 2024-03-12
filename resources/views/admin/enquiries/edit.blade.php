@@ -105,10 +105,10 @@
                             </div>
 
                             <div class="col-md-12 mb-2">
-                                <label for="available_slot" class="form-label">Category </label>
-                                <textarea type="text" class="form-control" readonly name="available_slot" placeholder="Category">{{ old('available_slot',$enquiry->available_slot) }}</textarea>
-                                @error('available_slot')
-                                    <code id="available_slot-error" class="text-danger">{{ $message }}</code>
+                                <label for="category" class="form-label">Category </label>
+                                <textarea type="text" class="form-control" readonly name="category" placeholder="Category">{{ old('category',$enquiry->category) }}</textarea>
+                                @error('category')
+                                    <code id="category-error" class="text-danger">{{ $message }}</code>
                                 @enderror
                             </div>
 

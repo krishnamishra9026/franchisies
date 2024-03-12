@@ -44,7 +44,9 @@ class IndexController extends Controller
 
         $faqs = Faq::where('status', 1)->orderBy('sort_order', 'asc')->take(5)->get();
 
-        return view('frontend.welcome', compact('reviews', 'services', 'settings', 'brands', 'responses', 'faqs', 'wf_left', 'wf_right'));
+        $categories = Category::get(['name', 'id']);
+
+        return view('frontend.welcome', compact('reviews', 'services', 'settings', 'brands', 'responses', 'faqs', 'wf_left', 'wf_right', 'categories'));
     }
 
     public function generateSiteMap()
@@ -160,6 +162,25 @@ class IndexController extends Controller
         $product = Enquiry::create($input);
 
         return redirect()->back()->with('message', 'Enquiry submitted successfully!');
+    }
+
+
+    public function saveLead(Request $request)
+    {
+        $validator = \Validator::make($request->all(), [
+            'name' => 'required',
+            'mobile' => 'required',
+        ]);
+        
+        if ($validator->fails())
+        {
+            return response()->json(['errors'=>$validator->errors()->all()]);
+        }
+
+        $input = $request->all();
+        
+        Enquiry::create($input);
+        return response()->json(['success'=>'Lead saved successfully!']);
     }
 
 }
