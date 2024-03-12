@@ -54,10 +54,6 @@ $logo = $setting ? asset('storage/uploads/logo/'.$setting->logo) : asset('assets
                         </a>
                     </div>
 
-                    <br>
-                    <br>
-                    <br>
-
                     <!-- title-->
                     <h4 class="mt-0">Franchisor Login</h4>
                     <p class="text-muted mb-4">Enter your email address and password to access account.</p>

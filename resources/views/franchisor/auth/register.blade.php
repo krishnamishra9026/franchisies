@@ -55,6 +55,7 @@ $logo = $setting ? asset('storage/uploads/logo/'.$setting->logo) : asset('assets
                     </div>
 
                     <br>
+                    <br>
 
                     <!-- title-->
                     <h4 class="mt-0">Franchisor Registration</h4>

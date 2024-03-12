@@ -46,10 +46,10 @@ $logo = $setting ? asset('storage/uploads/logo/'.$setting->logo) : asset('assets
                     <!-- Logo -->
                     <div class="auth-brand text-center">
                         <a href="/" class="logo-dark">
-                            <span><img src="{{ $logo }}"></span>
+                            <span><img src="{{ $logo }}" class="img-fluid"></span>
                         </a>
                         <a href="/" class="logo-light">
-                            <span><img src="{{ $logo }}"></span>
+                            <span><img src="{{ $logo }}" class="img-fluid"></span>
                         </a>
                     </div>
 
