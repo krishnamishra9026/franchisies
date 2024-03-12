@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string('header')->nullable();
             $table->text('description')->nullable();
             $table->string('banner')->nullable();
+            $table->string('image')->nullable();
             $table->string('email')->nullable();
             $table->string('phone')->nullable();
             $table->timestamps();

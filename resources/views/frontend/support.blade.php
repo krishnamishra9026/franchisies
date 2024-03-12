@@ -57,7 +57,13 @@ $setting =  \App\Models\WebsiteContactSetting::first();
 
                             <div class="row">
                                 <div class="col-sm-6">
-                                    <img src="{{ asset('assets/images/h5_hard.png') }}" class="img-fluid img-responsive w-100 p-3">
+
+                                    @if(isset($setting->image))
+                                        <img src="{{ asset('storage/uploads/image/'.$setting->image) }}" class="img-fluid img-responsive w-100 p-3">
+                                    @else
+                                        <img src="{{ asset('assets/images/h5_hard.png') }}" class="img-fluid img-responsive w-100 p-3">
+                                    @endif
+                                   
                                 </div>
                                 <form method="POST" class="row col-sm-6" action="{{ route('save-conatct-us') }}" id="contactForm">
                                     @csrf

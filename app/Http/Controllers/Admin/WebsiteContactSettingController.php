@@ -98,6 +98,26 @@ class WebsiteContactSettingController extends Controller
 
         }
 
+        if($request->hasfile('image')){
+
+            if(isset($admin->image)){
+
+                $path   = 'public/uploads/image/'.$admin->image;
+
+                Storage::delete($path);
+
+            }
+
+            $image      = $request->file('image');
+
+            $name       = $image->getClientOriginalName();
+
+            $image->storeAs('uploads/image/', $name, 'public');
+
+            $admin->image = $name;
+
+        }
+
         $admin->save();
 
         return redirect()->route('admin.contact-setting.index')->with('success', 'Website Setting updated successfully');

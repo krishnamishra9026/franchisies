@@ -51,19 +51,35 @@
                             </div>
 
                             <div class="form-group mb-3">
-                            <label for="banner">Banner</label>
-                            <div class="input-group">
-                                <input type="file" class="form-control" id="banner" name="banner"
-                                onchange="loadPreview(this);">
-                            </div>
-                            @if ($errors->has('banner'))
+                                <label for="banner">Banner</label>
+                                <div class="input-group">
+                                    <input type="file" class="form-control" id="banner" name="banner"
+                                    onchange="loadPreview(this);">
+                                </div>
+                                @if ($errors->has('banner'))
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $errors->first('banner') }}</strong>
                                 </span>
-                            @endif
-                            <img id="preview_img" src="{{ asset('storage/uploads/banner/'. $setting->banner) }}" class="mt-2" width="100"
+                                @endif
+                                <img id="preview_img" src="{{ asset('storage/uploads/banner/'. $setting->banner) }}" class="mt-2" width="100"
                                 height="100" />
-                        </div>
+                            </div>
+
+
+                            <div class="form-group mb-3">
+                                <label for="image">Image</label>
+                                <div class="input-group">
+                                    <input type="file" class="form-control" id="image" name="image"
+                                    onchange="loadPreviewImage(this);">
+                                </div>
+                                @if ($errors->has('image'))
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $errors->first('image') }}</strong>
+                                </span>
+                                @endif
+                                <img id="preview_img_image" src="{{ asset('storage/uploads/image/'. $setting->image) }}" class="mt-2" width="100"
+                                height="100" />
+                            </div>
 
                             <div class="form-group mb-2 {{ $errors->has('email') ? 'has-error' : '' }}">
                                 <label for="meta_description">Support Email </label>
@@ -98,6 +114,24 @@
     <script>
         function loadPreview(input, id) {
             id = id || '#preview_img';
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+
+                reader.onload = function(e) {
+                    $(id)
+                        .attr('src', e.target.result)
+                        .width(100)
+                        .height(100);
+                };
+
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+    </script>
+
+    <script>
+        function loadPreviewImage(input, id) {
+            id = id || '#preview_img_image';
             if (input.files && input.files[0]) {
                 var reader = new FileReader();
 

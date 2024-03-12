@@ -13,6 +13,7 @@ class WebsiteContactSetting extends Model
         'header',
         'description',
         'banner',
+        'image',
         'email',
         'phone',
     ];
