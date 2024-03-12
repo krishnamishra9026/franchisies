@@ -35,7 +35,6 @@ $footer_logo = $setting ? asset('storage/uploads/logo/'.$setting->footer_logo) :
                     <div class="col-8 col-sm-12">
                         <ul class="list-inline">
                             <li><a href="{{ route('support') }}">Support</a></li>
-                            <li><a href="{{ "#" }}"><span>Write your suggestion</span></a></li>
                         </ul>
                     </div>
                 </div>
