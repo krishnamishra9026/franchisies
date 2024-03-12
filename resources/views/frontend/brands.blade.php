@@ -166,11 +166,11 @@
                                                 <div class="image">
                                                     <div class="listing-image-box">
                                                         @if(isset($brand->banner))
-                                                        <a href="#">
+                                                        <a href="{{ route('brands.index', $brand->slug) }}">
                                                             <img src="{{ asset('storage/uploads/brands/'.$brand->id.'/banner/'.$brand->banner) }}"  alt="{{$brand->firstname.' '.$brand->lastname }}">
                                                         </a>
                                                         @else
-                                                        <a href="#">
+                                                        <a href="{{ route('brands.index', $brand->slug) }}">
                                                             <img src="{{ asset('assets/images/frontend/creator-placeholder.jpeg') }}" class="img-fluid" alt="{{ $brand->talent_title }}">
                                                         </a>
                                                         @endif
@@ -181,22 +181,22 @@
                                         </div>
                                         <div class="col-sm-6 col-12">
                                             <div class="Lcaption">
-                                                <div class="panel-heading"><a href="#">{{ $category->name }}</a></div>
+                                                <div class="panel-heading"><a href="{{ route('categories.index', 'food') }}">{{ $category->name }}</a></div>
                                                 <div class="user">
                                                     <div class="avtar-profile-image">
                                                         @if(isset($brand->logo))
-                                                        <a href="#">
+                                                        <a href="{{ route('brands.index', $brand->slug) }}">
                                                             <img src="{{ asset('storage/uploads/brands/'.$brand->id.'/logo/'.$brand->logo) }}"  alt="{{$brand->firstname.' '.$brand->lastname }}">
                                                         </a>
                                                         @else
-                                                        <a href="#">
+                                                        <a href="{{ route('brands.index', $brand->slug) }}">
                                                             <img src="{{ asset('assets/images/frontend/user-profile-placeholder.png') }}"  alt="{{$brand->firstname.' '.$brand->lastname }}">
                                                         </a>
                                                         @endif
                                                     </div>
                                                     <div class="userN">
                                                         <div class="col-badges">
-                                                            <h5 class="username"><a href="#">{{$brand->brandname }}</a></h5>
+                                                            <h5 class="username"><a href="{{ route('brands.index', $brand->slug) }}">{{$brand->brandname }}</a></h5>
                                                         </div>
                                                         
                                                     </div>
