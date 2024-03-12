@@ -154,7 +154,6 @@ $logo = $setting ? asset('storage/uploads/logo/'.$setting->logo) : asset('assets
                         </li>
                         @endcan
 
-                        @can('Settings')
                         <li class="side-nav-item">
                             <a data-bs-toggle="collapse" href="#file-management-tracking" aria-expanded="false" aria-controls="file-management-tracking" class="">
                                 <span> Home Page </span>
@@ -202,7 +201,6 @@ $logo = $setting ? asset('storage/uploads/logo/'.$setting->logo) : asset('assets
                                 </ul>
                             </div>
                         </li>
-                        @endcan
                         @can('My Account')
                         <li>
                             <a href="{{ route('admin.my-account.edit', Auth::guard('administrator')->id()) }}">My Account</a>
