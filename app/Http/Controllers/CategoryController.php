@@ -12,11 +12,15 @@ class CategoryController extends Controller
      * Display a listing of the resource.
      */
     public function index($slug)
-    {
+    {      
         $category_id = Category::where('slug', $slug)->value('id');
         $category = Category::where('slug', $slug)->value('name');
         $categories = Category::get(['name', 'slug']);
         $brands = Brand::where('category', $category_id)->latest()->paginate(15);
+
+        if($slug == 'all'){
+             $brands = Brand::latest()->paginate(15);
+        }
 
         return view('frontend.brands', compact('category_id', 'brands', 'categories', 'slug', 'category'));
     }

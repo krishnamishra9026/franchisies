@@ -18,7 +18,7 @@ $footer_logo = $setting ? asset('storage/uploads/logo/'.$setting->footer_logo) :
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                      <a class="nav-link btn btn-primary" href="{{ url('category/music') }}">Explore Brands</a>
+                      <a class="nav-link btn btn-primary" href="{{ url('category/all') }}">Explore Brands</a>
                     </li>
                     <li class="nav-item">
                       <a href="{{ route('franchisor.register') }}" class="nav-link btn btn-primary">Join</a>
