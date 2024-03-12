@@ -8,7 +8,7 @@
 <section class="productlist informationpage">
     <div class="container">
         <div class="row">
-            <div class="col-sm-12 col-12 hidden-xs">
+            <div class="col-sm-12 col-12 ">
                 <div class="informationcontent">
                 <h1>{{ $information->name }}</h1>
                 <p>{!! $information->editor !!}</p>
