@@ -492,12 +492,12 @@
         </div>
     </div>
 
-     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+     <div class="modal fade" id="exampleModal" data-backdrop="static" data-keyboard="false">
         <div class="modal-dialog modal-dialog-center" role="document">
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="exampleModalLabel">Thinking to start something of your own</h5>
-                    <button style="display: none;" type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">×</span>
                     </button>
                 </div>
@@ -556,7 +556,15 @@
 
     <script type="text/javascript">
         $(window).on('load', function() {
-            $('#exampleModal').modal('show');
+
+            setTimeout(function() {
+                $('#exampleModal').modal('show');
+            }, 1000);
+
+            // if(localStorage.getItem('popState') == 'shown'){
+                // $('#exampleModal').modal('show');
+                // localStorage.setItem('popState','shown')
+            // }   
         });
     </script>
 
@@ -745,6 +753,10 @@
             if ($(this).val() != '') {
                 $(".show-brand").show();
             }
+        });
+
+        $(".close").click(function() {
+            $('#exampleModal').modal('hide');
         });
 
         $("#find").click(function() {
