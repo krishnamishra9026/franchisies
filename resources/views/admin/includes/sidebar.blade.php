@@ -45,7 +45,15 @@ $logo = $setting ? asset('storage/uploads/logo/'.$setting->logo) : asset('assets
                     <span> Brands </span>
                 </a>
             </li>
-            @endcan          
+            @endcan
+
+
+            <li class="side-nav-item">
+                <a href="{{ route('admin.franchisors.index') }}" class="side-nav-link">
+                    <i class="mdi mdi-account-tie"></i>
+                    <span> Franchisors </span>
+                </a>
+            </li>
 
 
             @can('Categories')

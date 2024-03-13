@@ -7,6 +7,7 @@ use App\Http\Controllers\Admin\Auth\MyAccountController;
 use App\Http\Controllers\Admin\Auth\ResetPasswordController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\BrandController;
+use App\Http\Controllers\Admin\FranchisorController;
 use App\Http\Controllers\Admin\WebsiteContactSettingController;
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\HomePageSettingController;
@@ -104,6 +105,7 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.'], function () {
     */
 
     Route::resource('user-management',UserManagementController::class);
+    Route::resource('franchisors',FranchisorController::class);
 
      /*
     |--------------------------------------------------------------------------
