@@ -201,7 +201,7 @@
                                                         
                                                         <div class="userN">
                                                             <div class="col-badges">
-                                                                <h5 class="username">{{ $brand->categoryData->name }}</h5>
+                                                                <h5 class="username">{{ @$brand->categoryData->name }}</h5>
                                                             </div>
                                                         </div>
                                                     </div>
