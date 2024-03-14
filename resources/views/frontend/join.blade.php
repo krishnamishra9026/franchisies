@@ -101,7 +101,7 @@ $setting =  \App\Models\WebsiteContactSetting::first();
                                         <div class="form-group {{ $errors->has('available_slot') ? 'has-error' : '' }} mb-2">
                                             <label for="exampleFormControlInput1" class="form-label">Available Slots to Connect (Mon to Fri): 10 am to 12 PM, 12 PM to 2 PM, 2 PM to 4 PM, 4 PM to 6 PM</label>
                                             <select  class="form-control" name="available_slot">
-                                                <option value="">Select Category</option>
+                                                <option value="">Select Slots</option>
                                                 <option value="10 am to 12 PM">10 am to 12 PM</option>
                                                 <option value="12 PM to 2 PM"> 12 PM to 2 PM</option>
                                                 <option value="2 PM to 4 PM">2 PM to 4 PM</option>
