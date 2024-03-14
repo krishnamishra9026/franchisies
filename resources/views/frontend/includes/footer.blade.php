@@ -13,7 +13,7 @@ $footer_logo = $setting ? asset('storage/uploads/logo/'.$setting->footer_logo) :
 <footer class="Hfooter">
 <div class="container">
     <div class="row">
-        <div class="col-sm-6">
+        <div class="col-sm-9">
             <div class="footerinfo footerinfoM">
                 <div class="row">
                     <div class="col-12 col-sm-12">
@@ -33,12 +33,12 @@ $footer_logo = $setting ? asset('storage/uploads/logo/'.$setting->footer_logo) :
         </div>
     </div>
     <div class="row footerB">
-        <div class="col-sm-5">
+        <div class="col-sm-3">
             <div class="copyright">
                 <p>&copy; {{ $setting->copyright_text }} </p>
             </div>
         </div>
-        <div class="col-sm-7">
+        <div class="col-sm-9">
             <div class="footerinfo footerinfoD">
                 <ul class="list-inline">
                     <li><a target="_blank" href="/blogs">Blogs</a></li>
