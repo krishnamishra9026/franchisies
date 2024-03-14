@@ -116,7 +116,7 @@ $setting =  \App\Models\WebsiteContactSetting::first();
                                         <input id="how_to_know_me" type="radio" value="Social Media"   name="how_to_know_me" style=" margin:10px 0 0;"  > &nbsp;Social Media &nbsp;&nbsp;&nbsp;&nbsp;
                                         <input id="how_to_know_me" type="radio" value="Referral"  name="how_to_know_me"  style=" margin:10px 0 0;"  checked > &nbsp;Referral &nbsp;&nbsp;&nbsp;&nbsp;
                                         <input id="how_to_know_me" type="radio" value="Webinars"  name="how_to_know_me"  style=" margin:10px 0 0;"  checked > &nbsp;Webinars &nbsp;&nbsp;&nbsp;&nbsp;
-                                        <input id="how_to_know_me" type="radio" value="Partner Companies"   name="how_to_know_me" style=" margin:10px 0 0;"  > &nbsp;Partner Companies &nbsp;&nbsp;&nbsp;&nbsp;
+                                        <input id="how_to_know_me" type="radio" value="Partner Companies"   name="how_to_know_me" style=" margin:10px 0 0;"  > &nbsp;Partner Companies &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                         <input id="how_to_know_me" type="radio" value="Newspaper"  name="how_to_know_me"  style=" margin:10px 0 0;"  checked > &nbsp;Newspaper &nbsp;&nbsp;&nbsp;&nbsp;
                                         <input id="how_to_know_me" type="radio" value="TV Advertisement"  name="how_to_know_me"  style=" margin:10px 0 0;"  checked > &nbsp;TV Advertisement  &nbsp;&nbsp;&nbsp;&nbsp;                                      
                                         <input id="how_to_know_me" type="radio" value="Others"  name="how_to_know_me"  style=" margin:10px 0 0;"  checked > &nbsp;Others
