@@ -47,7 +47,7 @@
                             <label for="basicText" class="form-label">Category*</label>
                             <div class="col-sm-12">
 
-                                <select name="category" value="{{ $brand->category }}" class="form-control">
+                                <select name="category" value="{{ $brand->category }}" class="form-control" required>
                                     @foreach($categories as $category)
                                     <option @if($brand->category == $category->id) selected @endif value="{{ $category->id }}">{{ $category->name }}</option>
                                     @endforeach

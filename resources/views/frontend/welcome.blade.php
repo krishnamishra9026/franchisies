@@ -343,9 +343,9 @@
         .getthe-best.right-text p{
             font-size: 15px;
         }
-        .getthe-best.left-text:nth-child(odd) p{color: #000;}
+/*        .getthe-best.left-text:nth-child(odd) p{color: #000;}*/
         .getthe-best.left-text:nth-child(even) p{}
-        .getthe-best.right-text:nth-child(odd) p{color: #000;}
+/*        .getthe-best.right-text:nth-child(odd) p{color: #000;}*/
         .getthe-best.right-text:nth-child(even) p{}
     </style>
 
