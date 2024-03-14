@@ -68,7 +68,7 @@
                                 <img height="55" src="{{ asset('storage/uploads/homebanner/'.$homebanner->background_image) }}">
                             @endif
                         </div>
-                        <div class="form-group mb-2">
+                        <div class="form-group mb-2" style="display: none;">
                             <label for="mobile_background_image" class="mb-1">Upload Mobile Background image</label>
                             <input type="file" class="form-control" id="mobile_background_image" value="{{ old('mobile_background_image', $homebanner->mobile_background_image) }}" name="mobile_background_image">
                             @error('background-image')

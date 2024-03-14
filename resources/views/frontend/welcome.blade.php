@@ -493,15 +493,15 @@
     </div>
 
     <div class="vertical-btn">
-    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"><img src="{{ asset('assets/images/frontend/icons/b-chat.png') }}" class="me-1" />Connect with me</a>
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#connectUsModal"><img src="{{ asset('assets/images/frontend/icons/b-chat.png') }}" class="me-1" />Connect with us</a>
 </div>
 
-     <div class="modal fade" id="exampleModal" data-backdrop="static" data-keyboard="false">
+     <div class="modal fade" id="connectUsModal">
         <div class="modal-dialog modal-dialog-center" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Thinking to start something of your own</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <h5 class="modal-title" id="connectUsModalLabel">Thinking to start something of your own</h5>
+                    <button type="button" class="closed" data-bs-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">×</span>
                     </button>
                 </div>
@@ -562,11 +562,11 @@
         $(window).on('load', function() {
 
             setTimeout(function() {
-                $('#exampleModal').modal('show');
-            }, 1000);
+                $('#connectUsModal').modal('show');
+            }, 1700);
 
             // if(localStorage.getItem('popState') == 'shown'){
-                // $('#exampleModal').modal('show');
+                // $('#connectUsModal').modal('show');
                 // localStorage.setItem('popState','shown')
             // }   
         });
@@ -608,7 +608,7 @@
                             $('.alert-success').show();
 
                             setTimeout(function() {
-                                $('#exampleModal').modal('hide');
+                                $('#connectUsModal').modal('hide');
                             }, 1500);
 
                         }
@@ -760,7 +760,8 @@
         });
 
         $(".close").click(function() {
-            $('#exampleModal').modal('hide');
+            $('#connectUsModal').modal('toggle');
+            $('#connectUsModal').modal('hide');
         });
 
         $("#find").click(function() {
