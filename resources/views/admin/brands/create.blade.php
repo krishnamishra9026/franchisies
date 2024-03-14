@@ -45,6 +45,7 @@
                             <div class="col-sm-12">
 
                                 <select name="category" class="form-control" required>
+                                    <option value="">Please select</option>
                                     @foreach($categories as $category)
                                     <option value="{{ $category->id }}">{{ $category->name }}</option>
                                     @endforeach
