@@ -191,7 +191,7 @@
                                         </div>
                                         <div class="col-sm-6 col-12">
                                             <div class="Lcaption">
-                                                <div class="panel-heading"><a href="{{ route('categories.index', 'food') }}">{{ $brand->categoryData->name }}</a></div>
+                                                <div class="panel-heading"><a href="{{ route('categories.index', 'food') }}">{{ @$brand->categoryData->name }}</a></div>
                                                 <div class="user">
                                                     <div class="avtar-profile-image">
                                                         @if(isset($brand->logo))
