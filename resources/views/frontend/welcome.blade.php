@@ -305,7 +305,7 @@
             <div class="row">
                 <div class="col-sm-3 col-12">
 
-                    <h4>{{ $settings->title2 ?? 'Franchisees' }}</h4>
+                    <h4 style="text-align: center;">{{ $settings->title2 ?? 'Franchisees' }}</h4>
                     @if($wf_left && count($wf_left))
                     @foreach($wf_left as $key => $wfLeft)
                     <div class="getthe-best left-text">
@@ -323,7 +323,7 @@
                 </div>
                 <div class="col-sm-3 col-12">
 
-                    <h4>{{ $settings->title3 ?? 'Francisors' }}</h4>
+                    <h4 style="text-align: center;">{{ $settings->title3 ?? 'Francisors' }}</h4>
 
                     @if($wf_right && count($wf_right))
                     @foreach($wf_right as $key => $wfRight)      
