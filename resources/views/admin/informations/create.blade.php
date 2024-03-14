@@ -99,24 +99,13 @@
     </form>
 @endsection
 @push('scripts')
-
-<script src="{{ asset('assets/js/tinymce/tinymce.min.js') }}"></script>
-<script>
-    tinymce.init({
-        selector: 'textarea#content',
-        height: 300,
-        menubar: false,
-        plugins: [
-            'advlist autolink lists link image charmap print preview anchor',
-            'searchreplace visualblocks code fullscreen',
-            'insertdatetime media table paste code help wordcount'
-        ],
-        toolbar: 'undo redo | formatselect | ' +
-            'bold italic backcolor | alignleft aligncenter ' +
-            'alignright alignjustify | bullist numlist outdent indent | ' +
-            'removeformat | help',
-            content_style: 'body { font-family:roboto; font-size:16px }'
-    });
+<script type="text/javascript" src="{{ asset('assets/summernote/summernote-bs4.min.js') }}"></script>
+<script type="text/javascript">
+    $(document).ready(function() {
+  $('.summernote').summernote({
+        tabsize: 5,
+        height: 200
+      });
+});
 </script>
-
 @endpush
