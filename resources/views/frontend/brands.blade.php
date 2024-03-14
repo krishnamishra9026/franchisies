@@ -15,17 +15,13 @@
 <div class="marketplace">
     <div class="MSearch">
         <div class="container">
-            @if(isset($category_h1_title))
-            <h1>{{ $category_h1_title }}</h1>
-            @else
             <h1>{{ $category }}</h1>
-            @endif
             <div class="row">
                 <div class="col-sm-12 col-12">
                     <div class="searchbar BoxShadow">
-                        <form action="{{ route('categories.index', 'music') }}">
+                        <form action="{{ route('categories.index', $slug) }}">
                             <div class="input-group mb-3">
-                                <input type="text" id="searchUser" value="{{ request()->get('search') }}" name="search" class="form-control" placeholder="Search for Creator">
+                                <input type="text" id="searchUser" value="{{ request()->get('search') }}" name="search" class="form-control" placeholder="Search by Brand Name">
                                 <div class="input-group-append">
                                     <button type="submit" class="input-group-text"><img src="{{ asset('assets/images/frontend/icons/search-black.png') }}" alt="Search" /></button>
                                 </div>
@@ -144,7 +140,6 @@
                                         </div>
                                     </div>
                                     <div class="d-flex custom-flex">
-                                        <!-- <button type="submit" id="filter_me" class="wt-btn btn btn-primary" >Apply Filter</button> -->
                                         <button type="button" id="clear_filter" class="wt-btn btn btn-default" >Clear Filter</button>
                                     </div>
                                 </div>
@@ -196,7 +191,7 @@
                                         </div>
                                         <div class="col-sm-6 col-12">
                                             <div class="Lcaption">
-                                                <div class="panel-heading"><a href="{{ route('categories.index', 'food') }}">{{ $category->name }}</a></div>
+                                                <div class="panel-heading"><a href="{{ route('categories.index', 'food') }}">{{ $brand->categoryData->name }}</a></div>
                                                 <div class="user">
                                                     <div class="avtar-profile-image">
                                                         @if(isset($brand->logo))
@@ -223,7 +218,11 @@
                                             </div>
 
                                             <div>
+                                                <div>{!! truncate(strip_tags($brand->busioverview), 350) !!}</div>
+                                                <br>
                                                 <ul class="list-group">
+
+                                                    
                                                   <li class="list-group-flush d-flex justify-content-between align-items-center">
                                                     Investment:
                                                     <span class=" " >{{ $brand->investment }}</span>
@@ -304,8 +303,7 @@
 
     $(document).on('click', '#clear-category-filter', function(event) {
         event.preventDefault();
-        $('.wt-checkbox input:checkbox').prop('checked', false);
-        $("#filter_me").trigger('click');
+        window.location.href = "{{ route("categories.index", 'all') }}";
     });
 
 
@@ -516,11 +514,9 @@ $(document).ready(function(){
         window.location.href = url;
     });
 
-    $("#clear-rating-filter").on('click', function (e) {
+    $("#clear_filter").on('click', function (e) {
         e.preventDefault();
-        let url = new URL(location.href);
-        url.searchParams.delete('rating[]');
-        window.location.href = url;
+        window.location.href = "{{ route("categories.index", 'all') }}";
     });
 
 
