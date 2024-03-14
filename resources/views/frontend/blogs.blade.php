@@ -23,7 +23,7 @@
                         <div id="collapse{{ $blog->id }}" class="accordion-collapse collapse @if(!$key) show @else  @endif"
                             data-bs-parent="#accordionExample">
                             <div class="accordion-body">
-                                <p>{!! \Str::limit($blog->description, 500, '...') !!}</p>
+                                <p>{!! \Str::limit($blog->description, 1000, '...') !!}</p>
                             <a type="button" class="btn btn-info" href="{{ route('blog', $blog->id) }}">View Details</a>
                             </div>
                         </div>
