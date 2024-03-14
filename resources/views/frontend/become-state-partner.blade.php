@@ -38,7 +38,7 @@ $setting =  \App\Models\WebsiteContactSetting::first();
                             </div>
                             @endif
 
-                            <form method="POST" action="{{ route('save-become-state-partner') }}" id="contactForm">
+                            <form class="row col-md-10" method="POST" action="{{ route('save-become-state-partner') }}" id="contactForm">
                                 @csrf
                                 @method('POST')
                                 <input type="hidden" value="become_state_partner" name="form_type">
@@ -83,7 +83,7 @@ $setting =  \App\Models\WebsiteContactSetting::first();
                                     <label for="basicText" class="form-label">Investment Range</label>
                                     <div class="col-sm-12">
                                         <input id="investment_range" type="radio" value="Below 3 Lacs "   name="investment_range" style=" margin:10px 0 0;"  > &nbsp;&nbsp;Below 3 Lacs  &nbsp;&nbsp;
-                                        <input id="investment_range" type="radio" value="3 to 5 Lacs"  name="investment_range"  style=" margin:10px 0 0;"  checked > &nbsp;&nbsp;3 to 5 Lacs
+                                        <input id="investment_range" type="radio" value="3 to 5 Lacs"  name="investment_range"  style=" margin:10px 0 0;"  checked > &nbsp;&nbsp;3 to 5 Lacs &nbsp;&nbsp;
                                         <input id="investment_range" type="radio" value="5 Lacs+"  name="investment_range"  style=" margin:10px 0 0;"  checked > &nbsp;&nbsp;5 Lacs+
                                     </div>
                                 </div>
@@ -93,7 +93,7 @@ $setting =  \App\Models\WebsiteContactSetting::first();
                                     <label for="basicText" class="form-label">How soon do you want to associate:</label>
                                     <div class="col-sm-12">
                                         <input id="associate_time" type="radio" value="Immediately"   name="associate_time" style=" margin:10px 0 0;"  > &nbsp;&nbsp;Immediately &nbsp;&nbsp;
-                                        <input id="associate_time" type="radio" value="Within 3 Months"  name="associate_time"  style=" margin:10px 0 0;"  checked > &nbsp;&nbsp;Within 3 Months
+                                        <input id="associate_time" type="radio" value="Within 3 Months"  name="associate_time"  style=" margin:10px 0 0;"  checked > &nbsp;&nbsp;Within 3 Months &nbsp;&nbsp;
                                         <input id="associate_time" type="radio" value="After 3 Months"  name="associate_time"  style=" margin:10px 0 0;"  checked > &nbsp;&nbsp;After 3 Months
                                     </div>
                                 </div>
@@ -102,11 +102,11 @@ $setting =  \App\Models\WebsiteContactSetting::first();
                                     <label for="basicText" class="form-label">How did you get to know about FranchiseBazaar partnership program:</label>
                                     <div class="col-sm-12">
                                         <input id="how_to_know_me" type="radio" value="Social Media"   name="how_to_know_me" style=" margin:10px 0 0;"  > &nbsp;&nbsp;Social Media &nbsp;&nbsp;
-                                        <input id="how_to_know_me" type="radio" value="Referral"  name="how_to_know_me"  style=" margin:10px 0 0;"  checked > &nbsp;&nbsp;Referral
-                                        <input id="how_to_know_me" type="radio" value="Webinars"  name="how_to_know_me"  style=" margin:10px 0 0;"  checked > &nbsp;&nbsp;Webinars
+                                        <input id="how_to_know_me" type="radio" value="Referral"  name="how_to_know_me"  style=" margin:10px 0 0;"  checked > &nbsp;&nbsp;Referral &nbsp;&nbsp;
+                                        <input id="how_to_know_me" type="radio" value="Webinars"  name="how_to_know_me"  style=" margin:10px 0 0;"  checked > &nbsp;&nbsp;Webinars &nbsp;&nbsp;
                                         <input id="how_to_know_me" type="radio" value="Partner Companies"   name="how_to_know_me" style=" margin:10px 0 0;"  > &nbsp;&nbsp;Partner Companies &nbsp;&nbsp;
-                                        <input id="how_to_know_me" type="radio" value="Newspaper"  name="how_to_know_me"  style=" margin:10px 0 0;"  checked > &nbsp;&nbsp;Newspaper
-                                        <input id="how_to_know_me" type="radio" value="TV Advertisement"  name="how_to_know_me"  style=" margin:10px 0 0;"  checked > &nbsp;&nbsp;TV Advertisement                                        
+                                        <input id="how_to_know_me" type="radio" value="Newspaper"  name="how_to_know_me"  style=" margin:10px 0 0;"  checked > &nbsp;&nbsp;Newspaper &nbsp;&nbsp;
+                                        <input id="how_to_know_me" type="radio" value="TV Advertisement"  name="how_to_know_me"  style=" margin:10px 0 0;"  checked > &nbsp;&nbsp;TV Advertisement  &nbsp;&nbsp;                                      
                                         <input id="how_to_know_me" type="radio" value="Others"  name="how_to_know_me"  style=" margin:10px 0 0;"  checked > &nbsp;&nbsp;Others
                                     </div>
                                 </div>
