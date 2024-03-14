@@ -38,7 +38,19 @@ $setting =  \App\Models\WebsiteContactSetting::first();
                             </div>
                             @endif
 
-                            <form class="row col-md-8" method="POST" action="{{ route('save-become-state-partner') }}" id="contactForm">
+                            <div class="row">
+
+                                <div class="col-sm-6">
+
+                                    @if(isset($setting->image))
+                                    <img src="{{ asset('storage/uploads/image/'.$setting->image) }}" class="img-fluid img-responsive w-100 p-3">
+                                    @else
+                                    <img src="{{ asset('assets/images/h5_hard.png') }}" class="img-fluid img-responsive w-100 p-3">
+                                    @endif
+
+                                </div>
+
+                            <form class="row col-md-6" method="POST" action="{{ route('save-become-state-partner') }}" id="contactForm">
                                 @csrf
                                 @method('POST')
                                 <input type="hidden" value="become_state_partner" name="form_type">
@@ -115,6 +127,7 @@ $setting =  \App\Models\WebsiteContactSetting::first();
                                     <button class="btn btn-primary" type="submit">Submit</button>
                                 </div>
                             </form>
+                        </div>
                         </div>
                     </div>
                 </div>
