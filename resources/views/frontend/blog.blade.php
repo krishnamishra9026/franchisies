@@ -8,8 +8,8 @@
 <div class="blogpage">
     <div class="blog">
         <div class="container">
-            <h1>Blog Detail</h1>
-            <div class="row">
+            <h1>Blog Detail : {{$blog->title}}</h1>
+            <div class="row mt-5">
                 <div class="accordion" id="accordionExample">
                     <div class="accordion-item">
                         <div class="accordion-header">

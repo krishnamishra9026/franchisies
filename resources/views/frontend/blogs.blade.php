@@ -9,7 +9,7 @@
     <div class="blog">
         <div class="container">
             <h1>Blogs</h1>
-            <div class="row">
+            <div class="row mt-5">
                 <div class="accordion" id="accordionExample">
                     @if($blogs && count($blogs))
                     @foreach($blogs as $key => $blog)
