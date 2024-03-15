@@ -501,67 +501,65 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="connectUsModalLabel">Thinking to start something of your own</h5>
-                    <button type="button" class="closed" data-bs-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">×</span>
-                    </button>
+
+                    <button type="button" class="btn-close" class="closed" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
 
-                <div class="row">
+            <div class="row">
 
-                                <div class="col-sm-6">
+                            <div class="col-sm-6">
 
-                                    <div style="margin-left: 12px; margin-top: 18px;"><strong>Want to start a secure business with “Business Assurance”</strong></div>
+                                <div style="margin-left: 12px; margin-top: 18px;"><strong>Want to start a secure business with “Business Assurance”</strong></div>
 
-                                    @if(isset($setting->image))
-                                    <img src="{{ asset('storage/uploads/image/'.$setting->image) }}" class="img-fluid img-responsive w-100 p-3">
-                                    @else
-                                    <img src="{{ asset('assets/images/h5_hard.png') }}" class="img-fluid img-responsive w-100 p-3">
-                                    @endif
+                                @if(isset($setting->image))
+                                <img src="{{ asset('storage/uploads/image/'.$setting->image) }}" class="img-fluid img-responsive w-100 p-3">
+                                @else
+                                <img src="{{ asset('assets/images/h5_hard.png') }}" class="img-fluid img-responsive w-100 p-3">
+                                @endif
 
-                                </div>
+                            </div>
 
-                <form class="image-upload row col-sm-6" method="POST" action="">
-                    <div class="modal-body">
-                        <div class="alert alert-danger" style="display:none"></div>
-                        <div class="alert alert-success" style="display:none">Your Lead submitted successfully</div>
-                        @csrf
-                        <div class="form-group">
-                            <label>Name</label>
-                            <input type="text" required name="name" id="name" class="form-control"/>
-                        </div>  
+            <form class="image-upload row col-sm-6" method="POST" action="">
+                <div class="modal-body">
+                    <div class="alert alert-danger" style="display:none"></div>
+                    <div class="alert alert-success" style="display:none">Your Lead submitted successfully</div>
+                    @csrf
+                    <div class="form-group">
+                        <label>Name</label>
+                        <input type="text" required name="name" id="name" class="form-control"/>
+                    </div>  
 
-                        <div class="form-group">
-                            <label>Mobile No.</label>
-                            <input type="number" required name="mobile" id="mobile" class="form-control"/>
-                        </div>  
+                    <div class="form-group">
+                        <label>Mobile No.</label>
+                        <input type="number" required name="mobile" id="mobile" class="form-control"/>
+                    </div>  
 
-                        <div class="form-group">
-                            <label>City</label>
-                            <input type="text" name="city" id="city" class="form-control"/>
-                        </div>
-
-                        <div class="form-group">
-                            <label>Interested Category</label>
-                            <select  class="form-control" id="category"  name="category">
-                                <option value="">Select Category</option>
-                                @foreach($categories as $category)
-                                <option value="{{ $category->name }}">{{ $category->name }}</option>
-                                @endforeach
-                            </select>
-                        </div>
-
-                        <div class="form-group show-brand" style="display: none;">
-                            <label>Interested Brand(if selected)</label>
-                            <input type="text" name="brand_name" id="brand_name" class="form-control"/>
-                        </div>
-
+                    <div class="form-group">
+                        <label>City</label>
+                        <input type="text" name="city" id="city" class="form-control"/>
                     </div>
-                    <div class="modal-footer">
-                        <!-- <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button> -->
-                        <button type="button" class="btn btn-success" id="formSubmit">Save</button>
+
+                    <div class="form-group">
+                        <label>Interested Category</label>
+                        <select  class="form-control" id="category"  name="category">
+                            <option value="">Select Category</option>
+                            @foreach($categories as $category)
+                            <option value="{{ $category->name }}">{{ $category->name }}</option>
+                            @endforeach
+                        </select>
                     </div>
-                </form>
-            </div>
+
+                    <div class="form-group show-brand" style="display: none;">
+                        <label>Interested Brand(if selected)</label>
+                        <input type="text" name="brand_name" id="brand_name" class="form-control"/>
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-success" id="formSubmit">Save</button>
+                </div>
+            </form>
+        </div>
             </div>
         </div>
     </div>
