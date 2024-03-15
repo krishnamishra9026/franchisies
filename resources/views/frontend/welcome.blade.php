@@ -31,7 +31,6 @@
     </style>
 @endsection
 @section('content')
-{{$settings->mobile_background_image}}
     @if (isset($settings->background_image))
         <div class="mainbanner"
             style="background-image: url('{{ asset('storage/uploads/homebanner/' . $settings->background_image) }}')">
