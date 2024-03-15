@@ -82,7 +82,7 @@
                         </div>
 
                         <div class="form-group mb-2">
-                            <label for="modal_image" class="mb-1">Upload Mobile Background image</label>
+                            <label for="modal_image" class="mb-1">Upload Popup Image image</label>
                             <input type="file" class="form-control" id="modal_image" value="{{ old('modal_image', $homebanner->modal_image) }}" name="modal_image">
                             @error('background-image')
                                 <span id="modal_image-error" class="error invalid-feedback">{{ $message }}</span>
