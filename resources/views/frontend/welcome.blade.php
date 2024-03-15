@@ -505,7 +505,22 @@
                         <span aria-hidden="true">×</span>
                     </button>
                 </div>
-                <form class="image-upload" method="POST" action="">
+
+                <div class="row">
+
+                                <div class="col-sm-6">
+
+                                    <div style="margin-left: 12px; margin-top: 18px;"><strong>Want to start a secure business with “Business Assurance”</strong></div>
+
+                                    @if(isset($setting->image))
+                                    <img src="{{ asset('storage/uploads/image/'.$setting->image) }}" class="img-fluid img-responsive w-100 p-3">
+                                    @else
+                                    <img src="{{ asset('assets/images/h5_hard.png') }}" class="img-fluid img-responsive w-100 p-3">
+                                    @endif
+
+                                </div>
+
+                <form class="image-upload row col-sm-6" method="POST" action="">
                     <div class="modal-body">
                         <div class="alert alert-danger" style="display:none"></div>
                         <div class="alert alert-success" style="display:none">Your Lead submitted successfully</div>
@@ -546,6 +561,7 @@
                         <button type="button" class="btn btn-success" id="formSubmit">Save</button>
                     </div>
                 </form>
+            </div>
             </div>
         </div>
     </div>
