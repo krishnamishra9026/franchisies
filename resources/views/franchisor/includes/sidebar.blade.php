@@ -36,14 +36,29 @@ $logo = $setting ? asset('storage/uploads/logo/'.$setting->logo) : asset('assets
                 </a>
             </li>
 
-            <li class="side-nav-item" style="display: none;">
+            <li class="side-nav-item">
+                <a href="{{ route('franchisor.categories.index') }}" class="side-nav-link">
+                    <i class="mdi mdi-collage"></i>
+                    <span> Categories </span>
+                </a>
+            </li>      
+
+
+           
+
+            <li class="side-nav-item">
                 <a href="{{ route('franchisor.brands.index') }}" class="side-nav-link">
                     <i class="mdi mdi-account-tie"></i>
                     <span> Brands </span>
                 </a>
             </li>
 
-
+             <li class="side-nav-item">
+                <a href="{{ route('franchisor.enquiries.index') }}" class="side-nav-link">
+                    <i class="mdi mdi-headset"></i>
+                    <span> Enquiries </span>
+                </a>
+            </li>
 
 
             <li class="side-nav-item">

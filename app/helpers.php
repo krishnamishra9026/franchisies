@@ -1,9 +1,15 @@
 <?php
 use App\Models\ChatMessage;
 use App\Models\Badge;
+use App\Models\HomePageSetting;
   
 function dateFormat($date,$format){
     return \Carbon\Carbon::createFromFormat('Y-m-d', $date)->format($format);    
+}
+
+
+function getMobileBGImage(){
+    return HomePageSetting::value('mobile_background_image');   
 }
 
 function trimString($string, $repl, $limit) 

@@ -8,6 +8,8 @@ use App\Http\Controllers\Franchisor\Auth\MyAccountController;
 use App\Http\Controllers\Franchisor\Auth\ResetPasswordController;
 use App\Http\Controllers\Franchisor\DashboardController;
 use App\Http\Controllers\Franchisor\BrandController;
+use App\Http\Controllers\Franchisor\CategoryController;
+use App\Http\Controllers\Franchisor\EnquiryController;
 use App\Http\Controllers\Franchisor\UserManagementController;
 use App\Http\Controllers\Franchisor\RoleController;
 use Illuminate\Support\Facades\Route;
@@ -63,6 +65,22 @@ Route::group(['prefix' => 'franchisor', 'as' => 'franchisor.'], function () {
 
     Route::resource('brands', BrandController::class);
 
+    /*
+    |--------------------------------------------------------------------------
+    | Categories Route
+    |--------------------------------------------------------------------------
+    */
+
+    Route::resource('categories', CategoryController::class);
+
+
+    /*
+    |--------------------------------------------------------------------------
+    | Enquiry Route
+    |--------------------------------------------------------------------------
+    */
+
+    Route::resource('enquiries', EnquiryController::class);
 
     /*
     |--------------------------------------------------------------------------

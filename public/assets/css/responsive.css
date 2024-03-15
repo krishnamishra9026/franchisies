@@ -973,7 +973,7 @@
     background-position: center right;
     padding-top: 80px;
     padding-bottom: 50px;
-    background-image: url('../images/frontend/Hom2.jpg')!important;
+/*    background-image: url('../images/frontend/Hom2.jpg')!important;*/
 }
 .desktop-P{
     display: none;

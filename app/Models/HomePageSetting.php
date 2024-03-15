@@ -51,5 +51,6 @@ class HomePageSetting extends Model
         'search_button_background',
         'background_image',
         'mobile_background_image',
+        'modal_image',
     ];
 }

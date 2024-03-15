@@ -38,6 +38,7 @@ class IndexController extends Controller
         $wf_right = WhyFranchisee::where(['direction' => '1', 'status' => 1])->latest('sort_order')->take(10)->get();
 
         $settings = HomePageSetting::first();
+        
         $brands = Brand::where('status', 1)->inRandomOrder()->take(12)->get();
 
         $responses = collect();

@@ -95,6 +95,27 @@ class HomePageSettingController extends Controller
 
         }
 
+
+        if($request->hasfile('modal_image')){
+
+            if(isset($admin->modal_image)){
+
+                $path   = 'public/uploads/homebanner/'.$admin->modal_image;
+
+                Storage::delete($path);
+
+            }
+
+            $image      = $request->file('modal_image');
+
+            $name       = $image->getClientOriginalName();
+
+            $image->storeAs('uploads/homebanner/', $name, 'public');
+
+            $admin->modal_image = $name;
+
+        }
+
         $admin->save();
 
         return redirect()->route('admin.settings.homebanner')->with('success', 'Setting updated successfully!');

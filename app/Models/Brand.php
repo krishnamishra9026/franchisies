@@ -46,6 +46,7 @@ class Brand extends Model
 
     protected $fillable = [
         'email',
+        'franchisor_id',
         'password',
         'category',
         'brandname',

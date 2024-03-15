@@ -60,6 +60,8 @@ return new class extends Migration
             $table->string('search_button_background')->nullable();
             $table->string('background_image')->nullable();
             $table->string('mobile_background_image')->nullable();
+            
+            $table->string('modal_image')->nullable();
 
             $table->timestamps();
         });

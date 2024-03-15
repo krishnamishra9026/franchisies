@@ -68,7 +68,7 @@
                                 <img height="55" src="{{ asset('storage/uploads/homebanner/'.$homebanner->background_image) }}">
                             @endif
                         </div>
-                        <div class="form-group mb-2" style="display: none;">
+                        <div class="form-group mb-2">
                             <label for="mobile_background_image" class="mb-1">Upload Mobile Background image</label>
                             <input type="file" class="form-control" id="mobile_background_image" value="{{ old('mobile_background_image', $homebanner->mobile_background_image) }}" name="mobile_background_image">
                             @error('background-image')
@@ -78,6 +78,19 @@
                              @if(isset($homebanner->mobile_background_image))
                              <br>
                                 <img height="55" src="{{ asset('storage/uploads/homebanner/'.$homebanner->mobile_background_image) }}">
+                            @endif
+                        </div>
+
+                        <div class="form-group mb-2">
+                            <label for="modal_image" class="mb-1">Upload Mobile Background image</label>
+                            <input type="file" class="form-control" id="modal_image" value="{{ old('modal_image', $homebanner->modal_image) }}" name="modal_image">
+                            @error('background-image')
+                                <span id="modal_image-error" class="error invalid-feedback">{{ $message }}</span>
+                            @enderror
+
+                             @if(isset($homebanner->modal_image))
+                             <br>
+                                <img height="55" src="{{ asset('storage/uploads/homebanner/'.$homebanner->modal_image) }}">
                             @endif
                         </div>
                     </form>

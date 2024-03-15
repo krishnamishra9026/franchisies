@@ -26,7 +26,7 @@ class BrandController extends Controller
         $filter_name              = $request->input('filter_name');
         $filter_phone             = $request->input('filter_phone');
 
-        $brands = Brand::orderBy('id', 'desc');
+        $brands = Brand::where('franchisor_id', auth()->user()->id)->orderBy('id', 'desc');
 
         if ($request->filter_name) {
             $brands->where('brandname', 'LIKE', '%' . $request->input('filter_name') . '%');
@@ -66,6 +66,8 @@ class BrandController extends Controller
         $input = $request->except('_token');
 
         $input['password'] = Hash::make(($input['password'] ?? 'password'));
+
+        $input['franchisor_id'] = auth()->user()->id;
 
         $brandData = Brand::create($input);
 
@@ -178,10 +180,7 @@ class BrandController extends Controller
      * Update the specified resource in storage.
      */
     public function update(Request $request, string $id)
-    {
-
-              // echo '<pre>'; print_r($request->all()); echo '</pre>'; exit();
-              
+    {              
         $request->validate([
             'email'                      => ['required'],
         ]);
@@ -196,6 +195,8 @@ class BrandController extends Controller
         }else{
             $input['password'] = 'password';
         }
+
+        $input['franchisor_id'] = auth()->user()->id;
         
         Brand::find($id)->update($input);              
 

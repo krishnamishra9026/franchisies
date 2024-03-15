@@ -12,14 +12,29 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css" />
     <style type="text/css">
         .modal-dialog-center {
-    margin-top: 10%;
-}
+            margin-top: 10%;
+        }
+
+        @if (isset($settings->mobile_background_image))
+        @media screen and (max-width: 575px){
+            .mainbanner {
+                background-image: url("{{ asset('storage/uploads/homebanner/' . getMobileBGImage()) }}") !important;
+            }
+        }
+        @else
+        @media screen and (max-width: 575px){
+            .mainbanner {
+                background-image: url("{{ asset('images/frontend/Hom2.jpg') }}") !important;
+            }
+        }
+        @endif
     </style>
 @endsection
 @section('content')
+{{$settings->mobile_background_image}}
     @if (isset($settings->background_image))
         <div class="mainbanner"
-            style="background-image: url('{{ asset('storage/uploads/homebanner/' . $settings->background_image) }}') !important">
+            style="background-image: url('{{ asset('storage/uploads/homebanner/' . $settings->background_image) }}')">
         @else
             <div class="mainbanner" style="background-image: url('{{ asset('assets/images/frontend/home-banner.jpg') }}')">
     @endif
@@ -510,9 +525,8 @@
                             <div class="col-sm-6">
 
                                 <div style="margin-left: 12px; margin-top: 18px;"><strong>Want to start a secure business with “Business Assurance”</strong></div>
-
-                                @if(isset($setting->image))
-                                <img src="{{ asset('storage/uploads/image/'.$setting->image) }}" class="img-fluid img-responsive w-100 p-3">
+                                @if(isset($settings->modal_image))
+                                <img src="{{ asset('storage/uploads/homebanner/'.$settings->modal_image) }}" class="img-fluid img-responsive w-100 p-3">
                                 @else
                                 <img src="{{ asset('assets/images/h5_hard.png') }}" class="img-fluid img-responsive w-100 p-3">
                                 @endif
