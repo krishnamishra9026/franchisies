@@ -590,7 +590,7 @@
 
             setTimeout(function() {
                 $('#connectUsModal').modal('show');
-            }, 1700);
+            }, 3000);
 
             // if(localStorage.getItem('popState') == 'shown'){
                 // $('#connectUsModal').modal('show');
